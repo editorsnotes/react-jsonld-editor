@@ -1,0 +1,27 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "ecmaFeatures": {
+    "jsx": true,
+    "experimentalObjectRestSpread": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "extends": "eslint:recommended",
+  "rules": {
+    "comma-dangle": 0,
+    "curly": [2, "multi-line"],
+    "eol-last": 2,
+    "jsx-quotes": 2,
+    "no-console": 1,
+    "no-fallthrough": 0,
+    "no-multiple-empty-lines": [2, {"max": 1}],
+    "no-trailing-spaces": [2],
+    "no-use-before-define": [2, "nofunc"],
+    "semi": [2, "never"]
+  }
+}

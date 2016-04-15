@@ -1,0 +1,7 @@
+.DS_Store
+data/labels.json
+data/ranges.json
+data/shapes.json
+data/types.json
+lib/
+node_modules/

@@ -1,0 +1,14 @@
+{
+  "@context": { "@vocab": "http://stupid.com/" },
+  "@type": "Car",
+  "wheels": [
+    { "location": "front right",
+      "hubcap": {"color": "black"} },
+    { "location": "front left",
+      "hubcap": {"color": "unknown", "status": "missing"} },
+    { "location": "rear right",
+      "hubcap": {"color": "black"} },
+    { "location": "rear left",
+      "hubcap": {"color": "black"} }
+  ]
+}

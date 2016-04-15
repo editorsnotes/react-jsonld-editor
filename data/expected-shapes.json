@@ -1,0 +1,292 @@
+{
+  "http://www.w3.org/ns/activitystreams#actor": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://www.w3.org/ns/activitystreams#displayName"
+        }
+      }
+    ]
+  },
+  "http://stupid.com/Car": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://stupid.com/wheels"
+        }
+      }
+    ]
+  },
+  "http://example.org/vocab#Library": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://example.org/vocab#contains"
+        }
+      }
+    ]
+  },
+  "http://example.org/vocab#Book": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://purl.org/dc/elements/1.1/creator"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://purl.org/dc/elements/1.1/title"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://example.org/vocab#contains"
+        }
+      }
+    ]
+  },
+  "http://purl.org/goodrelations/v1#Individual": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://xmlns.com/foaf/0.1/page"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://purl.org/goodrelations/v1#name"
+        }
+      }
+    ]
+  },
+  "http://www.w3.org/ns/activitystreams#Note": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://www.w3.org/ns/activitystreams#content"
+        }
+      }
+    ]
+  },
+  "http://purl.org/goodrelations/v1#hasPriceSpecification": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://purl.org/goodrelations/v1#hasCurrency"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://purl.org/goodrelations/v1#hasCurrencyValue"
+        }
+      }
+    ]
+  },
+  "http://www.w3.org/ns/activitystreams#Person": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://www.w3.org/ns/activitystreams#displayName"
+        }
+      }
+    ]
+  },
+  "http://stupid.com/wheels": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://stupid.com/hubcap"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://stupid.com/location"
+        }
+      }
+    ]
+  },
+  "http://schema.org/geo": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://schema.org/latitude"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://schema.org/longitude"
+        }
+      }
+    ]
+  },
+  "http://rdf.data-vocabulary.org/#instructions": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://rdf.data-vocabulary.org/#description"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://rdf.data-vocabulary.org/#step"
+        }
+      }
+    ]
+  },
+  "http://stupid.com/hubcap": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://stupid.com/color"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://stupid.com/status"
+        }
+      }
+    ]
+  },
+  "http://www.w3.org/ns/activitystreams#Create": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://www.w3.org/ns/activitystreams#actor"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://www.w3.org/ns/activitystreams#object"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://www.w3.org/ns/activitystreams#published"
+        }
+      }
+    ]
+  },
+  "http://purl.org/goodrelations/v1#Offering": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://purl.org/goodrelations/v1#acceptedPaymentMethods"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://purl.org/goodrelations/v1#description"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://purl.org/goodrelations/v1#hasBusinessFunction"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://purl.org/goodrelations/v1#hasPriceSpecification"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://purl.org/goodrelations/v1#includes"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://purl.org/goodrelations/v1#name"
+        }
+      }
+    ]
+  },
+  "http://www.w3.org/ns/activitystreams#object": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://www.w3.org/ns/activitystreams#content"
+        }
+      }
+    ]
+  },
+  "http://example.org/vocab#Chapter": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://purl.org/dc/elements/1.1/description"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://purl.org/dc/elements/1.1/title"
+        }
+      }
+    ]
+  },
+  "http://purl.org/goodrelations/v1#includes": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://xmlns.com/foaf/0.1/page"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://purl.org/goodrelations/v1#name"
+        }
+      }
+    ]
+  },
+  "http://schema.org/Person": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://schema.org/jobTitle"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://schema.org/name"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://schema.org/telephone"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://schema.org/url"
+        }
+      }
+    ]
+  },
+  "http://www.productontology.org/id/Vehicle": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://xmlns.com/foaf/0.1/page"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://purl.org/goodrelations/v1#name"
+        }
+      }
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/based_near": {
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+        }
+      },
+      {
+        "http://www.w3.org/ns/shacl#predicate": {
+          "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+        }
+      }
+    ]
+  }
+}
