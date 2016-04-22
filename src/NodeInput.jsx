@@ -3,6 +3,7 @@
 var React = require('react')
   , {Map, List} = require('immutable')
   , {JSONLDNode} = require('immutable-jsonld')
+  , URLInput = require('./URLInput')
   , PropertyInput = require('./PropertyInput')
 
 module.exports = React.createClass({
@@ -51,10 +52,6 @@ module.exports = React.createClass({
     return node
   },
 
-  _renderID: function(id) {
-    return id === undefined ? null : <span>@id: {id}</span>
-  },
-
   render: function() {
     let node = this._addMissingProperties(
                  this.props.node.getIn(this.props.path))
@@ -69,7 +66,10 @@ module.exports = React.createClass({
     return (
       <div className="node-input border border-gray p1">
         <ul className="list-reset ml4">
-          <li>{this._renderID(node.id)}</li>
+          <URLInput
+            {...this.props}
+            path={this.props.path.push('@id')}
+          />
           <PropertyInput
             {...this.props}
             path={this.props.path.push('@type')}
