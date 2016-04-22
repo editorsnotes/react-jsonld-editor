@@ -720,3 +720,7 @@
 body {
     font-family: Helvetica Neue, Helvetica, sans-serif;
 }
+
+.label {
+    text-transform: lowercase;
+}

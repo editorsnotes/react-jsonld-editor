@@ -24,7 +24,7 @@ module.exports = React.createClass({
 
   render: function () {
     return (
-      <div>
+      <div className="max-width-4">
         <NodeInput
            node={this.state.node}
            labels={labels}

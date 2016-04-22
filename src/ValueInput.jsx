@@ -46,7 +46,6 @@ module.exports = props => {
         autoFocus
         type="text"
         className={'input ' + (isValid(value) ? 'bg-white' : 'bg-red')}
-        style={{width: '350px'}}
         value={value.value}
         onChange={event => handleChange(event, props)}
         onKeyUp={event => handleKeyUp(event, props)}
