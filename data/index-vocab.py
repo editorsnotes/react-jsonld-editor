@@ -93,6 +93,9 @@ for s, p, o in g.triples((None, RDFS.range, None)):
     key = str(s)
     if key in output['properties']:
         addRange('properties', s, o)
+        if (o == RDFS.Literal):
+            addLabels('datatype-properties', s,
+                      output['properties'][key]['labels'])
     if key in output['datatype-properties']:
         addRange('datatype-properties', s, o)
 
