@@ -1,6 +1,5 @@
 @import 'basscss-btn';
 @import 'basscss-btn-primary';
-@import 'basscss-forms';
 @import 'basscss-background-colors';
 @import 'basscss-border-colors';
 @import 'basscss';
@@ -11,4 +10,29 @@ body {
 
 .label {
     text-transform: lowercase;
+}
+
+.input {
+    font-family: inherit;
+    font-size: inherit;
+    height: 2.1rem;
+    padding: .2rem;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    width: 20rem;
+}
+
+.suggest input:focus {
+    outline: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.dropdown {
+    top: 41px;
+    width: 20.4rem;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }

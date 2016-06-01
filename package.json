@@ -44,8 +44,10 @@
     "language-tags": "^1.0.5",
     "n3": "^0.4.5",
     "react": "^0.14.7",
-    "react-autocomplete": "^0.2.1",
+    "react-autosuggest": "^3.7.4",
     "react-dom": "^0.14.7",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
     "validator": "^5.1.0"
   }
 }
