@@ -1,4 +1,6 @@
-const APPEND_TO = 'APPEND_TO'
+const APPEND_BLANK_NODE = 'APPEND_BLANK_NODE'
+const APPEND_EMPTY_TYPE = 'APPEND_EMPTY_TYPE'
+const APPEND_EMPTY_VALUE = 'APPEND_EMPTY_VALUE'
 const DELETE_IN = 'DELETE_IN'
 const FINISH_EDIT = 'FINISH_EDIT'
 const REQUEST_SUGGESTIONS = 'REQUEST_SUGGESTIONS'
@@ -8,7 +10,9 @@ const START_EDIT_IDENTIFIER = 'START_EDIT_IDENTIFIER'
 const START_EDIT_VALUE = 'START_EDIT_VALUE'
 const UPDATE_INPUT = 'UPDATE_INPUT'
 
-exports.APPEND_TO = APPEND_TO
+exports.APPEND_BLANK_NODE = APPEND_BLANK_NODE
+exports.APPEND_EMPTY_TYPE = APPEND_EMPTY_TYPE
+exports.APPEND_EMPTY_VALUE = APPEND_EMPTY_VALUE
 exports.DELETE_IN = DELETE_IN
 exports.FINISH_EDIT = FINISH_EDIT
 exports.REQUEST_SUGGESTIONS = REQUEST_SUGGESTIONS
@@ -18,10 +22,26 @@ exports.START_EDIT_IDENTIFIER = START_EDIT_IDENTIFIER
 exports.START_EDIT_VALUE = START_EDIT_VALUE
 exports.UPDATE_INPUT = UPDATE_INPUT
 
-exports.appendTo = (path) => {
+exports.appendBlankNode = (path, nodeTypes) => {
   return {
-    type: APPEND_TO,
+    type: APPEND_BLANK_NODE,
+    path,
+    nodeTypes
+  }
+}
+
+exports.appendEmptyType = path => {
+  return {
+    type: APPEND_EMPTY_TYPE,
     path
+  }
+}
+
+exports.appendEmptyValue = (path, valueType) => {
+  return {
+    type: APPEND_EMPTY_VALUE,
+    path,
+    valueType
   }
 }
 

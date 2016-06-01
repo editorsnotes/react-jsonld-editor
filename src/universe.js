@@ -77,8 +77,12 @@ module.exports = (
   , getAllLabelsForNode: (node, labels = Map()) => node.descendantNodes()
       .reduce((labels, pair) => getLabelsForNode(pair.last(), labels), labels)
 
-  , getRangesForProperty: property => get(DATATYPE_PROPERTIES).has(property)
-      ? get(DATATYPE_PROPERTIES).getIn([property, 'ranges'], List())
-      : get(PROPERTIES).getIn([property, 'ranges'], List())
+  , getRangesForProperty:
+      property => get(PROPERTIES).getIn([property, 'ranges'], List())
+
+  , getRangeForDatatypeProperty: property => {
+      let ranges = get(DATATYPE_PROPERTIES).getIn([property, 'ranges'], List())
+      return ranges.isEmpty() ? undefined : ranges.first()
+    }
   }
 )

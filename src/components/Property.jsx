@@ -23,8 +23,8 @@ const renderObject = path => (o, i) => (
 const Property = (
   { objects
   , path
-  , appendTo
   , label = path.last()
+  , onAppend
   }) => {
   if (Node === null) {
     // circular dependency
@@ -34,7 +34,7 @@ const Property = (
     <li className="mb1">
       <button
         className="label btn"
-        onClick={() => appendTo(path.push(objects.count()))}
+        onClick={() => onAppend(objects.count())}
       >
         {label} +
       </button>
@@ -55,8 +55,8 @@ Property.propTypes =
       }
     }
   , path: React.PropTypes.instanceOf(List).isRequired
-  , appendTo: React.PropTypes.func.isRequired
   , label: React.PropTypes.string
+  , onAppend: React.PropTypes.func.isRequired
   }
 
 module.exports = Property

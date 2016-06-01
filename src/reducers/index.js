@@ -1,37 +1,27 @@
 const {JSONLDNode, JSONLDValue} = require('immutable-jsonld')
     , {Map, List} = require('immutable')
     , {combineReducers} = require('redux')
-    , { isDatatypeProperty, getRangesForProperty, getLabelForID
-      , getResourcesWithLabelsMatching
-      } = require('../universe')
-    , { SET_IDENTIFIER, SET_VALUE, START_EDIT_IDENTIFIER, START_EDIT_VALUE
-      , FINISH_EDIT, DELETE_IN, APPEND_TO, UPDATE_INPUT, REQUEST_SUGGESTIONS
+    , { getLabelForID , getResourcesWithLabelsMatching} = require('../universe')
+    , { APPEND_BLANK_NODE, APPEND_EMPTY_TYPE, APPEND_EMPTY_VALUE
+      , SET_IDENTIFIER, SET_VALUE, START_EDIT_IDENTIFIER, START_EDIT_VALUE
+      , FINISH_EDIT, DELETE_IN, UPDATE_INPUT, REQUEST_SUGGESTIONS
       } = require('../actions')
 
-const newValue = property => {
-  let value = JSONLDValue(), ranges = getRangesForProperty(property)
-  return ranges.isEmpty() ? value : value.set('@type', ranges.first())
-}
-
-const newNode = property => {
-  let node = JSONLDNode(), ranges = getRangesForProperty(property)
-  return ranges.isEmpty()
-    ? node
-    : node.set('@types', ranges)
-}
-
-const newObject = property => property === '@type'
-  ? ''
-  : isDatatypeProperty(property)
-    ? newValue(property)
-    : newNode(property)
+const appendTo = (node, path, object) => node.setIn(
+  path, node.getIn(path, List()).push(object))
 
 const node = (node = JSONLDNode(), action) => {
   switch (action.type) {
-    case APPEND_TO:
-      let path = action.path.butLast()
-        , object = newObject(path.last())
-      return node.setIn(path, node.getIn(path, List()).push(object))
+    case APPEND_BLANK_NODE:
+      return appendTo(
+        node, action.path.butLast(),
+        JSONLDNode().set('@type', action.nodeTypes))
+    case APPEND_EMPTY_TYPE:
+      return appendTo(node, action.path.butLast(), '')
+    case APPEND_EMPTY_VALUE:
+      return appendTo(
+        node, action.path.butLast(),
+        JSONLDValue().set('@type', action.valueType))
     case SET_IDENTIFIER:
       return node.setIn(action.path, action.id)
     case SET_VALUE:
@@ -45,8 +35,11 @@ const node = (node = JSONLDNode(), action) => {
 
 const labels = (labels = Map(), action) => {
   switch (action.type) {
+    case APPEND_BLANK_NODE:
+      return action.nodeTypes.reduce(
+        (labels, type) => getLabelForID(type, labels), labels)
     case SET_IDENTIFIER:
-        return getLabelForID(action.id, labels)
+      return getLabelForID(action.id, labels)
     default:
       return labels
   }
@@ -54,13 +47,15 @@ const labels = (labels = Map(), action) => {
 
 const editPath = (editPath = List(), action) => {
   switch (action.type) {
+    case APPEND_BLANK_NODE:
+      return action.path.push('@id')
+    case APPEND_EMPTY_TYPE:
+    case APPEND_EMPTY_VALUE:
     case START_EDIT_IDENTIFIER:
     case START_EDIT_VALUE:
       return action.path
     case FINISH_EDIT:
       return List()
-    case APPEND_TO:
-      return action.path
     default:
       return editPath
   }
