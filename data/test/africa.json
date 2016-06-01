@@ -1,0 +1,196 @@
+[
+  {
+    "@id": "http://pleiades.stoa.org/places/775",
+    "@type": [
+      "http://pleiades.stoa.org/places/vocab#Place",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://pleiades.stoa.org/places/vocab#hasFeatureType": [
+      {
+        "@id": "http://pleiades.stoa.org/vocabularies/place-types/province"
+      }
+    ],
+    "http://pleiades.stoa.org/places/vocab#hasLocation": [
+      {
+        "@id": "http://pleiades.stoa.org/places/775/batlas-location",
+        "@type": [
+          "http://pleiades.stoa.org/places/vocab#Location"
+        ],
+        "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/partiallyOverlaps": [
+          {
+            "@id": "http://atlantides.org/capgrids/1#E4"
+          }
+        ],
+        "http://purl.org/dc/terms/title": [
+          {
+            "@value": "Barrington Atlas location"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasDerivedFrom": [
+          {
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Barrington Atlas: BAtlas 1 E4 Africa"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "http://pleiades.stoa.org/places/vocab#hasName": [
+      {
+        "@id": "http://pleiades.stoa.org/places/775/africa",
+        "@type": [
+          "http://pleiades.stoa.org/places/vocab#Name"
+        ],
+        "http://pleiades.stoa.org/places/vocab#during": [
+          {
+            "@id": "http://pleiades.stoa.org/vocabularies/time-periods/roman"
+          }
+        ],
+        "http://pleiades.stoa.org/places/vocab#end_date": [
+          {
+            "@value": 300
+          }
+        ],
+        "http://pleiades.stoa.org/places/vocab#nameAttested": [
+          {
+            "@language": "la",
+            "@value": "Africa"
+          }
+        ],
+        "http://pleiades.stoa.org/places/vocab#nameRomanized": [
+          {
+            "@value": "Africa"
+          }
+        ],
+        "http://pleiades.stoa.org/places/vocab#start_date": [
+          {
+            "@value": -30
+          }
+        ],
+        "http://purl.org/dc/terms/bibliographicCitation": [
+          {
+            "@value": "IRT 338"
+          }
+        ],
+        "http://purl.org/dc/terms/title": [
+          {
+            "@value": "Africa"
+          }
+        ],
+        "http://purl.org/spar/cito/citesAsEvidence": [
+          {
+            "@id": "http://irt.kcl.ac.uk/irt2009/IRT338.html"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasDerivedFrom": [
+          {
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Barrington Atlas: BAtlas 1 E4 Africa"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "http://purl.org/dc/terms/bibliographicCitation": [
+      {
+        "@value": "BAtlas 1 E4 Africa"
+      },
+      {
+        "@value": "EncBerb 2 Africa"
+      }
+    ],
+    "http://purl.org/dc/terms/coverage": [
+      {
+        "@value": "Barrington Atlas grid 1 E4"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "An ancient place, cited: BAtlas 1 E4 Africa"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Africa"
+      }
+    ],
+    "http://purl.org/spar/cito/citesForInformation": [
+      {
+        "@id": "http://encyclopedieberbere.revues.org/888"
+      },
+      {
+        "@id": "http://openlibrary.org/works/OL8327792W"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://pleiades.stoa.org/places/1043"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "la",
+        "@value": "Africa"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "http://pleiades.stoa.org/places"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Barrington Atlas: BAtlas 1 E4 Africa"
+          }
+        ]
+      }
+    ],
+    "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within": [
+      {
+        "@id": "http://atlantides.org/capgrids/1#E4",
+        "http://data.ordnancesurvey.co.uk/ontology/geometry/extent": [
+          {
+            "@id": "http://atlantides.org/capgrids/1#E4-extent",
+            "@type": [
+              "http://data.ordnancesurvey.co.uk/ontology/geometry/AbstractGeometry"
+            ],
+            "http://data.ordnancesurvey.co.uk/ontology/geometry/asGeoJSON": [
+              {
+                "@value": "{\"type\": \"Polygon\", \"coordinates\": [[[10.0, 30.0], [10.0, 35.0], [5.0, 35.0], [5.0, 30.0], [10.0, 30.0]]]}"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/primaryTopic": [
+      {
+        "@id": "http://pleiades.stoa.org/places/775#this",
+        "@type": [
+          "http://geovocab.org/spatial#Feature"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Africa"
+          }
+        ],
+        "http://geovocab.org/spatial#C": [
+          {
+            "@id": "http://pleiades.stoa.org/places/1043#this"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+          {
+            "@value": "An ancient place, cited: BAtlas 1 E4 Africa"
+          }
+        ]
+      }
+    ]
+  }
+]

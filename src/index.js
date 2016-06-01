@@ -9,7 +9,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
 const mount = document.createElement('div')
 document.body.appendChild(mount)
 
-const node = fromExpandedJSONLD(require('../data/africa.json')).first()
+const node = fromExpandedJSONLD(require('../data/test/africa.json')).first()
 const store = configureStore({node, labels: getAllLabelsForNode(node)})
 
 render((

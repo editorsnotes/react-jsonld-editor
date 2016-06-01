@@ -4,23 +4,26 @@
 
 const N3 = require('n3')
     , fs = require('fs')
-    , {Map, List} = require('immutable')
+    , {Map, List, Set} = require('immutable')
     , {RDF} = require('./namespaces')
 
 let shapes = Map()
 
 function ShapeLearner() {
   const writer = new require('stream').Writable({objectMode: true})
-  let subject, type
+  let subject, types = Set()
   writer._write = function (triple, _, done) {
-    if (triple.predicate == RDF.type) {
+    if (triple.subject != subject) {
       subject = triple.subject
-      type = triple.object
-    } else if (triple.subject == subject) {
-      if (type !== undefined) {
+      types = types.clear()
+    }
+    if (triple.predicate == RDF.type) {
+      types = types.add(triple.object)
+    } else {
+      types.forEach(type => {
         shapes = shapes.update(
           type, Map(), m => m.update(triple.predicate, 0, c => c+1))
-      }
+      })
     }
     done()
   }
