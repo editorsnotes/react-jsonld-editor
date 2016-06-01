@@ -21,7 +21,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
 const Node = ({node, path = List()}) => {
   return (
     <div className="border border-silver p1">
-      {node.id ? <Identifier path={path.push('@id')} /> : null}
+      <Identifier path={path.push('@id')} />
       <ul className="list-reset">
         <Property label="is a" path={path.push('@type')} />
         {node.propertySeq().map(([predicate, ]) => (
