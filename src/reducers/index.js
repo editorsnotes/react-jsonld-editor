@@ -2,10 +2,10 @@ const {JSONLDNode, JSONLDValue} = require('immutable-jsonld')
     , {Map, List} = require('immutable')
     , {combineReducers} = require('redux')
     , { getLabelForID , getResourcesWithLabelsMatching} = require('../universe')
-    , { APPEND_BLANK_NODE, APPEND_EMPTY_TYPE, APPEND_EMPTY_VALUE
-      , SET_IDENTIFIER, SET_VALUE, START_EDIT_IDENTIFIER, START_EDIT_VALUE
-      , FINISH_EDIT, DELETE_IN, UPDATE_INPUT, REQUEST_SUGGESTIONS
-      } = require('../actions')
+    , { APPEND_BLANK_NODE, APPEND_EMPTY_PROPERTY, APPEND_EMPTY_TYPE
+      , APPEND_EMPTY_VALUE, SET_IDENTIFIER, SET_VALUE, START_EDIT_IDENTIFIER
+      , START_EDIT_VALUE, FINISH_EDIT, DELETE_IN, UPDATE_INPUT
+      , REQUEST_SUGGESTIONS } = require('../actions')
 
 const appendTo = (node, path, object) => node.setIn(
   path, node.getIn(path, List()).push(object))
@@ -16,6 +16,8 @@ const node = (node = JSONLDNode(), action) => {
       return appendTo(
         node, action.path.butLast(),
         JSONLDNode().set('@type', action.nodeTypes))
+    case APPEND_EMPTY_PROPERTY:
+      return node.hasIn(action.path) ? node : node.setIn(action.path, List())
     case APPEND_EMPTY_TYPE:
       return appendTo(node, action.path.butLast(), '')
     case APPEND_EMPTY_VALUE:
@@ -49,6 +51,7 @@ const editPath = (editPath = List(), action) => {
   switch (action.type) {
     case APPEND_BLANK_NODE:
       return action.path.push('@id')
+    case APPEND_EMPTY_PROPERTY:
     case APPEND_EMPTY_TYPE:
     case APPEND_EMPTY_VALUE:
     case START_EDIT_IDENTIFIER:

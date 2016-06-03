@@ -1,4 +1,5 @@
 const APPEND_BLANK_NODE = 'APPEND_BLANK_NODE'
+const APPEND_EMPTY_PROPERTY = 'APPEND_EMPTY_PROPERTY'
 const APPEND_EMPTY_TYPE = 'APPEND_EMPTY_TYPE'
 const APPEND_EMPTY_VALUE = 'APPEND_EMPTY_VALUE'
 const DELETE_IN = 'DELETE_IN'
@@ -11,6 +12,7 @@ const START_EDIT_VALUE = 'START_EDIT_VALUE'
 const UPDATE_INPUT = 'UPDATE_INPUT'
 
 exports.APPEND_BLANK_NODE = APPEND_BLANK_NODE
+exports.APPEND_EMPTY_PROPERTY = APPEND_EMPTY_PROPERTY
 exports.APPEND_EMPTY_TYPE = APPEND_EMPTY_TYPE
 exports.APPEND_EMPTY_VALUE = APPEND_EMPTY_VALUE
 exports.DELETE_IN = DELETE_IN
@@ -27,6 +29,13 @@ exports.appendBlankNode = (path, nodeTypes) => {
     type: APPEND_BLANK_NODE,
     path,
     nodeTypes
+  }
+}
+
+exports.appendEmptyProperty = path => {
+  return {
+    type: APPEND_EMPTY_PROPERTY,
+    path
   }
 }
 
