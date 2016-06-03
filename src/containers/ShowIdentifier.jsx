@@ -1,8 +1,7 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
-    , {bindActionCreators} = require('redux')
     , Identifier = require('../components/Identifier')
-    , {startEditIdentifier} = require('../actions')
+    , {deleteIn} = require('../actions')
 
 const mapStateToProps = (state, {path, domain}) => {
   let id = state.node.getIn(path)
@@ -15,7 +14,14 @@ const mapStateToProps = (state, {path, domain}) => {
   )
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators(
-  {startEdit: startEditIdentifier}, dispatch)
+const mapDispatchToProps = (dispatch, {path, deletable = true}) => {
+  let props = {}
+  if (deletable) {
+    props.onClickDelete = () => {
+      dispatch(deleteIn(path.last() === '@id' ? path.butLast() : path))
+    }
+  }
+  return props
+}
 
 module.exports = connect(mapStateToProps, mapDispatchToProps)(Identifier)

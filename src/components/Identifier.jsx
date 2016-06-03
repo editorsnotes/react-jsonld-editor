@@ -1,30 +1,45 @@
 const React = require('react') // eslint-disable-line no-unused-vars
-    , {List} = require('immutable')
-    , {DOMAINS} = require('../universe')
+    , DeleteButton = require('./DeleteButton')
 
-const Identifier = ({id, path, domain, label = id, startEdit}) => (
+const Identifier = ({id, label = id, onClickDelete}) => (
   id === undefined
     ? <span className="blank-node"></span>
     : (
-        <div>
-          <button
-            className="btn btn-primary bg-gray mr1"
-            onClick={() => startEdit(path, label, domain)}
-          >{label}</button>
-          <a
-            href={id}
-            className="inline-block text-decoration-none h1"
-          >&#10144;</a>
-        </div>
+        <a
+          href={id}
+          target="_blank"
+          style={
+            { color: '#fff'
+            , backgroundColor: '#0b48aa'
+            , textDecoration: 'none'
+            , fontWeight: 'bold'
+            , borderRadius: '1.5em'
+            , display: 'inline-block'
+            , padding: '0.4em 0.6em'
+            }
+          }
+        >
+          <span style={{marginRight: '0.4em'}}>{label}</span>
+          {onClickDelete
+            ? (
+                <DeleteButton
+                  size="20px"
+                  onClick={e => {
+                    e.preventDefault()
+                    onClickDelete()
+                  }}
+                />
+              )
+            : null
+          }
+        </a>
       )
 )
 
 Identifier.propTypes = {
   id: React.PropTypes.string,
-  path: React.PropTypes.instanceOf(List).isRequired,
-  domain: React.PropTypes.oneOf(DOMAINS).isRequired,
   label: React.PropTypes.string,
-  startEdit: React.PropTypes.func.isRequired
+  onClickDelete: React.PropTypes.func
 }
 
 module.exports = Identifier

@@ -5,9 +5,9 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , EditIdentifier = require('./EditIdentifier')
     , {INDIVIDUALS} = require('../universe')
 
-const Identifier = ({path, domain, editable}) => editable
+const Identifier = ({path, domain, editable, deletable}) => editable
   ? <EditIdentifier path={path} domain={domain} />
-  : <ShowIdentifier path={path} domain={domain} />
+  : <ShowIdentifier path={path} domain={domain} deletable={deletable} />
 
 Identifier.propTypes = {
   path: React.PropTypes.instanceOf(List).isRequired,
