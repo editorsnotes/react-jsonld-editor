@@ -17,7 +17,6 @@ render((
     <Provider store={store}>
       <Node/>
     </Provider>
-    <pre>{JSON.stringify(store.getState().node.toJS(), null, '  ')}</pre>
   </div>
 ), mount)
 
