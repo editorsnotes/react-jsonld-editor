@@ -1,10 +1,12 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
+    , {bindActionCreators} = require('redux')
     , {JSONLDValue} = require('immutable-jsonld')
     , langTags = require('language-tags')
     , validator = require('validator')
     , {XSD, RDFS} = require('../namespaces')
-    , {setValue, finishEdit, deleteIn} = require('../actions')
+    , {getEditChange} = require('../selectors')
+    , {updateChange, acceptChange, cancelChange} = require('../actions')
     , {positionInputCaret} = require('../utils')
 
 const VALIDATORS = {
@@ -28,16 +30,16 @@ const renderLanguage = value => {
     : <span>{'unknown language: ' + value.language}</span>
 }
 
-const Value = ({value, onChange, onFinishEdit, onDelete}) => (
+const Value = ({value, onChange, onAccept, onCancel}) => (
   <div>
     <button
       className="btn btn-primary white bg-red"
-      onMouseDown={() => onDelete()}
+      onMouseDown={() => onCancel()}
     >X</button>
 
     <button
       className="btn btn-primary white bg-green"
-      onMouseDown={() => onFinishEdit()}
+      onMouseDown={() => onAccept()}
     >&#10003;</button>
 
     <input
@@ -46,9 +48,9 @@ const Value = ({value, onChange, onFinishEdit, onDelete}) => (
         + (isValid(value) ? 'bg-white' : 'bg-red')}
       value={value.value}
       ref={positionInputCaret(String(value).length)}
-      onChange={event => onChange(value.set('@value', event.target.value))}
-      onBlur={() => onFinishEdit()}
-      onKeyUp={event => { if (event.key === 'Enter') onFinishEdit() }}
+      onChange={onChange}
+      onBlur={onCancel}
+      onKeyUp={event => { if (event.key === 'Enter') onAccept() }}
     />
     {renderLanguage(value)}
   </div>
@@ -57,22 +59,28 @@ const Value = ({value, onChange, onFinishEdit, onDelete}) => (
 Value.propTypes = {
   value: React.PropTypes.instanceOf(JSONLDValue).isRequired,
   onChange: React.PropTypes.func.isRequired,
-  onFinishEdit: React.PropTypes.func.isRequired
+  onAccept: React.PropTypes.func.isRequired
 }
 
-const mapStateToProps = (state, {path}) => {
-  return {
-    value: state.node.getIn(path),
-    path
+const mapStateToProps = state => ({value: getEditChange(state)})
+
+const mapDispatchToProps = dispatch => bindActionCreators(
+  {updateChange, acceptChange, cancelChange}, dispatch)
+
+const mergeProps = (
+  {value}, {updateChange, acceptChange, cancelChange}, {path}) => (
+
+  { value
+
+  , onChange: e => updateChange(
+      path,
+      value.set('@value', e.target.value),
+      e.target.value)
+
+  , onAccept: () => acceptChange(path, value)
+  , onCancel: () => cancelChange()
   }
-}
+)
 
-const mapDispatchToProps = (dispatch, {path}) => {
-  return {
-    onChange: value => dispatch(setValue(path, value)),
-    onFinishEdit: () => dispatch(finishEdit()),
-    onDelete: () => dispatch(deleteIn(path))
-  }
-}
-
-module.exports = connect(mapStateToProps, mapDispatchToProps)(Value)
+module.exports = connect(
+  mapStateToProps, mapDispatchToProps, mergeProps)(Value)

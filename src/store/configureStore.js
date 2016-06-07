@@ -1,9 +1,10 @@
 const { createStore } = require('redux')
     , reducer = require('../reducers')
+    , {getAllLabelsForNode} = require('../universe')
 
-module.exports = initialState => createStore(
+module.exports = node => createStore(
   reducer,
-  initialState,
+  {node, labels: getAllLabelsForNode(node)},
   window.devToolsExtension ? window.devToolsExtension() : undefined
 )
 

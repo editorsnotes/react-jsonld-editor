@@ -40,7 +40,7 @@ const Value = ({value, onClick = ()=>{}, onClickDelete = null}) => (
           <DeleteButton
             size="20px"
             onClick={e => {
-              e.preventDefault()
+              e.stopPropagation()
               onClickDelete()
             }}
           />

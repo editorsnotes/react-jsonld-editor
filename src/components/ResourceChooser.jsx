@@ -11,7 +11,6 @@ const ResourceChooser = (
   , suggestions = []
   , onChange
   , onSuggestionSelected
-  , onSuggestionsUpdateRequested
   , onCancel
   , onAccept}) => (
 
@@ -30,7 +29,6 @@ const ResourceChooser = (
     <Autosuggest
       suggestions={suggestions}
       onSuggestionSelected={onSuggestionSelected}
-      onSuggestionsUpdateRequested={onSuggestionsUpdateRequested}
       getSuggestionValue={getSuggestionValue}
       renderSuggestion={renderSuggestion}
       focusInputOnSuggestionClick={false}
@@ -58,7 +56,6 @@ ResourceChooser.propTypes =
   , suggestions: React.PropTypes.array
   , onChange: React.PropTypes.func.isRequired
   , onSuggestionSelected: React.PropTypes.func.isRequired
-  , onSuggestionsUpdateRequested: React.PropTypes.func.isRequired
   , onCancel: React.PropTypes.func.isRequired
   , onAccept: React.PropTypes.func.isRequired
   }

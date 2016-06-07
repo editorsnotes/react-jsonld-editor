@@ -1,20 +1,20 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
-    , {startEditValue, deleteIn} = require('../actions')
+    , {deleteIn, updateChange} = require('../actions')
     , Value = require('../components/Value')
+    , {getEditedNode} = require('../selectors')
 
 const mapStateToProps = (state, {path}) => (
-  {value: state.node.getIn(path), path}
+  {value: getEditedNode(state).getIn(path)}
 )
 
 const mapDispatchToProps = dispatch => bindActionCreators(
-  {startEditValue, deleteIn}, dispatch)
+  {deleteIn, updateChange}, dispatch)
 
-const mergeProps = ({value, path}, {startEditValue, deleteIn}) => (
+const mergeProps = ({value}, {deleteIn, updateChange}, {path}) => (
   { value
-  , path
-  , onClick: () => startEditValue(path, value.value)
+  , onClick: () => updateChange(path, value, value.value)
   , onClickDelete: () => deleteIn(path)
   }
 )

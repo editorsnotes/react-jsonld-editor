@@ -2,8 +2,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {List, Iterable} = require('immutable')
     , {JSONLDNode, JSONLDValue} = require('immutable-jsonld')
     , Value = require('../containers/Value')
-    , Identifier = require('../containers/Identifier')
-    , {CLASSES} = require('../universe')
+    , TypeIdentifier = require('../containers/TypeIdentifier')
 
 let Node = null // circular dependency
 
@@ -16,7 +15,7 @@ const renderObject = path => (o, i) => (
       ? <Value path={path.push(i)} />
       : JSONLDNode.isJSONLDNode(o)
         ? <Node path={path.push(i)} />
-        : <Identifier path={path.push(i)} domain={CLASSES} />}
+        : <TypeIdentifier path={path.push(i)} />}
   </li>
 )
 

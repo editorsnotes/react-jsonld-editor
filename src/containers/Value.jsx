@@ -1,6 +1,7 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {List} = require('immutable')
+    , {getEditPath} = require('../selectors')
     , EditValue = require('./EditValue')
     , ShowValue = require('./ShowValue')
 
@@ -13,12 +14,10 @@ Value.propTypes = {
   editable: React.PropTypes.bool
 }
 
-const mapStateToProps = (state, {path}) => {
-  return (
-    { path
-    , editable: path.equals(state.editPath)
-    }
-  )
-}
+const mapStateToProps = (state, {path}) => (
+  { path
+  , editable: path.equals(getEditPath(state))
+  }
+)
 
 module.exports = connect(mapStateToProps)(Value)

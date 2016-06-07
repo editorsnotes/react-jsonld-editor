@@ -2,9 +2,10 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , Identifier = require('../components/Identifier')
     , {deleteIn} = require('../actions')
+    , {getEditedNode} = require('../selectors')
 
 const mapStateToProps = (state, {path, domain}) => {
-  let id = state.node.getIn(path)
+  let id = getEditedNode(state).getIn(path)
   return (
     { id
     , path

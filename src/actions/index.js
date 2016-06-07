@@ -1,118 +1,37 @@
-const APPEND_BLANK_NODE = 'APPEND_BLANK_NODE'
-const APPEND_EMPTY_PROPERTY = 'APPEND_EMPTY_PROPERTY'
-const APPEND_EMPTY_TYPE = 'APPEND_EMPTY_TYPE'
-const APPEND_EMPTY_VALUE = 'APPEND_EMPTY_VALUE'
 const DELETE_IN = 'DELETE_IN'
-const FINISH_EDIT = 'FINISH_EDIT'
-const REQUEST_SUGGESTIONS = 'REQUEST_SUGGESTIONS'
-const SET_IDENTIFIER = 'SET_IDENTIFIER'
-const SET_VALUE = 'SET_VALUE'
-const START_EDIT_IDENTIFIER = 'START_EDIT_IDENTIFIER'
-const START_EDIT_VALUE = 'START_EDIT_VALUE'
-const UPDATE_INPUT = 'UPDATE_INPUT'
+const UPDATE_CHANGE = 'UPDATE_CHANGE'
+const ACCEPT_CHANGE = 'ACCEPT_CHANGE'
+const CANCEL_CHANGE = 'CANCEL_CHANGE'
 
-exports.APPEND_BLANK_NODE = APPEND_BLANK_NODE
-exports.APPEND_EMPTY_PROPERTY = APPEND_EMPTY_PROPERTY
-exports.APPEND_EMPTY_TYPE = APPEND_EMPTY_TYPE
-exports.APPEND_EMPTY_VALUE = APPEND_EMPTY_VALUE
 exports.DELETE_IN = DELETE_IN
-exports.FINISH_EDIT = FINISH_EDIT
-exports.REQUEST_SUGGESTIONS = REQUEST_SUGGESTIONS
-exports.SET_IDENTIFIER = SET_IDENTIFIER
-exports.SET_VALUE = SET_VALUE
-exports.START_EDIT_IDENTIFIER = START_EDIT_IDENTIFIER
-exports.START_EDIT_VALUE = START_EDIT_VALUE
-exports.UPDATE_INPUT = UPDATE_INPUT
+exports.UPDATE_CHANGE = UPDATE_CHANGE
+exports.ACCEPT_CHANGE = ACCEPT_CHANGE
+exports.CANCEL_CHANGE = CANCEL_CHANGE
 
-exports.appendBlankNode = (path, nodeTypes) => {
-  return {
-    type: APPEND_BLANK_NODE,
-    path,
-    nodeTypes
+exports.deleteIn = path => (
+  { type: DELETE_IN
+  , path
   }
-}
+)
 
-exports.appendEmptyProperty = path => {
-  return {
-    type: APPEND_EMPTY_PROPERTY,
-    path
+exports.updateChange = (path, change, input = '', selectedSuggestion = {}) => (
+  { type: UPDATE_CHANGE
+  , path
+  , change
+  , input
+  , selectedSuggestion
   }
-}
+)
 
-exports.appendEmptyType = path => {
-  return {
-    type: APPEND_EMPTY_TYPE,
-    path
+exports.acceptChange = (path, change) => (
+  { type: ACCEPT_CHANGE
+  , path
+  , change
   }
-}
+)
 
-exports.appendEmptyValue = (path, valueType) => {
-  return {
-    type: APPEND_EMPTY_VALUE,
-    path,
-    valueType
-  }
-}
+exports.cancelChange = () => (
+  { type: CANCEL_CHANGE }
+)
 
-exports.deleteIn = path => {
-  return {
-    type: DELETE_IN,
-    path
-  }
-}
-
-exports.finishEdit = () => {
-  return {
-    type: FINISH_EDIT
-  }
-}
-
-exports.requestSuggestions = (input, domain) => {
-  return {
-    type: REQUEST_SUGGESTIONS,
-    input,
-    domain
-  }
-}
-
-exports.setIdentifier = (path, id, label) => {
-  return {
-    type: SET_IDENTIFIER,
-    path,
-    id,
-    label
-  }
-}
-
-exports.setValue = (path, value) => {
-  return {
-    type: SET_VALUE,
-    path,
-    value
-  }
-}
-
-exports.startEditIdentifier = (path, input, domain) => {
-  return {
-    type: START_EDIT_IDENTIFIER,
-    path,
-    input,
-    domain,
-  }
-}
-
-exports.startEditValue = (path, input) => {
-  return {
-    type: START_EDIT_VALUE,
-    path,
-    input
-  }
-}
-
-exports.updateInput = input => {
-  return {
-    type: UPDATE_INPUT,
-    input
-  }
-}
-
+exports.NO_CHANGE = Symbol('NO CHANGE')

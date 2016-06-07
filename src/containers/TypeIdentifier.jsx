@@ -1,15 +1,15 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {List} = require('immutable')
-    , {getEditPath} = ('../selectors')
+    , {getEditPath} = require('../selectors')
     , ShowIdentifier = require('./ShowIdentifier')
-    , EditIdentifier = require('./EditIdentifier')
+    , EditTypeIdentifier = require('./EditTypeIdentifier')
 
-const Identifier = ({path, editable, deletable}) => editable
-  ? <EditIdentifier path={path} />
+const TypeIdentifier = ({path, editable, deletable}) => editable
+  ? <EditTypeIdentifier path={path} />
   : <ShowIdentifier path={path} deletable={deletable} />
 
-Identifier.propTypes = {
+TypeIdentifier.propTypes = {
   path: React.PropTypes.instanceOf(List).isRequired,
   editable: React.PropTypes.bool,
   deletable: React.PropTypes.bool
@@ -17,9 +17,9 @@ Identifier.propTypes = {
 
 const mapStateToProps = (state, {path, deletable = true}) => (
   { path
-  , editable: path.butLast().equals(getEditPath(state))
+  , editable: path.equals(getEditPath(state))
   , deletable
   }
 )
 
-module.exports = connect(mapStateToProps)(Identifier)
+module.exports = connect(mapStateToProps)(TypeIdentifier)

@@ -1,4 +1,5 @@
 const {fromJS, List, Map} = require('immutable')
+    , {JSONLDNode, JSONLDValue} = require('immutable-jsonld')
 
 const INDIVIDUALS = 'INDIVIDUALS'
     , CLASSES = 'CLASSES'
@@ -50,6 +51,12 @@ const matches = (inputValue, inputLength) => label => (
   label.first().toLowerCase().slice(0, inputLength) === inputValue
 )
 
+const getLabels = (change, labels) => JSONLDNode.isJSONLDNode(change)
+  ? getLabelsForNode(change, labels)
+  : JSONLDValue.isJSONLDValue(change)
+      ? labels
+      : getLabelForID(change, labels)
+
 const getResourcesWithLabelsMatching = (input, domain = INDIVIDUALS) => {
   const inputValue = input.trim().toLowerCase()
   const inputLength = inputValue.length
@@ -68,7 +75,7 @@ module.exports = (
   { INDIVIDUALS, CLASSES, PROPERTIES, DATATYPE_PROPERTIES
   , DOMAINS: [INDIVIDUALS, CLASSES, PROPERTIES, DATATYPE_PROPERTIES]
 
-  , getLabelForID
+  , getLabels
 
   , getResourcesWithLabelsMatching
 
