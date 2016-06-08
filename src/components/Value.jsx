@@ -1,6 +1,7 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {JSONLDValue} = require('immutable-jsonld')
-    , DeleteButton = require('./DeleteButton')
+    , RoundedRectangle = require('./RoundedRectangle')
+    , DeletableRoundedRectangle = require('./DeletableRoundedRectangle')
     , {XSD} = require('../namespaces')
 
 const show = value => {
@@ -20,35 +21,18 @@ const show = value => {
   }
 }
 
-const Value = ({value, onClick = ()=>{}, onClickDelete = null}) => (
-  <span
-    onClick={onClick}
-    style={
-      { color: '#fff'
-      , backgroundColor: '#aaa'
-      , fontWeight: 'bold'
-      , borderRadius: '1.5em'
-      , display: 'inline-block'
-      , padding: '0.4em 0.6em'
-      , cursor: 'pointer'
-      }
-    }
-  >
-    <span style={{marginRight: '0.4em'}}>{show(value)}</span>
-    {onClickDelete
-      ? (
-          <DeleteButton
-            size="20px"
-            onClick={e => {
-              e.stopPropagation()
-              onClickDelete()
-            }}
-          />
-        )
-      : null
-    }
-  </span>
-)
+const Value = ({value, onClick, onClickDelete}) => onClickDelete
+  ? <DeletableRoundedRectangle
+      text={show(value)}
+      classes="bg-gray"
+      onClick={onClick}
+      onClickDelete={onClickDelete}
+    />
+  : <RoundedRectangle
+      text={show(value)}
+      classes="bg-gray"
+      onClick={onClick}
+    />
 
 Value.propTypes = {
   value: React.PropTypes.instanceOf(JSONLDValue).isRequired,

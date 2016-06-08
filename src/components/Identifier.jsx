@@ -1,40 +1,21 @@
 const React = require('react') // eslint-disable-line no-unused-vars
-    , DeleteButton = require('./DeleteButton')
+    , RoundedRectangle = require('./RoundedRectangle')
+    , DeletableRoundedRectangle = require('./DeletableRoundedRectangle')
 
-const Identifier = ({id, label = id, onClickDelete}) => (
-  id === undefined
-    ? <span className="blank-node"></span>
-    : (
-        <a
-          href={id}
-          target="_blank"
-          style={
-            { color: '#fff'
-            , backgroundColor: '#0b48aa'
-            , textDecoration: 'none'
-            , fontWeight: 'bold'
-            , borderRadius: '1.5em'
-            , display: 'inline-block'
-            , padding: '0.4em 0.6em'
-            }
-          }
-        >
-          <span style={{marginRight: '0.4em'}}>{label}</span>
-          {onClickDelete
-            ? (
-                <DeleteButton
-                  size="20px"
-                  onClick={e => {
-                    e.preventDefault()
-                    onClickDelete()
-                  }}
-                />
-              )
-            : null
-          }
-        </a>
-      )
-)
+const Identifier = ({id, label = id, onClickDelete}) => id === undefined
+  ? <span className="blank-node"></span>
+  : onClickDelete
+      ? <DeletableRoundedRectangle
+          text={label}
+          classes="bg-blue"
+          onClick={() => window.open(id, '_blank')}
+          onClickDelete={onClickDelete}
+        />
+      : <RoundedRectangle
+          text={label}
+          classes="bg-blue"
+          onClick={() => window.open(id, '_blank')}
+        />
 
 Identifier.propTypes = {
   id: React.PropTypes.string,

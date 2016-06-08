@@ -1,62 +1,4 @@
-/* Basscss Btn */
-
-.btn {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 18px;
-  line-height: 1.125rem;
-  padding: 8px 16px;
-  padding: .5rem 1rem;
-  margin: 0;
-  height: auto;
-  border: 1px solid transparent;
-  vertical-align: middle;
-  -webkit-appearance: none;
-  color: inherit;
-  background-color: transparent;
-}
-
-.btn:hover {
-  text-decoration: none;
-}
-
-.btn:focus {
-  outline: none;
-  border-color: rgba(0, 0, 0, .125);
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, .25);
-}
-
-::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-/* Basscss Btn Primary */
-
-.btn-primary {
-  color: #fff;
-  background-color: #0074D9;
-  border-radius: 3px;
-}
-
-.btn-primary:hover {
-  box-shadow: inset 0 0 0 20rem rgba(0, 0, 0, .0625);
-}
-
-.btn-primary:active {
-  box-shadow: inset 0 0 0 20rem rgba(0, 0, 0, .125),
-    inset 0 3px 4px 0 rgba(0, 0, 0, .25),
-    0 0 1px rgba(0, 0, 0, .125);
-}
-
-.btn-primary:disabled,
-.btn-primary.is-disabled {
-  opacity: .5;
-}
-/* Basscss Background Colors */
+/* Basscss Colors */
 
 /* 
 
@@ -67,6 +9,30 @@
    - Gray Scale
 
 */
+
+.black  { color: #111111 }
+.gray   { color: #AAAAAA }
+.silver { color: #DDDDDD }
+.white  { color: #FFFFFF }
+
+.aqua  { color: #7FDBFF }
+.blue  { color: #0074D9 }
+.navy  { color: #001F3F }
+.teal  { color: #39CCCC }
+.green { color: #2ECC40 }
+.olive { color: #3D9970 }
+.lime  { color: #01FF70 }
+
+.yellow  { color: #FFDC00 }
+.orange  { color: #FF851B }
+.red     { color: #FF4136 }
+.fuchsia { color: #F012BE }
+.purple  { color: #B10DC9 }
+.maroon  { color: #85144B }
+
+.color-inherit { color: inherit }
+.muted { opacity: .5 }
+/* Basscss Background Colors */
 
 .bg-black  { background-color: #111111 }
 .bg-gray   { background-color: #AAAAAA }
@@ -667,7 +633,7 @@ body {
     font-family: Helvetica Neue, Helvetica, sans-serif;
 }
 
-.label {
+.lowercase {
     text-transform: lowercase;
 }
 
@@ -699,4 +665,8 @@ body {
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
 }

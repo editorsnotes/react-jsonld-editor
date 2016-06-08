@@ -7,7 +7,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
       , getRangeForDatatypeProperty
       , getRangesForProperty
       } = require('../universe')
-    , { updateChange } = require('../actions')
+    , {deleteIn, updateChange} = require('../actions')
     , {getEditedNode} = require('../selectors')
 
 const mapStateToProps = (state, {path, label}) => (
@@ -30,7 +30,9 @@ const onAppend = (dispatch, path) => numObjects => {
 }
 
 const mapDispatchToProps = (dispatch, {path}) => (
-  {onAppend: onAppend(dispatch, path)}
+  { onAppend: onAppend(dispatch, path)
+  , onDelete: path.last() === '@type' ? null : () => dispatch(deleteIn(path))
+  }
 )
 
 module.exports = connect(mapStateToProps, mapDispatchToProps)(Property)

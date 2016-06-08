@@ -3,6 +3,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {JSONLDNode, JSONLDValue} = require('immutable-jsonld')
     , Value = require('../containers/Value')
     , TypeIdentifier = require('../containers/TypeIdentifier')
+    , DeleteButton = require('./DeleteButton')
 
 let Node = null // circular dependency
 
@@ -24,19 +25,25 @@ const Property = (
   , path
   , label = path.last()
   , onAppend
+  , onDelete = null
   }) => {
   if (Node === null) {
     // circular dependency
     Node = require('../containers/Node')
   }
   return (
-    <li className="mb1">
-      <button
-        className="label btn"
+    <li className="mb1 relative">
+      <DeleteButton
+        onClick={onDelete}
+        classes={onDelete ? '' : 'hidden'}
+        color="#ff4136"
+      />
+      <span
+        className="inline-block align-middle black bold cursor-pointer lowercase"
         onClick={() => onAppend(objects.count())}
       >
         {label} +
-      </button>
+      </span>
       <ul className="list-reset ml3">
         {objects.map(renderObject(path))}
       </ul>
@@ -56,6 +63,7 @@ Property.propTypes =
   , path: React.PropTypes.instanceOf(List).isRequired
   , label: React.PropTypes.string
   , onAppend: React.PropTypes.func.isRequired
+  , onDelete: React.PropTypes.func
   }
 
 module.exports = Property

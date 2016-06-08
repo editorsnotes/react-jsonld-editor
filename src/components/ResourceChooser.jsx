@@ -1,5 +1,6 @@
 const React = require('react')
     , Autosuggest = require('react-autosuggest')
+    , TextButton = require('./TextButton')
     , {positionInputCaret} = require('../utils')
 
 const getSuggestionValue = suggestion => suggestion.label
@@ -15,17 +16,6 @@ const ResourceChooser = (
   , onAccept}) => (
 
   <div>
-
-    <button
-      className="btn btn-primary white bg-red rounded-left"
-      onMouseDown={() => onCancel()}
-    >X</button>
-
-    <button
-      className="btn btn-primary white bg-green rounded-right"
-      onMouseDown={() => onAccept()}
-    >&#10003;</button>
-
     <Autosuggest
       suggestions={suggestions}
       onSuggestionSelected={onSuggestionSelected}
@@ -40,7 +30,7 @@ const ResourceChooser = (
       }
       theme={
         { container: 'inline-block relative suggest'
-        , input: 'input border border-silver '
+        , input: 'input mr1 border border-silver'
         , suggestionsContainer: `dropdown absolute m0 p0 list-reset border
  border-silver bg-white z2 rounded-bottom`
         , suggestion: 'cursor-pointer px2 py1'
@@ -48,6 +38,8 @@ const ResourceChooser = (
         }
       }
     />
+    <TextButton text="Cancel" onClick={onCancel} />
+    <TextButton text="Save" onClick={onAccept} />
   </div>
 )
 

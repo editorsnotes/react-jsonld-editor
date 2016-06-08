@@ -30,6 +30,9 @@ const labels = (labels = Map(), action) => {
     case ACCEPT_CHANGE:
       return getLabels(action.change, labels)
 
+    case UPDATE_CHANGE:
+      return getLabels(action.path.last(), labels)
+
     default:
       return labels
   }
