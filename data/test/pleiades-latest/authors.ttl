@@ -1,0 +1,1079 @@
+# Pleiades RDF Dump
+# Contents: Pleiades Authors
+# Date: 2016/04/10 06:34:22.557 GMT-4
+# License: http://creativecommons.org/licenses/by/3.0/us/
+# Credits: http://pleiades.stoa.org/credits
+# Triple count: 714
+
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://pleiades.stoa.org/author/Jweiland> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jonathan Weiland" .
+
+<http://pleiades.stoa.org/author/ShannonMT> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Shannon Turner" .
+
+<http://pleiades.stoa.org/author/aayris> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Alex Ayris" .
+
+<http://pleiades.stoa.org/author/abenaissa> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Amin Benaissa" .
+
+<http://pleiades.stoa.org/author/acabaniss> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Andrew Cabaniss" .
+
+<http://pleiades.stoa.org/author/acoles> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Amanda Coles" .
+
+<http://pleiades.stoa.org/author/adamp> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Adam Prins" .
+
+<http://pleiades.stoa.org/author/adan> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Anca Dan" .
+
+<http://pleiades.stoa.org/author/adavis> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Anthony Davis" .
+
+<http://pleiades.stoa.org/author/adelponte> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Andrea Del Ponte" .
+
+<http://pleiades.stoa.org/author/adgraauw> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Arthur De Graauw" .
+
+<http://pleiades.stoa.org/author/aherrin> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Andrew Herrin" .
+
+<http://pleiades.stoa.org/author/ahorsting> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "A. Horsting" .
+
+<http://pleiades.stoa.org/author/akokiousis> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Anastasia Kokiousis" .
+
+<http://pleiades.stoa.org/author/alanm> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Alan Maher" .
+
+<http://pleiades.stoa.org/author/alecpm> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Alec Mitchell" .
+
+<http://pleiades.stoa.org/author/alexbiad> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Alex Biad" .
+
+<http://pleiades.stoa.org/author/alimcmichael> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Alice Lynn McMichael" .
+
+<http://pleiades.stoa.org/author/amatessi> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Alvise Matessi" .
+
+<http://pleiades.stoa.org/author/ameadows> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Andy Meadows" .
+
+<http://pleiades.stoa.org/author/amirza> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Ahmet Mirza" .
+
+<http://pleiades.stoa.org/author/amorgan> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Ann Morgan" .
+
+<http://pleiades.stoa.org/author/amyh> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Amy Hawkins" .
+
+<http://pleiades.stoa.org/author/aoezcan> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Ahmet Oezcan" .
+
+<http://pleiades.stoa.org/author/arabinowitz> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Adam Rabinowitz" .
+
+<http://pleiades.stoa.org/author/areinhard> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Andrew Reinhard" .
+
+<http://pleiades.stoa.org/author/asquitieri> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Andrea Squitieri" .
+
+<http://pleiades.stoa.org/author/atesseri> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Andrea Tesseri" .
+
+<http://pleiades.stoa.org/author/audreyj> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Audrey Jo" .
+
+<http://pleiades.stoa.org/author/avarveri> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Athanasia Varveri" .
+
+<http://pleiades.stoa.org/author/avstockhausen> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Annette von Stockhausen" .
+
+<http://pleiades.stoa.org/author/baustin> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Benjamin Austin" .
+
+<http://pleiades.stoa.org/author/bazzani> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Bruno Bazzani" .
+
+<http://pleiades.stoa.org/author/bcrowther> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Benjamin M Crowther" .
+
+<http://pleiades.stoa.org/author/bdturner> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Brian Turner" .
+
+<http://pleiades.stoa.org/author/bduman> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Bahadir Duman" .
+
+<http://pleiades.stoa.org/author/bender-h> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "H. Bender" .
+
+<http://pleiades.stoa.org/author/bertrand-e> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "E. Bertrand" .
+
+<http://pleiades.stoa.org/author/bkiesling> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Brady Kiesling" .
+
+<http://pleiades.stoa.org/author/bmulligan> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Bret Mulligan" .
+
+<http://pleiades.stoa.org/author/bplewe> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Brandon Plewe" .
+
+<http://pleiades.stoa.org/author/bplimer> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Bob Plimer" .
+
+<http://pleiades.stoa.org/author/brown-j-p> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "J.P. Brown" .
+
+<http://pleiades.stoa.org/author/btremmel> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Bettina Tremmel" .
+
+<http://pleiades.stoa.org/author/burkeg> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Burke Gerstenschlager" .
+
+<http://pleiades.stoa.org/author/cargyrakou> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Constantina Argyrakou" .
+
+<http://pleiades.stoa.org/author/cdukes> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Christian Dukes" .
+
+<http://pleiades.stoa.org/author/chorst> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Claudia Horst" .
+
+<http://pleiades.stoa.org/author/christosn> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Christos Nüssli" .
+
+<http://pleiades.stoa.org/author/ciarawisecup> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Ciara L Wisecup" .
+
+<http://pleiades.stoa.org/author/classical-atlas-project-office> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Classical Atlas Project Office" .
+
+<http://pleiades.stoa.org/author/cmartinez> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Carlos Martinez" .
+
+<http://pleiades.stoa.org/author/cmichel> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Christian Michel" .
+
+<http://pleiades.stoa.org/author/cobbp> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Peter Cobb" .
+
+<http://pleiades.stoa.org/author/cpounds2> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Chelsey Pounds" .
+
+<http://pleiades.stoa.org/author/cprince> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Caroline Prince" .
+
+<http://pleiades.stoa.org/author/croueche> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Charlotte Roueché" .
+
+<http://pleiades.stoa.org/author/cwazer> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Caroline Wazer" .
+
+<http://pleiades.stoa.org/author/dadima> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "David Díez Mata" .
+
+<http://pleiades.stoa.org/author/dchau> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Diane Chau" .
+
+<http://pleiades.stoa.org/author/ddzhigova> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Denitsa Dzhigova" .
+
+<http://pleiades.stoa.org/author/demery> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Davis Emery" .
+
+<http://pleiades.stoa.org/author/dgfavro> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Diane Favro" .
+
+<http://pleiades.stoa.org/author/dglick> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "David Glick" .
+
+<http://pleiades.stoa.org/author/dhawke> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Daniel Hawke" .
+
+<http://pleiades.stoa.org/author/dhennessey> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Daniel Hennessey" .
+
+<http://pleiades.stoa.org/author/dhill> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "David Hill" .
+
+<http://pleiades.stoa.org/author/dhoyer> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Danielle Hoyer" .
+
+<http://pleiades.stoa.org/author/diffenda> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Dan Diffendale" .
+
+<http://pleiades.stoa.org/author/dkamara> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Dorothea Kamara" .
+
+<http://pleiades.stoa.org/author/dmichelson> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "David Michelson" .
+
+<http://pleiades.stoa.org/author/dpett> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Daniel Pett" .
+
+<http://pleiades.stoa.org/author/drohmann> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Dirk Rohmann" .
+
+<http://pleiades.stoa.org/author/dslootjes> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Daniëlle Slootjes" .
+
+<http://pleiades.stoa.org/author/dtootell> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Dave Tootell" .
+
+<http://pleiades.stoa.org/author/ecerasi> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Enrico Cerasi" .
+
+<http://pleiades.stoa.org/author/edkahraman> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Emine Duygu KAHRAMAN" .
+
+<http://pleiades.stoa.org/author/efentress> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Elizabeth Fentress" .
+
+<http://pleiades.stoa.org/author/efleming> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Elijah Fleming" .
+
+<http://pleiades.stoa.org/author/ekansa> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Eric Kansa" .
+
+<http://pleiades.stoa.org/author/emejia> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Eliseo Mejia" .
+
+<http://pleiades.stoa.org/author/erdosy-m-u> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "M.U. Erdosy" .
+
+<http://pleiades.stoa.org/author/eturnator> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Ece Turnator" .
+
+<http://pleiades.stoa.org/author/eweaverdyck> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Eli Weaverdyck" .
+
+<http://pleiades.stoa.org/author/eyalb> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Eyal Ben Eliyahu" .
+
+<http://pleiades.stoa.org/author/fbounoua> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Fouad Bounoua" .
+
+<http://pleiades.stoa.org/author/fbrown> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Frazer Brown" .
+
+<http://pleiades.stoa.org/author/fdeblauwe> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Francis Deblauwe" .
+
+<http://pleiades.stoa.org/author/fharbin> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Foster Harbin" .
+
+<http://pleiades.stoa.org/author/flynam> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Frank Lynam" .
+
+<http://pleiades.stoa.org/author/fossey-j> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "J. Fossey" .
+
+<http://pleiades.stoa.org/author/gbodard> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Gabriel Bodard" .
+
+<http://pleiades.stoa.org/author/gcasa> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Gianluca Casa" .
+
+<http://pleiades.stoa.org/author/gchasiotis> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Georgios Chasiotis" .
+
+<http://pleiades.stoa.org/author/genovese> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "E. Nicholas Genovese" .
+
+<http://pleiades.stoa.org/author/ghuang> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Guoping Huang" .
+
+<http://pleiades.stoa.org/author/gmarzella> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Guido Marzella" .
+
+<http://pleiades.stoa.org/author/gmoss> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Gabriel Moss" .
+
+<http://pleiades.stoa.org/author/graso> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Giovanna Raso" .
+
+<http://pleiades.stoa.org/author/grees> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Gethin Rees" .
+
+<http://pleiades.stoa.org/author/gtesoriero> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Giuseppina Tesoriero" .
+
+<http://pleiades.stoa.org/author/gthompson> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Glen Thompson" .
+
+<http://pleiades.stoa.org/author/gtsolakis> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Georgios Tsolakis" .
+
+<http://pleiades.stoa.org/author/gwhat> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jeff Meyer" .
+
+<http://pleiades.stoa.org/author/gzambotti> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Giovanni Zambotti" .
+
+<http://pleiades.stoa.org/author/hafedwalda> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Hafed Walda" .
+
+<http://pleiades.stoa.org/author/hcameron> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Hamish Cameron" .
+
+<http://pleiades.stoa.org/author/hcayless> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Hugh Cayless" .
+
+<http://pleiades.stoa.org/author/hmugger> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Hugger Mugger" .
+
+<http://pleiades.stoa.org/author/holgerj> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Holger R.E. Jürgenliemk" .
+
+<http://pleiades.stoa.org/author/hspock> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Hannah Spock" .
+
+<http://pleiades.stoa.org/author/hwilmeth> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Hannah Wilmeth" .
+
+<http://pleiades.stoa.org/author/irisf> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Iris Fernandez" .
+
+<http://pleiades.stoa.org/author/isoto> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Irene Soto" .
+
+<http://pleiades.stoa.org/author/jahlfeldt> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Johan Åhlfeldt" .
+
+<http://pleiades.stoa.org/author/jannan> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Janna Newman" .
+
+<http://pleiades.stoa.org/author/jatkins> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "James Atkins" .
+
+<http://pleiades.stoa.org/author/jauenmueller> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Johannes Auenmueller" .
+
+<http://pleiades.stoa.org/author/jbecker> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jeffrey Becker" .
+
+<http://pleiades.stoa.org/author/jbpiggin> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jean-Baptiste Piggin" .
+
+<http://pleiades.stoa.org/author/jcorsi> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jacopo Corsi" .
+
+<http://pleiades.stoa.org/author/jcowey> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "James Cowey" .
+
+<http://pleiades.stoa.org/author/jculver> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Juliette Culver" .
+
+<http://pleiades.stoa.org/author/jgross> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jonathan Gross" .
+
+<http://pleiades.stoa.org/author/jherbst> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "James Herbst" .
+
+<http://pleiades.stoa.org/author/jimcapreedy> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jim Capreedy" .
+
+<http://pleiades.stoa.org/author/jkent> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Joel Michael Kent" .
+
+<http://pleiades.stoa.org/author/jkreiner> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jamie Kreiner" .
+
+<http://pleiades.stoa.org/author/jlee> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Junho Lee" .
+
+<http://pleiades.stoa.org/author/jlipscomb> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jake Lipscomb" .
+
+<http://pleiades.stoa.org/author/jlpiroux> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jean Luc PIROUX" .
+
+<http://pleiades.stoa.org/author/jmartinez> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Javier Martínez Jiménez" .
+
+<http://pleiades.stoa.org/author/jmiller> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jackson N Miller" .
+
+<http://pleiades.stoa.org/author/jmuccigr> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "John Muccigrosso" .
+
+<http://pleiades.stoa.org/author/jnewman> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jeffrey Newman" .
+
+<http://pleiades.stoa.org/author/jnovotny> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jamie Novotny" .
+
+<http://pleiades.stoa.org/author/jordanp> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jordan Pickett" .
+
+<http://pleiades.stoa.org/author/jpaguilar> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "JohnPaul Aguilar" .
+
+<http://pleiades.stoa.org/author/jprag> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jonathan Prag" .
+
+<http://pleiades.stoa.org/author/jpullen> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "John Pullen" .
+
+<http://pleiades.stoa.org/author/jraines> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jacob Raines" .
+
+<http://pleiades.stoa.org/author/jramsey> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "John T. Ramsey" .
+
+<http://pleiades.stoa.org/author/jrising> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jessamyn Rising" .
+
+<http://pleiades.stoa.org/author/jsarlitto> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "John Sarlitto" .
+
+<http://pleiades.stoa.org/author/jscholten> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Joseph Scholten" .
+
+<http://pleiades.stoa.org/author/jsewell> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jamie Sewell" .
+
+<http://pleiades.stoa.org/author/jsgros> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jean-Sébastien Gros" .
+
+<http://pleiades.stoa.org/author/jsheppard> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Joe Sheppard" .
+
+<http://pleiades.stoa.org/author/jsosin> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Joshua Sosin" .
+
+<http://pleiades.stoa.org/author/jtallmer> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Jonathan Tallmer" .
+
+<http://pleiades.stoa.org/author/justinc> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Justin Charlton" .
+
+<http://pleiades.stoa.org/author/jwallrodt> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "John Wallrodt" .
+
+<http://pleiades.stoa.org/author/karlg> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Karl Grossner" .
+
+<http://pleiades.stoa.org/author/kbender> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "K. Bender" .
+
+<http://pleiades.stoa.org/author/kboliek> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Katherine Boliek" .
+
+<http://pleiades.stoa.org/author/kcbruhn> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Kai-Christian Bruhn" .
+
+<http://pleiades.stoa.org/author/keenan-j> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "J. Keenan" .
+
+<http://pleiades.stoa.org/author/keremk> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Kerem Koç" .
+
+<http://pleiades.stoa.org/author/kerilp> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Keri Lynne Porter" .
+
+<http://pleiades.stoa.org/author/kglowacki> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Kevin Glowacki" .
+
+<http://pleiades.stoa.org/author/kkocian> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Kali Kocian" .
+
+<http://pleiades.stoa.org/author/kleblanc> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Kim LeBlanc" .
+
+<http://pleiades.stoa.org/author/komponisto> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Robin Iversen Rönnlund" .
+
+<http://pleiades.stoa.org/author/kpbueker> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Klaus-Peter Büker" .
+
+<http://pleiades.stoa.org/author/kpetrarca> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Kelly Petrarca" .
+
+<http://pleiades.stoa.org/author/kweimer> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Kathy Weimer" .
+
+<http://pleiades.stoa.org/author/lalderson> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Laura Elizabeth Alderson" .
+
+<http://pleiades.stoa.org/author/lbalina> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Luis Baliña" .
+
+<http://pleiades.stoa.org/author/leifuss> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Leif Isaksen" .
+
+<http://pleiades.stoa.org/author/lfraga> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Luis Fraga da Silva" .
+
+<http://pleiades.stoa.org/author/lhall> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Loren Hall" .
+
+<http://pleiades.stoa.org/author/llarsen> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Lillian Larsen" .
+
+<http://pleiades.stoa.org/author/lstaine> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Lewin Ernest Staine" .
+
+<http://pleiades.stoa.org/author/lukewh> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Luke Wilson Hagemann" .
+
+<http://pleiades.stoa.org/author/lund-brian-z> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Brian Z. Lund" .
+
+<http://pleiades.stoa.org/author/magister> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Max Magister" .
+
+<http://pleiades.stoa.org/author/mbouchet> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Matthieu Bouchet" .
+
+<http://pleiades.stoa.org/author/mbroquin> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Marc Broquin" .
+
+<http://pleiades.stoa.org/author/mbrunet> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Michèle Brunet" .
+
+<http://pleiades.stoa.org/author/mcooper> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Mary Cooper" .
+
+<http://pleiades.stoa.org/author/mdomenica> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Matteo Di Domenica" .
+
+<http://pleiades.stoa.org/author/mgander> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Max Gander" .
+
+<http://pleiades.stoa.org/author/mheiden> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Maximilian Heiden" .
+
+<http://pleiades.stoa.org/author/mheubel> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Michael Heubel" .
+
+<http://pleiades.stoa.org/author/mhitchcock> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "McKenzie Hitchcock" .
+
+<http://pleiades.stoa.org/author/mhorst> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Michael Horst" .
+
+<http://pleiades.stoa.org/author/mhubbard> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "McKenna Hubbard" .
+
+<http://pleiades.stoa.org/author/millsm> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Mills McArthur" .
+
+<http://pleiades.stoa.org/author/mimno> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "David Mimno" .
+
+<http://pleiades.stoa.org/author/mjalmeida> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Maria José de Melo Henriques de Almeida" .
+
+<http://pleiades.stoa.org/author/mkolonas> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Kolonas Chrysostomos" .
+
+<http://pleiades.stoa.org/author/mkoncul> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Minja Koncul" .
+
+<http://pleiades.stoa.org/author/mkrier> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Mark Krier" .
+
+<http://pleiades.stoa.org/author/mlang> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Matthias Lang" .
+
+<http://pleiades.stoa.org/author/morin-j> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "J. Morin" .
+
+<http://pleiades.stoa.org/author/msamori> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Mahmoud Samori" .
+
+<http://pleiades.stoa.org/author/muratma> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Murat Akin" .
+
+<http://pleiades.stoa.org/author/murray-w-m> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "W.M. Murray" .
+
+<http://pleiades.stoa.org/author/mwaltre> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Mats Waltré" .
+
+<http://pleiades.stoa.org/author/mwilloughby> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Michelle Willoughby" .
+
+<http://pleiades.stoa.org/author/mymyers> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Micah Myers" .
+
+<http://pleiades.stoa.org/author/naravecchia> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Nicola Aravecchia" .
+
+<http://pleiades.stoa.org/author/nayers> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Natalie Ayers" .
+
+<http://pleiades.stoa.org/author/ndarbyshire> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Nicholas Darbyshire" .
+
+<http://pleiades.stoa.org/author/nevenj> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Neven Jovanovic" .
+
+<http://pleiades.stoa.org/author/newhardj> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "James Newhard" .
+
+<http://pleiades.stoa.org/author/nkaye> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Noah Kaye" .
+
+<http://pleiades.stoa.org/author/nnagy> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Nate Nagy" .
+
+<http://pleiades.stoa.org/author/nouraa> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Noura Alavi" .
+
+<http://pleiades.stoa.org/author/nstrupler> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Néhémie Strupler" .
+
+<http://pleiades.stoa.org/author/nterrenato> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Nicola Terrenato" .
+
+<http://pleiades.stoa.org/author/pacheson> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Phoebe Acheson" .
+
+<http://pleiades.stoa.org/author/pdevarney> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Patrick DeVarney" .
+
+<http://pleiades.stoa.org/author/pengelen> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Piet Engelen" .
+
+<http://pleiades.stoa.org/author/pliuzzo> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Pietro Maria Liuzzo" .
+
+<http://pleiades.stoa.org/author/pmotylewicz> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Pierre Motylewicz" .
+
+<http://pleiades.stoa.org/author/ppilhofer> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Philipp Pilhofer" .
+
+<http://pleiades.stoa.org/author/pscalfano> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Perry Scalfano" .
+
+<http://pleiades.stoa.org/author/pschneider> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Pierre Schneider" .
+
+<http://pleiades.stoa.org/author/pstead> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Peter Steadman" .
+
+<http://pleiades.stoa.org/author/pverkinderen> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Peter Verkinderen" .
+
+<http://pleiades.stoa.org/author/ralexander> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Riley Alexander" .
+
+<http://pleiades.stoa.org/author/rbagnall> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Roger Bagnall" .
+
+<http://pleiades.stoa.org/author/rboehm> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Ryan Boehm" .
+
+<http://pleiades.stoa.org/author/rbrowning> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Rachaelle L Browning" .
+
+<http://pleiades.stoa.org/author/rcamp> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Robert B Camp" .
+
+<http://pleiades.stoa.org/author/rcanavan> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Rosemary Canavan" .
+
+<http://pleiades.stoa.org/author/rchavez> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Rob Chavez" .
+
+<http://pleiades.stoa.org/author/rconsoli> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Robert Consoli" .
+
+<http://pleiades.stoa.org/author/renevoorburg> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "René Voorburg" .
+
+<http://pleiades.stoa.org/author/rfbaumann> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Ryan Baumann" .
+
+<http://pleiades.stoa.org/author/rholcomb> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Rachel Holcomb" .
+
+<http://pleiades.stoa.org/author/rmcneil> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Robert McNeil" .
+
+<http://pleiades.stoa.org/author/rmhorne> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Ryan Horne" .
+
+<http://pleiades.stoa.org/author/rmoffat> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Stefan Moffat" .
+
+<http://pleiades.stoa.org/author/rmort> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Robert Mort" .
+
+<http://pleiades.stoa.org/author/rmursinna> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Rio Mursinna" .
+
+<http://pleiades.stoa.org/author/rosst> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Ross Twele" .
+
+<http://pleiades.stoa.org/author/rrichardson> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Reid Richardson" .
+
+<http://pleiades.stoa.org/author/rrumora> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Roko Rumora" .
+
+<http://pleiades.stoa.org/author/rschneider> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Remick Schneider" .
+
+<http://pleiades.stoa.org/author/rtalbert> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Richard Talbert" .
+
+<http://pleiades.stoa.org/author/rviglianti> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Raffaele Viglianti" .
+
+<http://pleiades.stoa.org/author/sarcanon> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Scott Vanderbilt" .
+
+<http://pleiades.stoa.org/author/sarcenas> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Scott Arcenas" .
+
+<http://pleiades.stoa.org/author/sbond> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Sarah Bond" .
+
+<http://pleiades.stoa.org/author/sburges> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Steven Burges" .
+
+<http://pleiades.stoa.org/author/scaldis> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Sam Caldis" .
+
+<http://pleiades.stoa.org/author/scosta> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Stefano Costa" .
+
+<http://pleiades.stoa.org/author/scottm> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Scott McDonough" .
+
+<http://pleiades.stoa.org/author/sdunn> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Stuart Dunn" .
+
+<http://pleiades.stoa.org/author/sebs> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Sebastian Heath" .
+
+<http://pleiades.stoa.org/author/sfunsten> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Susana Funsten" .
+
+<http://pleiades.stoa.org/author/sgcole> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Susan Guettel Cole" .
+
+<http://pleiades.stoa.org/author/sgillies> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Sean Gillies" .
+
+<http://pleiades.stoa.org/author/simonkh> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Simon Krause-Heiber" .
+
+<http://pleiades.stoa.org/author/sinclair-t> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "T. Sinclair" .
+
+<http://pleiades.stoa.org/author/skleinfeldt> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Sally Kleinfeldt" .
+
+<http://pleiades.stoa.org/author/sotto> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Steven Otto" .
+
+<http://pleiades.stoa.org/author/ssilverstein> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Samuel Silverstein" .
+
+<http://pleiades.stoa.org/author/ssmith> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Shanell Smith" .
+
+<http://pleiades.stoa.org/author/sstark> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Sören Stark" .
+
+<http://pleiades.stoa.org/author/swalter> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Stephan Walter" .
+
+<http://pleiades.stoa.org/author/swright> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Sterling Wright" .
+
+<http://pleiades.stoa.org/author/tblackburn> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Tyler Blackburn" .
+
+<http://pleiades.stoa.org/author/tcarlson> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Thomas Carlson" .
+
+<http://pleiades.stoa.org/author/thansen> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Toke Hansen" .
+
+<http://pleiades.stoa.org/author/thomase> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Tom Elliott" .
+
+<http://pleiades.stoa.org/author/tkthomas> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Thelma Thomas" .
+
+<http://pleiades.stoa.org/author/tmelancon> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Tim Melancon" .
+
+<http://pleiades.stoa.org/author/tonnes> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "TÃ¸nnes Bekker-Nielsen" .
+
+<http://pleiades.stoa.org/author/uhenny> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Ulrike Henny" .
+
+<http://pleiades.stoa.org/author/vajder> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Vladimir Ajder" .
+
+<http://pleiades.stoa.org/author/vpapathanasiou> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Vasiliki Papathanasiou" .
+
+<http://pleiades.stoa.org/author/vvitale> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Valeria Vitale" .
+
+<http://pleiades.stoa.org/author/wagner-g> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "G. Wagner" .
+
+<http://pleiades.stoa.org/author/warner-r> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "R. Warner" .
+
+<http://pleiades.stoa.org/author/wenglert> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Walter Englert" .
+
+<http://pleiades.stoa.org/author/wilson-r-j-a> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "R.J.A. Wilson" .
+
+<http://pleiades.stoa.org/author/wtuttle> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Wade Tuttle" .
+
+<http://pleiades.stoa.org/author/zkorkmaz> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Zafer Korkmaz" .
+
+<http://pleiades.stoa.org/author/ztaylor> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Zachary Taylor" .
+
+<http://viaf.org/viaf/104172537> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "E.J. Keall" .
+
+<http://viaf.org/viaf/104306181> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "R.S. Bagnall" .
+
+<http://viaf.org/viaf/108993388> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "David Braund" .
+
+<http://viaf.org/viaf/109545672> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "J.S. Traill" .
+
+<http://viaf.org/viaf/113541735> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "H.S. Sivan" .
+
+<http://viaf.org/viaf/119316394> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "J. Bennet" .
+
+<http://viaf.org/viaf/12320449> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "L. Quilici" .
+
+<http://viaf.org/viaf/12323175> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "T.W. Potter" .
+
+<http://viaf.org/viaf/12324395> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "E.N. Borza" .
+
+<http://viaf.org/viaf/135024> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "D. Rupp" .
+
+<http://viaf.org/viaf/13810037> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "F.H. Stanley" .
+
+<http://viaf.org/viaf/14791213> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "S.J. Keay" .
+
+<http://viaf.org/viaf/17238976> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "D.T. Potts" .
+
+<http://viaf.org/viaf/17244949> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "W.V. Harris" .
+
+<http://viaf.org/viaf/17258746> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "R.W. Mathisen" .
+
+<http://viaf.org/viaf/19524400> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "R.B. Hitchner" .
+
+<http://viaf.org/viaf/19689588> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "A. Bernand" .
+
+<http://viaf.org/viaf/197700520> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "M. Pearce" .
+
+<http://viaf.org/viaf/19802204> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "J. Kunow" .
+
+<http://viaf.org/viaf/19956691> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "F. Hiebert",
+        "F.T. Hiebert" .
+
+<http://viaf.org/viaf/22153097> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "E.M. Meyers" .
+
+<http://viaf.org/viaf/236240316> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "R. Peretto" .
+
+<http://viaf.org/viaf/24617478> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "N. Purcell" .
+
+<http://viaf.org/viaf/24620920> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "S.L. Dyson" .
+
+<http://viaf.org/viaf/2500370> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "P. Kos" .
+
+<http://viaf.org/viaf/2604239> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "E.W. Haley" .
+
+<http://viaf.org/viaf/261890108> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "J.J. Wilkes" .
+
+<http://viaf.org/viaf/27195105> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "D.F. Graf" .
+
+<http://viaf.org/viaf/278548397> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "P.L. Kohl" .
+
+<http://viaf.org/viaf/29593223> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "R. Wenke" .
+
+<http://viaf.org/viaf/29622273> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "G.D. Woolf" .
+
+<http://viaf.org/viaf/32108909> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "S. Loseby" .
+
+<http://viaf.org/viaf/34489471> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "S.M. Burstein" .
+
+<http://viaf.org/viaf/36918577> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "P. Galliou" .
+
+<http://viaf.org/viaf/36949186> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "M. Šašel Kos" .
+
+<http://viaf.org/viaf/39409558> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "C. Foss" .
+
+<http://viaf.org/viaf/39678158> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "M. Roaf" .
+
+<http://viaf.org/viaf/46755947> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "S. Quilici Gigli" .
+
+<http://viaf.org/viaf/46867566> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "A. Bursche" .
+
+<http://viaf.org/viaf/48822584> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "T. Wilfong" .
+
+<http://viaf.org/viaf/5046666> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "G. Reger" .
+
+<http://viaf.org/viaf/51858528> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "M. Joann McDaniel" .
+
+<http://viaf.org/viaf/52023947> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "St J. Simpson" .
+
+<http://viaf.org/viaf/54156192> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "T. Drew Bear" .
+
+<http://viaf.org/viaf/56622759> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "E.W.B. Fentress" .
+
+<http://viaf.org/viaf/56641184> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "S.T. Parker" .
+
+<http://viaf.org/viaf/57623743> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "C.M. Wells" .
+
+<http://viaf.org/viaf/57871668> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "M. Drew Bear" .
+
+<http://viaf.org/viaf/59102736> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "J. McK. Camp II" .
+
+<http://viaf.org/viaf/59162760> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "R. Talbert" .
+
+<http://viaf.org/viaf/59869619> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "R. Häussler" .
+
+<http://viaf.org/viaf/61545480> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "M. Euzennat" .
+
+<http://viaf.org/viaf/61569715> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "P.O. Spann" .
+
+<http://viaf.org/viaf/65713033> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "Mary E. Downs" .
+
+<http://viaf.org/viaf/66492020> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "P.-L. Gatier" .
+
+<http://viaf.org/viaf/66514802> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "L.F. Pitts" .
+
+<http://viaf.org/viaf/71459378> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "I.E.M. Edlund Berry" .
+
+<http://viaf.org/viaf/71839743> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "J.H.F. Bloemers" .
+
+<http://viaf.org/viaf/71945708> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "S.E. Kroll" .
+
+<http://viaf.org/viaf/73868693/> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "B. Isaac" .
+
+<http://viaf.org/viaf/74028066> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "A. Hausleiter" .
+
+<http://viaf.org/viaf/7512162> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "S.E. Sidebotham" .
+
+<http://viaf.org/viaf/7513704> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "P. Tozzi" .
+
+<http://viaf.org/viaf/76387372> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "A.M. Small" .
+
+<http://viaf.org/viaf/79137985> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "A.G. Poulter" .
+
+<http://viaf.org/viaf/84714015> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "R.C. Knapp" .
+
+<http://viaf.org/viaf/89088748> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "D.J. Mattingly" .
+
+<http://viaf.org/viaf/91669326> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "S. Mitchell" .
+
+<http://viaf.org/viaf/92609475> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "A.S. Esmonde Cleary",
+        "A.S. Esmonde-Cleary" .
+
+<http://viaf.org/viaf/93262206> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "C. Haselgrove" .
+
+<http://viaf.org/viaf/93670504> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "N.B. Millet" .
+
+<http://viaf.org/viaf/94041687> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "R. Müller Wollermann" .
+
+<http://viaf.org/viaf/94888878> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "J.F. Drinkwater" .
+
+<pleiades.stoa.org/author/mitford-t-b> a <http://xmlns.com/foaf/0.1/Person>;
+    foaf:name "T.B. Mitford" .
+

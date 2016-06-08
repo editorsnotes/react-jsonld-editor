@@ -1,6 +1,5 @@
 .DS_Store
 data/indexes/
-data/test/pleiades-latest/
 data/vocabs/cito/
 data/vocabs/dcterms/
 data/vocabs/foaf/
