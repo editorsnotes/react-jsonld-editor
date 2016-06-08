@@ -1,38 +1,40 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
+    , {bindActionCreators} = require('redux')
     , {List} = require('immutable')
-    , {JSONLDNode, JSONLDValue} = require('immutable-jsonld')
     , Property = require('../components/Property')
-    , { isDatatypeProperty
-      , getRangeForDatatypeProperty
-      , getRangesForProperty
-      } = require('../universe')
     , {deleteIn, updateChange} = require('../actions')
-    , {getEditedNode} = require('../selectors')
+    , { getEditedNode
+      , getLabelResolver
+      , getEmptyObjectCreator
+      } = require('../selectors')
 
 const mapStateToProps = (state, {path, label}) => (
   { objects: getEditedNode(state).getIn(path, List())
+  , objectCreator: getEmptyObjectCreator(state)
+  , label: label || getLabelResolver(state)(path.last())
+  }
+)
+
+const mapDispatchToProps = dispatch => bindActionCreators(
+  {deleteIn, updateChange}, dispatch)
+
+const mergeProps = (
+  {objects, objectCreator, label},
+  {deleteIn, updateChange},
+  {path}) => (
+
+  { objects
   , path
-  , label: label || state.labels.get(path.last())
+  , label
+
+  , onAppend: numObjects => updateChange(
+      path.push(numObjects), objectCreator(path.last()))
+
+  , onDelete: path.last() === '@type' ? null : () => deleteIn(path)
   }
+
 )
 
-const onAppend = (dispatch, path) => numObjects => {
-  let property = path.last()
-    , fullpath = path.push(numObjects)
-    , change = property === '@type'
-        ? ''
-        : isDatatypeProperty(property)
-            ? JSONLDValue().set('@type', getRangeForDatatypeProperty(property))
-            : JSONLDNode().set('@type', getRangesForProperty(property))
-
-  return dispatch(updateChange(fullpath, change))
-}
-
-const mapDispatchToProps = (dispatch, {path}) => (
-  { onAppend: onAppend(dispatch, path)
-  , onDelete: path.last() === '@type' ? null : () => dispatch(deleteIn(path))
-  }
-)
-
-module.exports = connect(mapStateToProps, mapDispatchToProps)(Property)
+module.exports = connect(
+  mapStateToProps, mapDispatchToProps, mergeProps)(Property)

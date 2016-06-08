@@ -2,15 +2,14 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , Identifier = require('../components/Identifier')
     , {deleteIn} = require('../actions')
-    , {getEditedNode} = require('../selectors')
+    , {getEditedNode, getLabelResolver} = require('../selectors')
 
-const mapStateToProps = (state, {path, domain}) => {
+const mapStateToProps = (state, {path}) => {
   let id = getEditedNode(state).getIn(path)
   return (
     { id
     , path
-    , domain
-    , label: state.labels.get(id)
+    , label: getLabelResolver(state)(id)
     }
   )
 }

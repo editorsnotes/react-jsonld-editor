@@ -1,7 +1,6 @@
 const {JSONLDNode} = require('immutable-jsonld')
     , {Map, List} = require('immutable')
     , {combineReducers} = require('redux')
-    , {getLabels} = require('../universe')
     , { DELETE_IN
       , UPDATE_CHANGE
       , ACCEPT_CHANGE
@@ -24,17 +23,10 @@ const node = (node = JSONLDNode(), action) => {
   }
 }
 
-const labels = (labels = Map(), action) => {
+const universe = (universe = Map(), action) => {
   switch (action.type) {
-
-    case ACCEPT_CHANGE:
-      return getLabels(action.change, labels)
-
-    case UPDATE_CHANGE:
-      return getLabels(action.path.last(), labels)
-
     default:
-      return labels
+      return universe
   }
 }
 
@@ -109,7 +101,7 @@ const edit = combineReducers(
 
 module.exports = combineReducers(
   { node
-  , labels
+  , universe
   , edit
   }
 )
