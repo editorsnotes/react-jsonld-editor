@@ -9,12 +9,17 @@
   },
   "scripts": {
     "lint": "eslint --ext .jsx src",
+    "transpile": "babel src -d lib --source-maps inline",
+    "prebuild": "npm -s run lint",
+    "build": "npm -s run transpile",
+    "presetup": "npm -s run build",
+    "setup": "cd data && make -B vocabs && make",
     "css": "cssnext src/src.css src/style.css",
     "develop": "budo src --css src/style.css --live -- -t [ babelify --sourceMaps inline ] --extension=.jsx",
-    "transpile": "babel src -d lib --source-maps inline",
-    "build": "npm -s run lint && npm -s run transpile",
-    "transpile-tests": "npm -s run build && babel test -d lib/test",
-    "test": "npm -s run transpile-tests && tape lib/test/*.js | tap-spec"
+    "pretranspile-tests": "npm -s run build",
+    "transpile-tests": "babel test -d lib/test",
+    "pretest": "npm -s run transpile-tests",
+    "test": "tape lib/test/*.js | tap-spec"
   },
   "author": "Ryan Shaw",
   "license": "ISC",
