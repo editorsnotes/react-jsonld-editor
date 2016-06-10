@@ -21,16 +21,16 @@ const show = value => {
   }
 }
 
-const Value = ({value, onClick, onClickDelete}) => onClickDelete
+const Value = ({value, onClick = null, onClickDelete = null}) => onClickDelete
   ? <DeletableRoundedRectangle
       text={show(value)}
-      classes="bg-gray"
+      classes={`bg-gray ${onClick ? '' : 'muted'}`}
       onClick={onClick}
       onClickDelete={onClickDelete}
     />
   : <RoundedRectangle
       text={show(value)}
-      classes="bg-gray"
+      classes={`bg-gray ${onClick ? '' : 'muted'}`}
       onClick={onClick}
     />
 

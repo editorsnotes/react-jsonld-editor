@@ -3,7 +3,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {bindActionCreators} = require('redux')
     , validator = require('validator')
     , {XSD, RDFS} = require('../namespaces')
-    , {getEditChange} = require('../selectors')
+    , {getChange} = require('../selectors')
     , {updateChange, acceptChange, cancelChange} = require('../actions')
     , CancellableInput = require('../components/CancellableInput')
 
@@ -21,7 +21,7 @@ const isValid = value =>
   VALIDATORS[value.type || XSD.anyAtomicType](value.value + '')
 
 const mapStateToProps = state => {
-  let value = getEditChange(state)
+  let value = getChange(state)
   return (
     { value
     , input: value.value
@@ -44,6 +44,7 @@ const mergeProps = (
   , onChange: e => updateChange(
       path,
       value.set('@value', e.target.value),
+      false,
       e.target.value)
 
   , onAccept: () => acceptChange(path, value)

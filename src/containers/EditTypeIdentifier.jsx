@@ -2,35 +2,37 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
     , ResourceChooser = require('../components/ResourceChooser')
-    , {getEditInput, getSuggestions, getEditChange} = require('../selectors')
-    , {updateChange, acceptChange, cancelChange} = require('../actions')
+    , {getInput, getSuggestions, getChange} = require('../selectors')
+    , { updateInput
+      , updateChange
+      , acceptChange
+      , cancelChange
+      } = require('../actions')
 
 const mapStateToProps = state => (
-  { value: getEditInput(state)
+  { input: getInput(state)
   , suggestions: getSuggestions(state)
-  , change: getEditChange(state)
+  , change: getChange(state)
   }
 )
 
 const mapDispatchToProps = dispatch => bindActionCreators(
-  {updateChange, acceptChange, cancelChange}, dispatch)
+  {updateInput, updateChange, acceptChange, cancelChange}, dispatch)
 
 const mergeProps = (
-  {value, suggestions, change},
-  {updateChange, acceptChange, cancelChange},
+  {input, suggestions, change},
+  {updateInput, updateChange, acceptChange, cancelChange},
   {path}) => (
 
-  { value
+  { input
   , suggestions
 
-  , onChange: e => updateChange(
-      path,
-      '',
-      e.target.value)
+  , onChange: e => updateInput(e.target.value)
 
   , onSuggestionSelected: (_, {suggestion}) => updateChange(
       path,
       suggestion.id,
+      false,
       suggestion.label,
       suggestion)
 

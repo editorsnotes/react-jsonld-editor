@@ -2,6 +2,8 @@ const {JSONLDNode} = require('immutable-jsonld')
     , {Map, List} = require('immutable')
     , {combineReducers} = require('redux')
     , { DELETE_IN
+      , UPDATE_INPUT
+      , UPDATE_SELECTED_SUGGESTION
       , UPDATE_CHANGE
       , ACCEPT_CHANGE
       , CANCEL_CHANGE
@@ -30,7 +32,7 @@ const universe = (universe = Map(), action) => {
   }
 }
 
-const path = (path = List(), action) => {
+const editpath = (editpath = List(), action) => {
   switch (action.type) {
 
     case DELETE_IN:
@@ -39,10 +41,10 @@ const path = (path = List(), action) => {
       return List()
 
     case UPDATE_CHANGE:
-      return action.path
+       return action.path
 
     default:
-      return path
+      return editpath
   }
 }
 
@@ -68,8 +70,12 @@ const input = (input = '', action) => {
     case CANCEL_CHANGE:
       return ''
 
+    case UPDATE_INPUT:
     case UPDATE_CHANGE:
       return action.input
+
+    case UPDATE_SELECTED_SUGGESTION:
+      return action.suggestion.label ? action.suggestion.label : input
 
     default:
       return input
@@ -83,26 +89,38 @@ const selectedSuggestion = (selectedSuggestion = {}, action) => {
     case CANCEL_CHANGE:
       return {}
 
+    case UPDATE_SELECTED_SUGGESTION:
     case UPDATE_CHANGE:
-      return action.selectedSuggestion
+      return action.suggestion
 
     default:
       return selectedSuggestion
   }
 }
 
-const edit = combineReducers(
-  { path
-  , change
-  , input
-  , selectedSuggestion
+const editingProperties = (editingProperties = false, action) => {
+  switch (action.type) {
+
+    case ACCEPT_CHANGE:
+    case CANCEL_CHANGE:
+      return false
+
+    case UPDATE_CHANGE:
+      return action.editingProperties
+
+    default:
+      return editingProperties
   }
-)
+}
 
 module.exports = combineReducers(
   { node
   , universe
-  , edit
+  , editpath
+  , change
+  , input
+  , selectedSuggestion
+  , editingProperties
   }
 )
 

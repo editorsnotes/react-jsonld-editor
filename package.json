@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "immutable": "^3.7.6",
-    "immutable-jsonld": "^1.0.0",
+    "immutable-jsonld": "^1.0.1",
     "language-tags": "^1.0.5",
     "react": "^0.14.7",
     "react-autosuggest": "^3.7.4",

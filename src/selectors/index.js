@@ -16,13 +16,17 @@ exports.getLabelResolver = createSelector(
   }
 )
 
-const getEditPath = state => state.edit.path
-const getEditChange = state => state.edit.change
-const getEditInput = state => state.edit.input
+const getEditPath = state => state.editpath
+const getChange = state => state.change
+const getInput = state => state.input
+const getSelectedSuggestion = state => state.selectedSuggestion
+const isEditingProperties = state => state.editingProperties
 
 exports.getEditPath = getEditPath
-exports.getEditChange = getEditChange
-exports.getEditInput = getEditInput
+exports.getChange = getChange
+exports.getInput = getInput
+exports.getSelectedSuggestion = getSelectedSuggestion
+exports.isEditingProperties = isEditingProperties
 
 const pointsToType = path => (
   path.size > 1
@@ -30,26 +34,20 @@ const pointsToType = path => (
     && path.butLast().last() === '@type'
 )
 
-const pointsToProperty = path => (
-  path.size > 0
-    && (! Number.isInteger(path.last()))
-    && (path.last() !== '@id')
-)
-
 const getDomain = createSelector(
-  [getUniverse, getEditPath],
-  (universe, path) => pointsToType(path)
+  [getUniverse, getEditPath, isEditingProperties],
+  (universe, editpath, isEditingProperties) => pointsToType(editpath)
     ? universe.get('classes', Map())
-    : pointsToProperty(path)
+    : isEditingProperties
         ? universe.get('properties', Map())
         : universe.get('individuals', Map())
 )
 
 exports.getEditedNode = createSelector(
-  [getNode, getEditPath, getEditChange],
-  (node, path, change) => change === NO_CHANGE
+  [getNode, getEditPath, getChange],
+  (node, editpath, change) => change === NO_CHANGE
     ? node
-    : node.setIn(path, change)
+    : node.setIn(editpath, change)
 )
 
 const matches = (inputValue, inputLength) => label => (
@@ -57,7 +55,7 @@ const matches = (inputValue, inputLength) => label => (
 )
 
 exports.getSuggestions = createSelector(
-  [getEditInput, getDomain],
+  [getInput, getDomain],
   (input, domain) => {
 
     const inputValue = String(input).trim().toLowerCase()

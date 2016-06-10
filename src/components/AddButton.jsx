@@ -18,6 +18,7 @@ const AddButton = ({onClick, color='#2ECC40', classes = ''}) => (
 
 AddButton.propTypes =
   { onClick: React.PropTypes.func
+  , color: React.PropTypes.string
   , classes: React.PropTypes.string
   }
 

@@ -2,7 +2,10 @@ const React = require('react') // eslint-disable-line no-unused-vars
 
 const RoundedRectangle = ({text, classes = '', onClick}) => (
   <span
-    className={`relative inline-block py1 px2 white bold cursor-pointer ${classes}`}
+    className={
+      `relative inline-block py1 px2 white bold cursor-pointer
+ ${classes}
+`}
     style={{borderRadius: '1.5em', minHeight: '1.5em'}}
     onClick={onClick}
   >
