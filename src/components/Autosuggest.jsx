@@ -11,6 +11,7 @@ module.exports = (
   , onSuggestionSelected
   , input
   , onChange
+  , onKeyUp
   }) => (
   <Autosuggest
     suggestions={suggestions}
@@ -21,6 +22,7 @@ module.exports = (
     inputProps={
       { value: input
       , onChange
+      , onKeyUp
       , ref: positionInputCaret(input.length)
       }
     }

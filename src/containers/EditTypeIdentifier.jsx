@@ -2,7 +2,11 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
     , ResourceChooser = require('../components/ResourceChooser')
-    , {getInput, getSuggestions, getChange} = require('../selectors')
+    , { getInput
+      , getSuggestions
+      , getSelectedSuggestion
+      , getChange
+      } = require('../selectors')
     , { updateInput
       , updateChange
       , acceptChange
@@ -12,6 +16,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
 const mapStateToProps = state => (
   { input: getInput(state)
   , suggestions: getSuggestions(state)
+  , selectedSuggestion: getSelectedSuggestion(state)
   , change: getChange(state)
   }
 )
@@ -20,12 +25,13 @@ const mapDispatchToProps = dispatch => bindActionCreators(
   {updateInput, updateChange, acceptChange, cancelChange}, dispatch)
 
 const mergeProps = (
-  {input, suggestions, change},
+  {input, suggestions, selectedSuggestion, change},
   {updateInput, updateChange, acceptChange, cancelChange},
   {path}) => (
 
   { input
   , suggestions
+  , suggestionSelected: selectedSuggestion.id ? true : false
 
   , onChange: e => updateInput(e.target.value)
 
@@ -36,7 +42,7 @@ const mergeProps = (
       suggestion.label,
       suggestion)
 
-  , onAccept: () => acceptChange(path, change)
+  , onAccept: selectedSuggestion.id ? () => acceptChange(path, change) : null
   , onCancel: () => cancelChange()
   }
 )

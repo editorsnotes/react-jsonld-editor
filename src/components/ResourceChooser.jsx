@@ -5,6 +5,7 @@ const React = require('react')
 const ResourceChooser = (
   { input = ''
   , suggestions = []
+  , suggestionSelected
   , onChange
   , onSuggestionSelected
   , onCancel
@@ -15,6 +16,11 @@ const ResourceChooser = (
       input={input}
       suggestions={suggestions}
       onChange={onChange}
+      onKeyUp={event => {
+        if (suggestionSelected && event.key === 'Enter') {
+          onAccept()
+        }
+      }}
       onSuggestionSelected={onSuggestionSelected}
     />
     <TextButton text="Cancel" onClick={onCancel} />
@@ -25,6 +31,7 @@ const ResourceChooser = (
 ResourceChooser.propTypes =
   { input: React.PropTypes.string
   , suggestions: React.PropTypes.array
+  , suggestionSelected: React.PropTypes.bool
   , onChange: React.PropTypes.func.isRequired
   , onSuggestionSelected: React.PropTypes.func.isRequired
   , onCancel: React.PropTypes.func.isRequired
