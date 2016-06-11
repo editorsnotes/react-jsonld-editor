@@ -18,7 +18,7 @@ const Node = ({path, editpath, isEditingProperties}) => (
 
 Node.propTypes = {
   path: React.PropTypes.instanceOf(List).isRequired,
-  edipath: React.PropTypes.instanceOf(List).isRequired,
+  editpath: React.PropTypes.instanceOf(List).isRequired,
   isEditingProperties: React.PropTypes.bool.isRequired
 }
 
