@@ -18,7 +18,7 @@ const Node = (
       ? ( // node is named
           <ShowIdentifier
             path={path.push('@id')}
-            deletable={! path.isEmpty()}
+            disabled={path.isEmpty()}
           />
         )
       : ( // node is blank / anonymous

@@ -8,13 +8,13 @@ const React = require('react') // eslint-disable-line no-unused-vars
       , isEditingProperties
       } = require('../selectors')
 
-const mapStateToProps = (state, {path}) => {
+const mapStateToProps = (state, {path, disabled = false}) => {
   let id = getEditedNode(state).getIn(path)
   return (
     { id
     , path
     , label: getLabelResolver(state)(id)
-    , interactive: (! isEditingProperties(state))
+    , interactive: (! (disabled || isEditingProperties(state)))
     }
   )
 }
