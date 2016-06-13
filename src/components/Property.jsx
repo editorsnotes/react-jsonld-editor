@@ -24,7 +24,7 @@ const Property = (
   { objects
   , path
   , label = path.last()
-  , onAppend
+  , onAppend = null
   , onDelete = null
   }) => {
   if (Node === null) {
@@ -39,10 +39,13 @@ const Property = (
         color="#ff4136"
       />
       <span
-        className="inline-block align-middle black bold cursor-pointer lowercase"
-        onClick={() => onAppend(objects.count())}
+        className={
+          `inline-block align-middle bold cursor-pointer lowercase black
+           ${onAppend ? '' : 'muted'}`
+        }
+        onClick={onAppend ? () => onAppend(objects.count()) : null}
       >
-        {label} +
+        {`${label} ${onAppend ? '+' : ''}`}
       </span>
       <ul className="list-reset ml3">
         {objects.map(renderObject(path))}
@@ -62,7 +65,7 @@ Property.propTypes =
     }
   , path: React.PropTypes.instanceOf(List).isRequired
   , label: React.PropTypes.string
-  , onAppend: React.PropTypes.func.isRequired
+  , onAppend: React.PropTypes.func
   , onDelete: React.PropTypes.func
   }
 

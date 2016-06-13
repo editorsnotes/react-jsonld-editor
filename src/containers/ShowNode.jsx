@@ -1,15 +1,16 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
-    , {List} = require('immutable')
-    , {JSONLDNode} = require('immutable-jsonld')
+    , {bindActionCreators} = require('redux')
     , ShowIdentifier = require('./ShowIdentifier')
     , Property = require('./Property')
     , DeleteButton = require('../components/DeleteButton')
-    , AddButton = require('../components/AddButton')
-    , {updateChange, deleteIn} = require('../actions')
-    , {getEditedNode} = require('../selectors')
+    , TextButton = require('../components/TextButton')
+    , {deleteIn, startEditingProperties} = require('../actions')
+    , {getEditedNode, isEditingProperties} = require('../selectors')
 
-const Node = ({node, path, dispatch}) => (
+const Node = (
+  {node, path, isEditingProperties, deleteIn, startEditingProperties}
+  ) => (
   <div className={
     `border border-silver py1 pl1 ${node.id ? 'pr1' : 'pr3'} relative`}
   >
@@ -17,13 +18,13 @@ const Node = ({node, path, dispatch}) => (
       ? ( // node is named
           <ShowIdentifier
             path={path.push('@id')}
-            deletable={! path.isEmpty()}
+            disabled={path.isEmpty()}
           />
         )
       : ( // node is blank / anonymous
           <DeleteButton
             classes="absolute top-0 right-0"
-            onClick={() => { dispatch(deleteIn(path)) }}
+            onClick={() => deleteIn(path)}
           />
         )
     }
@@ -36,22 +37,24 @@ const Node = ({node, path, dispatch}) => (
         />))
       }
     </ul>
-    <AddButton
-      onClick={() => dispatch(updateChange(path.push(''), List()))}
-    />
+    <div className={isEditingProperties ? 'hidden' : ''}>
+      <TextButton
+        text={`${node.propertySeq().count() > 0 ? 'Edit' : 'Add'} properties`}
+        onClick={() => startEditingProperties(path, node)}
+      />
+    </div>
   </div>
 )
-
-Node.propTypes = {
-  node: React.PropTypes.instanceOf(JSONLDNode).isRequired,
-  path: React.PropTypes.instanceOf(List).isRequired
-}
 
 const mapStateToProps = (state, {path}) => (
   { node: getEditedNode(state).getIn(path)
   , path
+  , isEditingProperties: isEditingProperties(state)
   }
 )
 
-module.exports = connect(mapStateToProps)(Node)
+const mapDispatchToProps = dispatch => bindActionCreators(
+  {deleteIn, startEditingProperties}, dispatch)
+
+module.exports = connect(mapStateToProps, mapDispatchToProps)(Node)
 

@@ -5,7 +5,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {JSONLDValue} = require('immutable-jsonld')
     , ResourceChooser = require('../components/ResourceChooser')
     , {RDFS, XSD} = require('../namespaces')
-    , {getEditInput, getSuggestions, getEditChange} = require('../selectors')
+    , {getInput, getSuggestions, getChange} = require('../selectors')
     , {updateChange, acceptChange, cancelChange} = require('../actions')
 
 const setLabel = (node, label) => node.set(
@@ -14,9 +14,9 @@ const setLabel = (node, label) => node.set(
 )
 
 const mapStateToProps = state => (
-  { value: getEditInput(state)
+  { input: getInput(state)
   , suggestions: getSuggestions(state)
-  , change: getEditChange(state)
+  , change: getChange(state)
   }
 )
 
@@ -24,16 +24,17 @@ const mapDispatchToProps = dispatch => bindActionCreators(
   {updateChange, acceptChange, cancelChange}, dispatch)
 
 const mergeProps = (
-  {value, suggestions, change},
+  {input, suggestions, change},
   {updateChange, acceptChange, cancelChange},
   {path}) => (
 
-  { value
+  { input
   , suggestions
 
   , onChange: e => updateChange(
       path.butLast(),
       setLabel(change, e.target.value),
+      false,
       e.target.value)
 
   , onSuggestionSelected: (_, {suggestion}) => updateChange(
@@ -41,6 +42,7 @@ const mergeProps = (
       change
         .remove(RDFS.label)
         .set('@id', suggestion.id),
+      false,
       suggestion.label,
       suggestion)
 

@@ -2,39 +2,47 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
     , ResourceChooser = require('../components/ResourceChooser')
-    , {getEditInput, getSuggestions, getEditChange} = require('../selectors')
-    , {updateChange, acceptChange, cancelChange} = require('../actions')
+    , { getInput
+      , getSuggestions
+      , getSelectedSuggestion
+      , getChange
+      } = require('../selectors')
+    , { updateInput
+      , updateChange
+      , acceptChange
+      , cancelChange
+      } = require('../actions')
 
 const mapStateToProps = state => (
-  { value: getEditInput(state)
+  { input: getInput(state)
   , suggestions: getSuggestions(state)
-  , change: getEditChange(state)
+  , selectedSuggestion: getSelectedSuggestion(state)
+  , change: getChange(state)
   }
 )
 
 const mapDispatchToProps = dispatch => bindActionCreators(
-  {updateChange, acceptChange, cancelChange}, dispatch)
+  {updateInput, updateChange, acceptChange, cancelChange}, dispatch)
 
 const mergeProps = (
-  {value, suggestions, change},
-  {updateChange, acceptChange, cancelChange},
+  {input, suggestions, selectedSuggestion, change},
+  {updateInput, updateChange, acceptChange, cancelChange},
   {path}) => (
 
-  { value
+  { input
   , suggestions
+  , suggestionSelected: selectedSuggestion.id ? true : false
 
-  , onChange: e => updateChange(
-      path,
-      '',
-      e.target.value)
+  , onChange: e => updateInput(e.target.value)
 
   , onSuggestionSelected: (_, {suggestion}) => updateChange(
       path,
       suggestion.id,
+      false,
       suggestion.label,
       suggestion)
 
-  , onAccept: () => acceptChange(path, change)
+  , onAccept: selectedSuggestion.id ? () => acceptChange(path, change) : null
   , onCancel: () => cancelChange()
   }
 )

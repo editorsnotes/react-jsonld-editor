@@ -2,7 +2,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
 
 const TextButton = ({text, onClick}) => (
   <span
-    className="blue p1 cursor-pointer"
+    className={`p1 cursor-pointer ${onClick ? 'blue' : 'silver'}`}
     onClick={onClick}
   >
     {text}

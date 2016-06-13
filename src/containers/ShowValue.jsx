@@ -3,19 +3,23 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {bindActionCreators} = require('redux')
     , {deleteIn, updateChange} = require('../actions')
     , Value = require('../components/Value')
-    , {getEditedNode} = require('../selectors')
+    , {getEditedNode, isEditingProperties} = require('../selectors')
 
 const mapStateToProps = (state, {path}) => (
-  {value: getEditedNode(state).getIn(path)}
+  { value: getEditedNode(state).getIn(path)
+  , editable: (! isEditingProperties(state))
+  }
 )
 
 const mapDispatchToProps = dispatch => bindActionCreators(
   {deleteIn, updateChange}, dispatch)
 
-const mergeProps = ({value}, {deleteIn, updateChange}, {path}) => (
+const mergeProps = ({value, editable}, {deleteIn, updateChange}, {path}) => (
   { value
-  , onClick: () => updateChange(path, value, value.value)
-  , onClickDelete: () => deleteIn(path)
+  , onClick:
+      editable ? () => updateChange(path, value, false, value.value) : null
+  , onClickDelete:
+      editable ? () => deleteIn(path) : null
   }
 )
 

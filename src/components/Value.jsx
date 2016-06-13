@@ -1,7 +1,6 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {JSONLDValue} = require('immutable-jsonld')
     , RoundedRectangle = require('./RoundedRectangle')
-    , DeletableRoundedRectangle = require('./DeletableRoundedRectangle')
     , {XSD} = require('../namespaces')
 
 const show = value => {
@@ -21,18 +20,14 @@ const show = value => {
   }
 }
 
-const Value = ({value, onClick, onClickDelete}) => onClickDelete
-  ? <DeletableRoundedRectangle
-      text={show(value)}
-      classes="bg-gray"
-      onClick={onClick}
-      onClickDelete={onClickDelete}
-    />
-  : <RoundedRectangle
-      text={show(value)}
-      classes="bg-gray"
-      onClick={onClick}
-    />
+const Value = ({value, onClick = null, onClickDelete = null}) => (
+  <RoundedRectangle
+    text={show(value)}
+    classes="bg-gray"
+    onClick={onClick}
+    onClickDelete={onClickDelete}
+  />
+)
 
 Value.propTypes = {
   value: React.PropTypes.instanceOf(JSONLDValue).isRequired,

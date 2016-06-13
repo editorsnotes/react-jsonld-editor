@@ -1,22 +1,31 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {List} = require('immutable')
-    , {getEditPath} = require('../selectors')
+    , {getEditPath, isEditingProperties} = require('../selectors')
     , EditIdentifier = require('./EditIdentifier')
     , ShowNode = require('./ShowNode')
+    , EditNodeProperties = require('./EditNodeProperties')
 
-const Node = ({path, editable}) => editable
-  ? <EditIdentifier path={path.push('@id')} />
-  : <ShowNode path={path} />
+const Node = ({path, editpath, isEditingProperties}) => (
+  (! path.equals(editpath))
+    ? <ShowNode path={path} />
+    : isEditingProperties
+        ? <EditNodeProperties path={path} />
+        : path.isEmpty()
+            ? <ShowNode path={path} />
+            : <EditIdentifier path={path.push('@id')} />
+)
 
 Node.propTypes = {
   path: React.PropTypes.instanceOf(List).isRequired,
-  editable: React.PropTypes.bool,
+  editpath: React.PropTypes.instanceOf(List).isRequired,
+  isEditingProperties: React.PropTypes.bool.isRequired
 }
 
 const mapStateToProps = (state, {path = List()}) => (
   { path
-  , editable: path.isEmpty() ? false : path.equals(getEditPath(state))
+  , editpath: getEditPath(state)
+  , isEditingProperties: isEditingProperties(state)
   }
 )
 
