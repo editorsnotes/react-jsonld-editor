@@ -14,5 +14,6 @@ demo/data/vocabs/rdfs/
 demo/data/vocabs/skos/
 demo/data/vocabs/spatial/
 demo/lib/
+demo/standalone/
 lib/
 node_modules/

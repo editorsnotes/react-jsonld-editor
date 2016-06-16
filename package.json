@@ -6,33 +6,25 @@
   "main": "lib/Editor.js",
   "scripts": {
     "lint": "eslint --ext .jsx src demo/src test",
-
     "precompile": "npm -s run lint",
     "compile": "babel src -d lib --source-maps inline",
-
     "css": "cssnext src/src.css src/style.css",
-
     "develop-target": "budo $npm_config_target --css src/style.css --live -- -t [ babelify --sourceMaps inline ] --extension=.jsx",
-
     "develop": "npm -s run develop-target --target=src",
-
     "precompile-demo": "npm -s run compile",
     "compile-demo": "babel demo/src -d demo/lib",
-
+    "prestandalone-demo": "mkdir -p demo/standalone",
+    "standalone-demo": "browserify demo/lib | uglifyjs -c > demo/standalone/bundle.js",
+    "poststandalone-demo": "cp demo/src/index.html src/style.css demo/standalone",
     "presetup-demo-data": "npm -s run compile-demo",
     "setup-demo-data": "cd demo/data && make -B vocabs && make",
-
     "predevelop-demo": "npm -s run compile && if [ ! -d demo/data/indexes ]; then npm -s run setup-demo-data; fi",
     "develop-demo": "npm -s run develop-target --target=demo/src",
-
     "precompile-tests": "npm -s run compile",
     "compile-tests": "babel test -d lib/test",
-
     "pretest": "npm -s run compile-tests",
     "test": "tape lib/test/*.js | tap-spec",
-
     "prepublish": "babel src -d lib",
-
     "preversion": "npm test"
   },
   "author": "Ryan Shaw",
@@ -54,7 +46,8 @@
     "immutablediff": "^0.4.2",
     "n3": "^0.4.5",
     "tap-spec": "^4.1.1",
-    "tape": "^4.5.1"
+    "tape": "^4.5.1",
+    "uglify": "^0.1.5"
   },
   "dependencies": {
     "immutable": "^3.7.6",
