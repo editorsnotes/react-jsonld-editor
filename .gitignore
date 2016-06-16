@@ -1,0 +1,4 @@
+.DS_Store
+demo/data/vocabs/
+lib/
+node_modules/

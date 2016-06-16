@@ -1,0 +1,4480 @@
+{
+  "http://data.ordnancesurvey.co.uk/ontology/geometry/asGML": {
+    "labels": [
+      [
+        "as GML",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"
+    ]
+  },
+  "http://data.ordnancesurvey.co.uk/ontology/geometry/asGeoJSON": {
+    "labels": [
+      [
+        "as GeoJSON",
+        "en"
+      ]
+    ]
+  },
+  "http://data.ordnancesurvey.co.uk/ontology/geometry/extent": {
+    "labels": [
+      [
+        "extent",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://data.ordnancesurvey.co.uk/ontology/geometry/AbstractGeometry"
+    ]
+  },
+  "http://data.ordnancesurvey.co.uk/ontology/geometry/hectares": {
+    "labels": [
+      [
+        "The area of a geometry in hectres.",
+        null
+      ],
+      [
+        "hectres",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#double"
+    ]
+  },
+  "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/contains": {
+    "labels": [
+      [
+        "contains",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/disjoint": {
+    "labels": [
+      [
+        "disjoint",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting": {
+    "labels": [
+      [
+        "easting",
+        null
+      ]
+    ]
+  },
+  "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/equals": {
+    "labels": [
+      [
+        "equal",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing": {
+    "labels": [
+      [
+        "northing",
+        null
+      ]
+    ]
+  },
+  "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/oneKMGridReference": {
+    "labels": [
+      [
+        "1km Grid Reference",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://data.ordnancesurvey.co.uk/ontology/geometry/1kmGridSquare"
+    ]
+  },
+  "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/partiallyOverlaps": {
+    "labels": [
+      [
+        "overlaps",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/touches": {
+    "labels": [
+      [
+        "touches",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/twentyKMGridReference": {
+    "labels": [
+      [
+        "20km Grid Reference",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://data.ordnancesurvey.co.uk/ontology/geometry/20kmGridSquare"
+    ]
+  },
+  "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within": {
+    "labels": [
+      [
+        "within",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://geovocab.org/spatial#C": {
+    "labels": [
+      [
+        "connects with",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://geovocab.org/spatial#Feature"
+    ]
+  },
+  "http://geovocab.org/spatial#DC": {
+    "labels": [
+      [
+        "disconnected from",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://geovocab.org/spatial#Feature"
+    ]
+  },
+  "http://geovocab.org/spatial#DR": {
+    "labels": [
+      [
+        "discrete from",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://geovocab.org/spatial#Feature"
+    ]
+  },
+  "http://geovocab.org/spatial#EC": {
+    "labels": [
+      [
+        "externally connected with",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://geovocab.org/spatial#Feature"
+    ]
+  },
+  "http://geovocab.org/spatial#EQ": {
+    "labels": [
+      [
+        "equals",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://geovocab.org/spatial#Feature"
+    ]
+  },
+  "http://geovocab.org/spatial#NTPP": {
+    "labels": [
+      [
+        "is non-tangential proper part of",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://geovocab.org/spatial#Feature"
+    ]
+  },
+  "http://geovocab.org/spatial#NTPPi": {
+    "labels": [
+      [
+        "non tangentially properly contains",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://geovocab.org/spatial#Feature"
+    ]
+  },
+  "http://geovocab.org/spatial#O": {
+    "labels": [
+      [
+        "overlaps",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://geovocab.org/spatial#Feature"
+    ]
+  },
+  "http://geovocab.org/spatial#P": {
+    "labels": [
+      [
+        "is part of",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://geovocab.org/spatial#Feature"
+    ]
+  },
+  "http://geovocab.org/spatial#PO": {
+    "labels": [
+      [
+        "partially overlaps",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://geovocab.org/spatial#Feature"
+    ]
+  },
+  "http://geovocab.org/spatial#PP": {
+    "labels": [
+      [
+        "is proper part of",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://geovocab.org/spatial#Feature"
+    ]
+  },
+  "http://geovocab.org/spatial#PPi": {
+    "labels": [
+      [
+        "properly contains",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://geovocab.org/spatial#Feature"
+    ]
+  },
+  "http://geovocab.org/spatial#Pi": {
+    "labels": [
+      [
+        "contains",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://geovocab.org/spatial#Feature"
+    ]
+  },
+  "http://geovocab.org/spatial#TPP": {
+    "labels": [
+      [
+        "is tangential proper part of",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://geovocab.org/spatial#Feature"
+    ]
+  },
+  "http://geovocab.org/spatial#TPPi": {
+    "labels": [
+      [
+        "tangentially properly contains",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://geovocab.org/spatial#Feature"
+    ]
+  },
+  "http://geovocab.org/spatial#inconsistentWith": {
+    "labels": [
+      [
+        "inconsistent with",
+        null
+      ]
+    ]
+  },
+  "http://pleiades.stoa.org/places/vocab#during": {
+    "labels": [
+      [
+        "during",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ]
+  },
+  "http://pleiades.stoa.org/places/vocab#end_date": {
+    "labels": [
+      [
+        "end date",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#integer"
+    ]
+  },
+  "http://pleiades.stoa.org/places/vocab#hasFeatureType": {
+    "labels": [
+      [
+        "has feature type",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ]
+  },
+  "http://pleiades.stoa.org/places/vocab#hasLocation": {
+    "labels": [
+      [
+        "has location",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://pleiades.stoa.org/places/vocab#Location"
+    ]
+  },
+  "http://pleiades.stoa.org/places/vocab#hasName": {
+    "labels": [
+      [
+        "has name",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://pleiades.stoa.org/places/vocab#Location"
+    ]
+  },
+  "http://pleiades.stoa.org/places/vocab#nameAttested": {
+    "labels": [
+      [
+        "name attested",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#string"
+    ]
+  },
+  "http://pleiades.stoa.org/places/vocab#nameRomanized": {
+    "labels": [
+      [
+        "name romanized",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#string"
+    ]
+  },
+  "http://pleiades.stoa.org/places/vocab#start_date": {
+    "labels": [
+      [
+        "start date",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#integer"
+    ]
+  },
+  "http://purl.org/dc/terms/abstract": {
+    "labels": [
+      [
+        "Abstract",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/accessRights": {
+    "labels": [
+      [
+        "Access Rights",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/RightsStatement"
+    ]
+  },
+  "http://purl.org/dc/terms/accrualMethod": {
+    "labels": [
+      [
+        "Accrual Method",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/MethodOfAccrual"
+    ]
+  },
+  "http://purl.org/dc/terms/accrualPeriodicity": {
+    "labels": [
+      [
+        "Accrual Periodicity",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/Frequency"
+    ]
+  },
+  "http://purl.org/dc/terms/accrualPolicy": {
+    "labels": [
+      [
+        "Accrual Policy",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/Policy"
+    ]
+  },
+  "http://purl.org/dc/terms/alternative": {
+    "labels": [
+      [
+        "Alternative Title",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://purl.org/dc/terms/audience": {
+    "labels": [
+      [
+        "Audience",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/AgentClass"
+    ]
+  },
+  "http://purl.org/dc/terms/available": {
+    "labels": [
+      [
+        "Date Available",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://purl.org/dc/terms/bibliographicCitation": {
+    "labels": [
+      [
+        "Bibliographic Citation",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://purl.org/dc/terms/conformsTo": {
+    "labels": [
+      [
+        "Conforms To",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/Standard"
+    ]
+  },
+  "http://purl.org/dc/terms/contributor": {
+    "labels": [
+      [
+        "Contributor",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/Agent"
+    ]
+  },
+  "http://purl.org/dc/terms/coverage": {
+    "labels": [
+      [
+        "Coverage",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/LocationPeriodOrJurisdiction"
+    ]
+  },
+  "http://purl.org/dc/terms/created": {
+    "labels": [
+      [
+        "Date Created",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://purl.org/dc/terms/creator": {
+    "labels": [
+      [
+        "Creator",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/Agent"
+    ]
+  },
+  "http://purl.org/dc/terms/date": {
+    "labels": [
+      [
+        "Date",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://purl.org/dc/terms/dateAccepted": {
+    "labels": [
+      [
+        "Date Accepted",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://purl.org/dc/terms/dateCopyrighted": {
+    "labels": [
+      [
+        "Date Copyrighted",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://purl.org/dc/terms/dateSubmitted": {
+    "labels": [
+      [
+        "Date Submitted",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://purl.org/dc/terms/description": {
+    "labels": [
+      [
+        "Description",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/educationLevel": {
+    "labels": [
+      [
+        "Audience Education Level",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/AgentClass"
+    ]
+  },
+  "http://purl.org/dc/terms/extent": {
+    "labels": [
+      [
+        "Extent",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/SizeOrDuration"
+    ]
+  },
+  "http://purl.org/dc/terms/format": {
+    "labels": [
+      [
+        "Format",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/MediaTypeOrExtent"
+    ]
+  },
+  "http://purl.org/dc/terms/hasFormat": {
+    "labels": [
+      [
+        "Has Format",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/hasPart": {
+    "labels": [
+      [
+        "Has Part",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/hasVersion": {
+    "labels": [
+      [
+        "Has Version",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/identifier": {
+    "labels": [
+      [
+        "Identifier",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://purl.org/dc/terms/instructionalMethod": {
+    "labels": [
+      [
+        "Instructional Method",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/MethodOfInstruction"
+    ]
+  },
+  "http://purl.org/dc/terms/isFormatOf": {
+    "labels": [
+      [
+        "Is Format Of",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/isPartOf": {
+    "labels": [
+      [
+        "Is Part Of",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/isReferencedBy": {
+    "labels": [
+      [
+        "Is Referenced By",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/isReplacedBy": {
+    "labels": [
+      [
+        "Is Replaced By",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/isRequiredBy": {
+    "labels": [
+      [
+        "Is Required By",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/isVersionOf": {
+    "labels": [
+      [
+        "Is Version Of",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/issued": {
+    "labels": [
+      [
+        "Date Issued",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://purl.org/dc/terms/language": {
+    "labels": [
+      [
+        "Language",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/LinguisticSystem"
+    ]
+  },
+  "http://purl.org/dc/terms/license": {
+    "labels": [
+      [
+        "License",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/LicenseDocument"
+    ]
+  },
+  "http://purl.org/dc/terms/mediator": {
+    "labels": [
+      [
+        "Mediator",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/AgentClass"
+    ]
+  },
+  "http://purl.org/dc/terms/medium": {
+    "labels": [
+      [
+        "Medium",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/PhysicalMedium"
+    ]
+  },
+  "http://purl.org/dc/terms/modified": {
+    "labels": [
+      [
+        "Date Modified",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://purl.org/dc/terms/provenance": {
+    "labels": [
+      [
+        "Provenance",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/ProvenanceStatement"
+    ]
+  },
+  "http://purl.org/dc/terms/publisher": {
+    "labels": [
+      [
+        "Publisher",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/Agent"
+    ]
+  },
+  "http://purl.org/dc/terms/references": {
+    "labels": [
+      [
+        "References",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/relation": {
+    "labels": [
+      [
+        "Relation",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/replaces": {
+    "labels": [
+      [
+        "Replaces",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/requires": {
+    "labels": [
+      [
+        "Requires",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/rights": {
+    "labels": [
+      [
+        "Rights",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/RightsStatement"
+    ]
+  },
+  "http://purl.org/dc/terms/rightsHolder": {
+    "labels": [
+      [
+        "Rights Holder",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/Agent"
+    ]
+  },
+  "http://purl.org/dc/terms/source": {
+    "labels": [
+      [
+        "Source",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/spatial": {
+    "labels": [
+      [
+        "Spatial Coverage",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/Location"
+    ]
+  },
+  "http://purl.org/dc/terms/subject": {
+    "labels": [
+      [
+        "Subject",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/tableOfContents": {
+    "labels": [
+      [
+        "Table Of Contents",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/temporal": {
+    "labels": [
+      [
+        "Temporal Coverage",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://purl.org/dc/terms/PeriodOfTime"
+    ]
+  },
+  "http://purl.org/dc/terms/title": {
+    "labels": [
+      [
+        "Title",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://purl.org/dc/terms/type": {
+    "labels": [
+      [
+        "Type",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ]
+  },
+  "http://purl.org/dc/terms/valid": {
+    "labels": [
+      [
+        "Date Valid",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://purl.org/spar/cito/agreesWith": {
+    "labels": [
+      [
+        "agrees with",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/cites": {
+    "labels": [
+      [
+        "cites",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/citesAsAuthority": {
+    "labels": [
+      [
+        "cites as authority",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/citesAsDataSource": {
+    "labels": [
+      [
+        "cites as data source",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/citesAsEvidence": {
+    "labels": [
+      [
+        "cites as evidence",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/citesAsMetadataDocument": {
+    "labels": [
+      [
+        "cites as metadata document",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/citesAsPotentialSolution": {
+    "labels": [
+      [
+        "cites as potential solution",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/citesAsRecommendedReading": {
+    "labels": [
+      [
+        "cites as recommended reading",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/citesAsRelated": {
+    "labels": [
+      [
+        "cites as related",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/citesAsSourceDocument": {
+    "labels": [
+      [
+        "cites as source document",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/citesForInformation": {
+    "labels": [
+      [
+        "cites for information",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/compiles": {
+    "labels": [
+      [
+        "compiles",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/confirms": {
+    "labels": [
+      [
+        "confirms",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/containsAssertionFrom": {
+    "labels": [
+      [
+        "contains assertion from",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/corrects": {
+    "labels": [
+      [
+        "corrects",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/credits": {
+    "labels": [
+      [
+        "credits",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/critiques": {
+    "labels": [
+      [
+        "critiques",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/derides": {
+    "labels": [
+      [
+        "derides",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/describes": {
+    "labels": [
+      [
+        "describes",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/disagreesWith": {
+    "labels": [
+      [
+        "disagrees with",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/discusses": {
+    "labels": [
+      [
+        "discusses",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/disputes": {
+    "labels": [
+      [
+        "disputes",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/documents": {
+    "labels": [
+      [
+        "documents",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/extends": {
+    "labels": [
+      [
+        "extends",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/givesBackgroundTo": {
+    "labels": [
+      [
+        "gives background to",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/givesSupportTo": {
+    "labels": [
+      [
+        "gives support to",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/hasCitationCharacterization": {
+    "labels": [
+      [
+        "has citation characterization",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/hasCitedEntity": {
+    "labels": [
+      [
+        "has cited entity",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/hasCitingEntity": {
+    "labels": [
+      [
+        "has citing entity",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/hasReplyFrom": {
+    "labels": [
+      [
+        "has reply",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/includesExcerptFrom": {
+    "labels": [
+      [
+        "includes excerpt from",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/includesQuotationFrom": {
+    "labels": [
+      [
+        "includes quotation from",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isAgreedWithBy": {
+    "labels": [
+      [
+        "is agreed with by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isCitedAsAuthorityBy": {
+    "labels": [
+      [
+        "is cited as authority by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isCitedAsDataSourceBy": {
+    "labels": [
+      [
+        "is cited as data source by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isCitedAsEvidenceBy": {
+    "labels": [
+      [
+        "is cited as evidence by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isCitedAsMetadataDocumentBy": {
+    "labels": [
+      [
+        "is cited as metadata document by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isCitedAsPontentialSolutionBy": {
+    "labels": [
+      [
+        "is cited as potential solution by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isCitedAsRecommendedReading": {
+    "labels": [
+      [
+        "is cited as recommended reading",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isCitedAsRelatedBy": {
+    "labels": [
+      [
+        "is cited as related by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isCitedAsSourceDocumentBy": {
+    "labels": [
+      [
+        "is cited as source document by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isCitedBy": {
+    "labels": [
+      [
+        "is cited by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isCitedForInformationBy": {
+    "labels": [
+      [
+        "is cited for information by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isCompiledBy": {
+    "labels": [
+      [
+        "is compiled by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isConfirmedBy": {
+    "labels": [
+      [
+        "is confirmed by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isCorrectedBy": {
+    "labels": [
+      [
+        "is corrected by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isCreditedBy": {
+    "labels": [
+      [
+        "is credited by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isCritiquedBy": {
+    "labels": [
+      [
+        "is critiqued by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isDeridedBy": {
+    "labels": [
+      [
+        "is derided by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isDescribedBy": {
+    "labels": [
+      [
+        "is described by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isDisagreedWithBy": {
+    "labels": [
+      [
+        "is disagreed with by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isDiscussedBy": {
+    "labels": [
+      [
+        "is discussed by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isDisputedBy": {
+    "labels": [
+      [
+        "is disputed by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isDocumentedBy": {
+    "labels": [
+      [
+        "is documented by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isExtendedBy": {
+    "labels": [
+      [
+        "is extended by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isParodiedBy": {
+    "labels": [
+      [
+        "is parodied by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isPlagiarizedBy": {
+    "labels": [
+      [
+        "is plagiarized by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isQualifiedBy": {
+    "labels": [
+      [
+        "is qualified by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isRefutedBy": {
+    "labels": [
+      [
+        "is refuted by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isRetractedBy": {
+    "labels": [
+      [
+        "is retracted by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isReviewedBy": {
+    "labels": [
+      [
+        "is reviewed by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isRidiculedBy": {
+    "labels": [
+      [
+        "is ridiculed by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isSpeculatedOnBy": {
+    "labels": [
+      [
+        "is speculated on by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isSupportedBy": {
+    "labels": [
+      [
+        "is supported by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/isUpdatedBy": {
+    "labels": [
+      [
+        "is updated by",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/likes": {
+    "labels": [
+      [
+        "likes",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/obtainsBackgroundFrom": {
+    "labels": [
+      [
+        "obtains background from",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/obtainsSupportFrom": {
+    "labels": [
+      [
+        "obtains support from",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/parodies": {
+    "labels": [
+      [
+        "parodies",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/plagiarizes": {
+    "labels": [
+      [
+        "plagiarizes",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/providesAssertionFor": {
+    "labels": [
+      [
+        "provides assertion for",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/providesConclusionsFor": {
+    "labels": [
+      [
+        "provides conclusions for",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/providesDataFor": {
+    "labels": [
+      [
+        "provides data for",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/providesExcerptFor": {
+    "labels": [
+      [
+        "provides excerpt for",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/providesMethodFor": {
+    "labels": [
+      [
+        "provides method for",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/providesQuotationFor": {
+    "labels": [
+      [
+        "provides quotation for",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/qualifies": {
+    "labels": [
+      [
+        "qualifies",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/refutes": {
+    "labels": [
+      [
+        "refutes",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/repliesTo": {
+    "labels": [
+      [
+        "replies to",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/retracts": {
+    "labels": [
+      [
+        "retracts",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/reviews": {
+    "labels": [
+      [
+        "reviews",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/ridicules": {
+    "labels": [
+      [
+        "ridicules",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/sharesAuthorInstitutionWith": {
+    "labels": [
+      [
+        "shares author institution with",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/sharesAuthorsWith": {
+    "labels": [
+      [
+        "shares authors with",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/sharesFundingAgencyWith": {
+    "labels": [
+      [
+        "shares funding agency with",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/speculatesOn": {
+    "labels": [
+      [
+        "speculates on",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/supports": {
+    "labels": [
+      [
+        "supports",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/updates": {
+    "labels": [
+      [
+        "updates",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/usesConclusionsFrom": {
+    "labels": [
+      [
+        "uses conclusions from",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/usesDataFrom": {
+    "labels": [
+      [
+        "uses data from",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/usesMethodIn": {
+    "labels": [
+      [
+        "uses method in",
+        "en"
+      ]
+    ]
+  },
+  "http://schema.org/citation": {
+    "labels": [
+      [
+        "citation",
+        null
+      ]
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#asGML": {
+    "labels": [
+      [
+        "asGML",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#gmlLiteral"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#asWKT": {
+    "labels": [
+      [
+        "asWKT",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#wktLiteral"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#coordinateDimension": {
+    "labels": [
+      [
+        "coordinateDimension",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#integer"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#defaultGeometry": {
+    "labels": [
+      [
+        "defaultGeometry",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#Geometry"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#dimension": {
+    "labels": [
+      [
+        "dimension",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#integer"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#ehContains": {
+    "labels": [
+      [
+        "contains",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#ehCoveredBy": {
+    "labels": [
+      [
+        "coveredBy",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#ehCovers": {
+    "labels": [
+      [
+        "covers",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#ehDisjoint": {
+    "labels": [
+      [
+        "disjoint",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#ehEquals": {
+    "labels": [
+      [
+        "equals",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#ehInside": {
+    "labels": [
+      [
+        "inside",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#ehMeet": {
+    "labels": [
+      [
+        "meet",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#ehOverlap": {
+    "labels": [
+      [
+        "overlap",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#hasGeometry": {
+    "labels": [
+      [
+        "hasGeometry",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#Geometry"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#hasSerialization": {
+    "labels": [
+      [
+        "has serialization",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#isEmpty": {
+    "labels": [
+      [
+        "isEmpty",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#boolean"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#isSimple": {
+    "labels": [
+      [
+        "isSimple",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#boolean"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#rcc8dc": {
+    "labels": [
+      [
+        "disconnected",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#rcc8ec": {
+    "labels": [
+      [
+        "externally connected",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#rcc8eq": {
+    "labels": [
+      [
+        "equals",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#rcc8ntpp": {
+    "labels": [
+      [
+        "non-tangential proper part",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#rcc8ntppi": {
+    "labels": [
+      [
+        "non-tangential proper part inverse",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#rcc8po": {
+    "labels": [
+      [
+        "partially overlapping",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#rcc8tpp": {
+    "labels": [
+      [
+        "tangential proper part",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#rcc8tppi": {
+    "labels": [
+      [
+        "tangential proper part inverse",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#sfContains": {
+    "labels": [
+      [
+        "contains",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#sfCrosses": {
+    "labels": [
+      [
+        "crosses",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#sfDisjoint": {
+    "labels": [
+      [
+        "disjoint",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#sfEquals": {
+    "labels": [
+      [
+        "equals",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#sfIntersects": {
+    "labels": [
+      [
+        "intersects",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#sfOverlaps": {
+    "labels": [
+      [
+        "overlaps",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#sfTouches": {
+    "labels": [
+      [
+        "touches",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#sfWithin": {
+    "labels": [
+      [
+        "within",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.opengis.net/ont/geosparql#SpatialObject"
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#spatialDimension": {
+    "labels": [
+      [
+        "spatialDimension",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#integer"
+    ]
+  },
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": {
+    "labels": [
+      [
+        "first",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Resource"
+    ]
+  },
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": {
+    "labels": [
+      [
+        "object",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Resource"
+    ]
+  },
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": {
+    "labels": [
+      [
+        "predicate",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Resource"
+    ]
+  },
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": {
+    "labels": [
+      [
+        "rest",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+    ]
+  },
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": {
+    "labels": [
+      [
+        "subject",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Resource"
+    ]
+  },
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
+    "labels": [
+      [
+        "type",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ]
+  },
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": {
+    "labels": [
+      [
+        "value",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Resource"
+    ]
+  },
+  "http://www.w3.org/2000/01/rdf-schema#comment": {
+    "labels": [
+      [
+        "comment",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://www.w3.org/2000/01/rdf-schema#domain": {
+    "labels": [
+      [
+        "domain",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ]
+  },
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": {
+    "labels": [
+      [
+        "isDefinedBy",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Resource"
+    ]
+  },
+  "http://www.w3.org/2000/01/rdf-schema#label": {
+    "labels": [
+      [
+        "label",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://www.w3.org/2000/01/rdf-schema#member": {
+    "labels": [
+      [
+        "member",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Resource"
+    ]
+  },
+  "http://www.w3.org/2000/01/rdf-schema#range": {
+    "labels": [
+      [
+        "range",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ]
+  },
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso": {
+    "labels": [
+      [
+        "see also",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Resource"
+    ]
+  },
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
+    "labels": [
+      [
+        "subClassOf",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ]
+  },
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": {
+    "labels": [
+      [
+        "subPropertyOf",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#allValuesFrom": {
+    "labels": [
+      [
+        "allValuesFrom",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#annotatedProperty": {
+    "labels": [
+      [
+        "annotatedProperty",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Resource"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#annotatedSource": {
+    "labels": [
+      [
+        "annotatedSource",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Resource"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#annotatedTarget": {
+    "labels": [
+      [
+        "annotatedTarget",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Resource"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#assertionProperty": {
+    "labels": [
+      [
+        "assertionProperty",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#backwardCompatibleWith": {
+    "labels": [
+      [
+        "backwardCompatibleWith",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#bottomDataProperty": {
+    "labels": [
+      [
+        "bottomDataProperty",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#bottomObjectProperty": {
+    "labels": [
+      [
+        "bottomObjectProperty",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#cardinality": {
+    "labels": [
+      [
+        "cardinality",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#complementOf": {
+    "labels": [
+      [
+        "complementOf",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#datatypeComplementOf": {
+    "labels": [
+      [
+        "datatypeComplementOf",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#deprecated": {
+    "labels": [
+      [
+        "deprecated",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Resource"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#differentFrom": {
+    "labels": [
+      [
+        "differentFrom",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#disjointUnionOf": {
+    "labels": [
+      [
+        "disjointUnionOf",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#disjointWith": {
+    "labels": [
+      [
+        "disjointWith",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#distinctMembers": {
+    "labels": [
+      [
+        "distinctMembers",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#equivalentClass": {
+    "labels": [
+      [
+        "equivalentClass",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#equivalentProperty": {
+    "labels": [
+      [
+        "equivalentProperty",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#hasKey": {
+    "labels": [
+      [
+        "hasKey",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#hasSelf": {
+    "labels": [
+      [
+        "hasSelf",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Resource"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#hasValue": {
+    "labels": [
+      [
+        "hasValue",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Resource"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#imports": {
+    "labels": [
+      [
+        "imports",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#incompatibleWith": {
+    "labels": [
+      [
+        "incompatibleWith",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#intersectionOf": {
+    "labels": [
+      [
+        "intersectionOf",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#inverseOf": {
+    "labels": [
+      [
+        "inverseOf",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#maxCardinality": {
+    "labels": [
+      [
+        "maxCardinality",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality": {
+    "labels": [
+      [
+        "maxQualifiedCardinality",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#members": {
+    "labels": [
+      [
+        "members",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#minCardinality": {
+    "labels": [
+      [
+        "minCardinality",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality": {
+    "labels": [
+      [
+        "minQualifiedCardinality",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#onClass": {
+    "labels": [
+      [
+        "onClass",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#onDataRange": {
+    "labels": [
+      [
+        "onDataRange",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#onDatatype": {
+    "labels": [
+      [
+        "onDatatype",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#onProperties": {
+    "labels": [
+      [
+        "onProperties",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#onProperty": {
+    "labels": [
+      [
+        "onProperty",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#oneOf": {
+    "labels": [
+      [
+        "oneOf",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#priorVersion": {
+    "labels": [
+      [
+        "priorVersion",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom": {
+    "labels": [
+      [
+        "propertyChainAxiom",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#propertyDisjointWith": {
+    "labels": [
+      [
+        "propertyDisjointWith",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality": {
+    "labels": [
+      [
+        "qualifiedCardinality",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#sameAs": {
+    "labels": [
+      [
+        "sameAs",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#someValuesFrom": {
+    "labels": [
+      [
+        "someValuesFrom",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#sourceIndividual": {
+    "labels": [
+      [
+        "sourceIndividual",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#targetIndividual": {
+    "labels": [
+      [
+        "targetIndividual",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#targetValue": {
+    "labels": [
+      [
+        "targetValue",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#topDataProperty": {
+    "labels": [
+      [
+        "topDataProperty",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#topObjectProperty": {
+    "labels": [
+      [
+        "topObjectProperty",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#unionOf": {
+    "labels": [
+      [
+        "unionOf",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#versionIRI": {
+    "labels": [
+      [
+        "versionIRI",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#versionInfo": {
+    "labels": [
+      [
+        "versionInfo",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Resource"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#withRestrictions": {
+    "labels": [
+      [
+        "withRestrictions",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+    ]
+  },
+  "http://www.w3.org/2003/01/geo/wgs84_pos#alt": {
+    "labels": [
+      [
+        "altitude",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2003/01/geo/wgs84_pos#lat": {
+    "labels": [
+      [
+        "latitude",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long": {
+    "labels": [
+      [
+        "lat/long",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2003/01/geo/wgs84_pos#location": {
+    "labels": [
+      [
+        "location",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+    ]
+  },
+  "http://www.w3.org/2003/01/geo/wgs84_pos#long": {
+    "labels": [
+      [
+        "longitude",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#altLabel": {
+    "labels": [
+      [
+        "alternative label",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#broadMatch": {
+    "labels": [
+      [
+        "has broader match",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#broader": {
+    "labels": [
+      [
+        "has broader",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#broaderTransitive": {
+    "labels": [
+      [
+        "has broader transitive",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#changeNote": {
+    "labels": [
+      [
+        "change note",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#closeMatch": {
+    "labels": [
+      [
+        "has close match",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#definition": {
+    "labels": [
+      [
+        "definition",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#editorialNote": {
+    "labels": [
+      [
+        "editorial note",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#exactMatch": {
+    "labels": [
+      [
+        "has exact match",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#example": {
+    "labels": [
+      [
+        "example",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#hasTopConcept": {
+    "labels": [
+      [
+        "has top concept",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#hiddenLabel": {
+    "labels": [
+      [
+        "hidden label",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#historyNote": {
+    "labels": [
+      [
+        "history note",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#inScheme": {
+    "labels": [
+      [
+        "is in scheme",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#mappingRelation": {
+    "labels": [
+      [
+        "is in mapping relation with",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#member": {
+    "labels": [
+      [
+        "has member",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "f967c88fe34af468eaf8c02fdff9bca4db1"
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#memberList": {
+    "labels": [
+      [
+        "has member list",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#narrowMatch": {
+    "labels": [
+      [
+        "has narrower match",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#narrower": {
+    "labels": [
+      [
+        "has narrower",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#narrowerTransitive": {
+    "labels": [
+      [
+        "has narrower transitive",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#notation": {
+    "labels": [
+      [
+        "notation",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#note": {
+    "labels": [
+      [
+        "note",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#prefLabel": {
+    "labels": [
+      [
+        "preferred label",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#related": {
+    "labels": [
+      [
+        "has related",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#relatedMatch": {
+    "labels": [
+      [
+        "has related match",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#scopeNote": {
+    "labels": [
+      [
+        "scope note",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#semanticRelation": {
+    "labels": [
+      [
+        "is in semantic relation with",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#topConceptOf": {
+    "labels": [
+      [
+        "is top concept in scheme",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    ]
+  },
+  "http://www.w3.org/ns/prov#actedOnBehalfOf": {
+    "labels": [
+      [
+        "actedOnBehalfOf",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Agent"
+    ]
+  },
+  "http://www.w3.org/ns/prov#activity": {
+    "labels": [
+      [
+        "activity",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Activity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#agent": {
+    "labels": [
+      [
+        "agent",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Agent"
+    ]
+  },
+  "http://www.w3.org/ns/prov#alternateOf": {
+    "labels": [
+      [
+        "alternateOf",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#asInBundle": {
+    "labels": [
+      [
+        "asInBundle",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Bundle"
+    ]
+  },
+  "http://www.w3.org/ns/prov#atLocation": {
+    "labels": [
+      [
+        "atLocation",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Location"
+    ]
+  },
+  "http://www.w3.org/ns/prov#atTime": {
+    "labels": [
+      [
+        "atTime",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#dateTime"
+    ]
+  },
+  "http://www.w3.org/ns/prov#derivedByInsertionFrom": {
+    "labels": [
+      [
+        "derivedByInsertionFrom",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Dictionary"
+    ]
+  },
+  "http://www.w3.org/ns/prov#derivedByRemovalFrom": {
+    "labels": [
+      [
+        "derivedByRemovalFrom",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Dictionary"
+    ]
+  },
+  "http://www.w3.org/ns/prov#describesService": {
+    "labels": [
+      [
+        "describesService",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#dictionary": {
+    "labels": [
+      [
+        "dictionary",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Dictionary"
+    ]
+  },
+  "http://www.w3.org/ns/prov#endedAtTime": {
+    "labels": [
+      [
+        "endedAtTime",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#dateTime"
+    ]
+  },
+  "http://www.w3.org/ns/prov#entity": {
+    "labels": [
+      [
+        "entity",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#generated": {
+    "labels": [
+      [
+        "generated",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#generatedAtTime": {
+    "labels": [
+      [
+        "generatedAtTime",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#dateTime"
+    ]
+  },
+  "http://www.w3.org/ns/prov#hadActivity": {
+    "labels": [
+      [
+        "hadActivity",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Activity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#hadDictionaryMember": {
+    "labels": [
+      [
+        "hadDictionaryMember",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#KeyEntityPair"
+    ]
+  },
+  "http://www.w3.org/ns/prov#hadGeneration": {
+    "labels": [
+      [
+        "hadGeneration",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Generation"
+    ]
+  },
+  "http://www.w3.org/ns/prov#hadMember": {
+    "labels": [
+      [
+        "hadMember",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#hadPlan": {
+    "labels": [
+      [
+        "hadPlan",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Plan"
+    ]
+  },
+  "http://www.w3.org/ns/prov#hadPrimarySource": {
+    "labels": [
+      [
+        "hadPrimarySource",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#hadRole": {
+    "labels": [
+      [
+        "hadRole",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Role"
+    ]
+  },
+  "http://www.w3.org/ns/prov#hadUsage": {
+    "labels": [
+      [
+        "hadUsage",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Usage"
+    ]
+  },
+  "http://www.w3.org/ns/prov#has_anchor": {
+    "labels": [
+      [
+        "has_anchor",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#has_provenance": {
+    "labels": [
+      [
+        "has_provenance",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#has_query_service": {
+    "labels": [
+      [
+        "hasProvenanceService",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#influenced": {
+    "labels": [
+      [
+        "influenced",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#influencer": {
+    "labels": [
+      [
+        "influencer",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://www.w3.org/ns/prov#insertedKeyEntityPair": {
+    "labels": [
+      [
+        "insertedKeyEntityPair",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#KeyEntityPair"
+    ]
+  },
+  "http://www.w3.org/ns/prov#invalidated": {
+    "labels": [
+      [
+        "invalidated",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#invalidatedAtTime": {
+    "labels": [
+      [
+        "invalidatedAtTime",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#dateTime"
+    ]
+  },
+  "http://www.w3.org/ns/prov#mentionOf": {
+    "labels": [
+      [
+        "mentionOf",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#pairEntity": {
+    "labels": [
+      [
+        "pairKey",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#pairKey": {
+    "labels": [
+      [
+        "pairKey",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://www.w3.org/ns/prov#pingback": {
+    "labels": [
+      [
+        "provenance pingback",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#provenanceUriTemplate": {
+    "labels": [
+      [
+        "provenanceUriTemplate",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#qualifiedAssociation": {
+    "labels": [
+      [
+        "qualifiedAssociation",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Association"
+    ]
+  },
+  "http://www.w3.org/ns/prov#qualifiedAttribution": {
+    "labels": [
+      [
+        "qualifiedAttribution",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Attribution"
+    ]
+  },
+  "http://www.w3.org/ns/prov#qualifiedCommunication": {
+    "labels": [
+      [
+        "qualifiedCommunication",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Communication"
+    ]
+  },
+  "http://www.w3.org/ns/prov#qualifiedDelegation": {
+    "labels": [
+      [
+        "qualifiedDelegation",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Delegation"
+    ]
+  },
+  "http://www.w3.org/ns/prov#qualifiedDerivation": {
+    "labels": [
+      [
+        "qualifiedDerivation",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Derivation"
+    ]
+  },
+  "http://www.w3.org/ns/prov#qualifiedEnd": {
+    "labels": [
+      [
+        "qualifiedEnd",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#End"
+    ]
+  },
+  "http://www.w3.org/ns/prov#qualifiedGeneration": {
+    "labels": [
+      [
+        "qualifiedGeneration",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Generation"
+    ]
+  },
+  "http://www.w3.org/ns/prov#qualifiedInfluence": {
+    "labels": [
+      [
+        "qualifiedInfluence",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Influence"
+    ]
+  },
+  "http://www.w3.org/ns/prov#qualifiedInsertion": {
+    "labels": [
+      [
+        "qualifiedInsertion",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Insertion"
+    ]
+  },
+  "http://www.w3.org/ns/prov#qualifiedInvalidation": {
+    "labels": [
+      [
+        "qualifiedInvalidation",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Invalidation"
+    ]
+  },
+  "http://www.w3.org/ns/prov#qualifiedPrimarySource": {
+    "labels": [
+      [
+        "qualifiedPrimarySource",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#PrimarySource"
+    ]
+  },
+  "http://www.w3.org/ns/prov#qualifiedQuotation": {
+    "labels": [
+      [
+        "qualifiedQuotation",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Quotation"
+    ]
+  },
+  "http://www.w3.org/ns/prov#qualifiedRemoval": {
+    "labels": [
+      [
+        "qualifiedRemoval",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Removal"
+    ]
+  },
+  "http://www.w3.org/ns/prov#qualifiedRevision": {
+    "labels": [
+      [
+        "qualifiedRevision",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Revision"
+    ]
+  },
+  "http://www.w3.org/ns/prov#qualifiedStart": {
+    "labels": [
+      [
+        "qualifiedStart",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Start"
+    ]
+  },
+  "http://www.w3.org/ns/prov#qualifiedUsage": {
+    "labels": [
+      [
+        "qualifiedUsage",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Usage"
+    ]
+  },
+  "http://www.w3.org/ns/prov#removedKey": {
+    "labels": [
+      [
+        "removedKey",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://www.w3.org/ns/prov#specializationOf": {
+    "labels": [
+      [
+        "specializationOf",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#startedAtTime": {
+    "labels": [
+      [
+        "startedAtTime",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2001/XMLSchema#dateTime"
+    ]
+  },
+  "http://www.w3.org/ns/prov#used": {
+    "labels": [
+      [
+        "used",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#value": {
+    "labels": [
+      [
+        "value",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#wasAssociatedWith": {
+    "labels": [
+      [
+        "wasAssociatedWith",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Agent"
+    ]
+  },
+  "http://www.w3.org/ns/prov#wasAttributedTo": {
+    "labels": [
+      [
+        "wasAttributedTo",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Agent"
+    ]
+  },
+  "http://www.w3.org/ns/prov#wasDerivedFrom": {
+    "labels": [
+      [
+        "was derived from",
+        "en"
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#wasEndedBy": {
+    "labels": [
+      [
+        "wasEndedBy",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#wasGeneratedBy": {
+    "labels": [
+      [
+        "wasGeneratedBy",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Activity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#wasInfluencedBy": {
+    "labels": [
+      [
+        "wasInfluencedBy",
+        null
+      ]
+    ],
+    "ranges": [
+      "ub1bL315C36"
+    ]
+  },
+  "http://www.w3.org/ns/prov#wasInformedBy": {
+    "labels": [
+      [
+        "wasInformedBy",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Activity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#wasInvalidatedBy": {
+    "labels": [
+      [
+        "wasInvalidatedBy",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Activity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#wasQuotedFrom": {
+    "labels": [
+      [
+        "wasQuotedFrom",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#wasRevisionOf": {
+    "labels": [
+      [
+        "wasRevisionOf",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+  },
+  "http://www.w3.org/ns/prov#wasStartedBy": {
+    "labels": [
+      [
+        "wasStartedBy",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/account": {
+    "labels": [
+      [
+        "account",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/OnlineAccount"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/accountName": {
+    "labels": [
+      [
+        "account name",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/accountServiceHomepage": {
+    "labels": [
+      [
+        "account service homepage",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Document"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/age": {
+    "labels": [
+      [
+        "age",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/aimChatID": {
+    "labels": [
+      [
+        "AIM chat ID",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/based_near": {
+    "labels": [
+      [
+        "based near",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/birthday": {
+    "labels": [
+      [
+        "birthday",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/currentProject": {
+    "labels": [
+      [
+        "current project",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/depiction": {
+    "labels": [
+      [
+        "depiction",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Image"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/depicts": {
+    "labels": [
+      [
+        "depicts",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/dnaChecksum": {
+    "labels": [
+      [
+        "DNA checksum",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/familyName": {
+    "labels": [
+      [
+        "familyName",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/family_name": {
+    "labels": [
+      [
+        "family_name",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/firstName": {
+    "labels": [
+      [
+        "firstName",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/focus": {
+    "labels": [
+      [
+        "focus",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/fundedBy": {
+    "labels": [
+      [
+        "funded by",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/geekcode": {
+    "labels": [
+      [
+        "geekcode",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/gender": {
+    "labels": [
+      [
+        "gender",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/givenName": {
+    "labels": [
+      [
+        "Given name",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/givenname": {
+    "labels": [
+      [
+        "Given name",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/holdsAccount": {
+    "labels": [
+      [
+        "account",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/OnlineAccount"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/homepage": {
+    "labels": [
+      [
+        "homepage",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Document"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/icqChatID": {
+    "labels": [
+      [
+        "ICQ chat ID",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/img": {
+    "labels": [
+      [
+        "image",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Image"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/interest": {
+    "labels": [
+      [
+        "interest",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Document"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+    "labels": [
+      [
+        "is primary topic of",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Document"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/jabberID": {
+    "labels": [
+      [
+        "jabber ID",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/knows": {
+    "labels": [
+      [
+        "knows",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Person"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/lastName": {
+    "labels": [
+      [
+        "lastName",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/logo": {
+    "labels": [
+      [
+        "logo",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/made": {
+    "labels": [
+      [
+        "made",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/maker": {
+    "labels": [
+      [
+        "maker",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Agent"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/mbox": {
+    "labels": [
+      [
+        "personal mailbox",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/mbox_sha1sum": {
+    "labels": [
+      [
+        "sha1sum of a personal mailbox URI name",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/member": {
+    "labels": [
+      [
+        "member",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Agent"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/membershipClass": {
+    "labels": [
+      [
+        "membershipClass",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/msnChatID": {
+    "labels": [
+      [
+        "MSN chat ID",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/myersBriggs": {
+    "labels": [
+      [
+        "myersBriggs",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/name": {
+    "labels": [
+      [
+        "name",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/nick": {
+    "labels": [
+      [
+        "nickname",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/openid": {
+    "labels": [
+      [
+        "openid",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Document"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/page": {
+    "labels": [
+      [
+        "page",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Document"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/pastProject": {
+    "labels": [
+      [
+        "past project",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/phone": {
+    "labels": [
+      [
+        "phone",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/plan": {
+    "labels": [
+      [
+        "plan",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/primaryTopic": {
+    "labels": [
+      [
+        "primary topic",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/publications": {
+    "labels": [
+      [
+        "publications",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Document"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/schoolHomepage": {
+    "labels": [
+      [
+        "schoolHomepage",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Document"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/sha1": {
+    "labels": [
+      [
+        "sha1sum (hex)",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/skypeID": {
+    "labels": [
+      [
+        "Skype ID",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/status": {
+    "labels": [
+      [
+        "status",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/surname": {
+    "labels": [
+      [
+        "Surname",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/theme": {
+    "labels": [
+      [
+        "theme",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/thumbnail": {
+    "labels": [
+      [
+        "thumbnail",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Image"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/tipjar": {
+    "labels": [
+      [
+        "tipjar",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Document"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/title": {
+    "labels": [
+      [
+        "title",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/topic": {
+    "labels": [
+      [
+        "topic",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/topic_interest": {
+    "labels": [
+      [
+        "topic_interest",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2002/07/owl#Thing"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/weblog": {
+    "labels": [
+      [
+        "weblog",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Document"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/workInfoHomepage": {
+    "labels": [
+      [
+        "work info homepage",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Document"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/workplaceHomepage": {
+    "labels": [
+      [
+        "workplace homepage",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://xmlns.com/foaf/0.1/Document"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/yahooChatID": {
+    "labels": [
+      [
+        "Yahoo chat ID",
+        null
+      ]
+    ],
+    "ranges": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  }
+}

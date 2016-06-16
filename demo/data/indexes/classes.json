@@ -1,0 +1,1322 @@
+{
+  "http://data.ordnancesurvey.co.uk/ontology/geometry/1kmGridSquare": {
+    "labels": [
+      [
+        "1 km Grid Square",
+        null
+      ]
+    ]
+  },
+  "http://data.ordnancesurvey.co.uk/ontology/geometry/20kmGridSquare": {
+    "labels": [
+      [
+        "20km Grid Square",
+        null
+      ]
+    ]
+  },
+  "http://data.ordnancesurvey.co.uk/ontology/geometry/AbstractGeometry": {
+    "labels": [
+      [
+        "Abstract Geometry",
+        null
+      ]
+    ],
+    "shape": [
+      "http://data.ordnancesurvey.co.uk/ontology/geometry/asGeoJSON"
+    ]
+  },
+  "http://geovocab.org/spatial#Feature": {
+    "labels": [
+      [
+        "Feature",
+        null
+      ]
+    ],
+    "shape": [
+      "http://www.w3.org/2000/01/rdf-schema#label",
+      "http://www.w3.org/2000/01/rdf-schema#comment",
+      "http://geovocab.org/spatial#C"
+    ]
+  },
+  "http://pleiades.stoa.org/places/vocab#Location": {
+    "labels": [
+      [
+        "Location",
+        "en"
+      ]
+    ],
+    "shape": [
+      "http://purl.org/dc/terms/title",
+      "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/partiallyOverlaps",
+      "http://www.w3.org/ns/prov#wasDerivedFrom"
+    ]
+  },
+  "http://pleiades.stoa.org/places/vocab#Name": {
+    "labels": [
+      [
+        "Name",
+        "en"
+      ]
+    ],
+    "shape": [
+      "http://purl.org/dc/terms/title",
+      "http://purl.org/dc/terms/description",
+      "http://purl.org/dc/terms/bibliographicCitation",
+      "http://pleiades.stoa.org/places/vocab#nameAttested",
+      "http://pleiades.stoa.org/places/vocab#nameRomanized",
+      "http://pleiades.stoa.org/places/vocab#during",
+      "http://pleiades.stoa.org/places/vocab#start_date",
+      "http://pleiades.stoa.org/places/vocab#end_date",
+      "http://purl.org/spar/cito/cites",
+      "http://purl.org/spar/cito/citesAsEvidence",
+      "http://purl.org/spar/cito/citesForInformation",
+      "http://www.w3.org/ns/prov#wasDerivedFrom"
+    ]
+  },
+  "http://pleiades.stoa.org/places/vocab#Place": {
+    "labels": [
+      [
+        "Place",
+        "en"
+      ]
+    ],
+    "shape": [
+      "http://pleiades.stoa.org/places/vocab#hasName",
+      "http://pleiades.stoa.org/places/vocab#hasFeatureType",
+      "http://pleiades.stoa.org/places/vocab#hasLocation",
+      "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within",
+      "http://www.w3.org/ns/prov#wasDerivedFrom"
+    ]
+  },
+  "http://purl.org/dc/terms/Agent": {
+    "labels": [
+      [
+        "Agent",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/AgentClass": {
+    "labels": [
+      [
+        "Agent Class",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/BibliographicResource": {
+    "labels": [
+      [
+        "Bibliographic Resource",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/Box": {
+    "labels": [
+      [
+        "DCMI Box",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/FileFormat": {
+    "labels": [
+      [
+        "File Format",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/Frequency": {
+    "labels": [
+      [
+        "Frequency",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/ISO3166": {
+    "labels": [
+      [
+        "ISO 3166",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/ISO639-2": {
+    "labels": [
+      [
+        "ISO 639-2",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/ISO639-3": {
+    "labels": [
+      [
+        "ISO 639-3",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/Jurisdiction": {
+    "labels": [
+      [
+        "Jurisdiction",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/LicenseDocument": {
+    "labels": [
+      [
+        "License Document",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/LinguisticSystem": {
+    "labels": [
+      [
+        "Linguistic System",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/Location": {
+    "labels": [
+      [
+        "Location",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/LocationPeriodOrJurisdiction": {
+    "labels": [
+      [
+        "Location, Period, or Jurisdiction",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/MediaType": {
+    "labels": [
+      [
+        "Media Type",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/MediaTypeOrExtent": {
+    "labels": [
+      [
+        "Media Type or Extent",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/MethodOfAccrual": {
+    "labels": [
+      [
+        "Method of Accrual",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/MethodOfInstruction": {
+    "labels": [
+      [
+        "Method of Instruction",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/Period": {
+    "labels": [
+      [
+        "DCMI Period",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/PeriodOfTime": {
+    "labels": [
+      [
+        "Period of Time",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/PhysicalMedium": {
+    "labels": [
+      [
+        "Physical Medium",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/PhysicalResource": {
+    "labels": [
+      [
+        "Physical Resource",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/Point": {
+    "labels": [
+      [
+        "DCMI Point",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/Policy": {
+    "labels": [
+      [
+        "Policy",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/ProvenanceStatement": {
+    "labels": [
+      [
+        "Provenance Statement",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/RFC1766": {
+    "labels": [
+      [
+        "RFC 1766",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/RFC3066": {
+    "labels": [
+      [
+        "RFC 3066",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/RFC4646": {
+    "labels": [
+      [
+        "RFC 4646",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/RFC5646": {
+    "labels": [
+      [
+        "RFC 5646",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/RightsStatement": {
+    "labels": [
+      [
+        "Rights Statement",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/SizeOrDuration": {
+    "labels": [
+      [
+        "Size or Duration",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/Standard": {
+    "labels": [
+      [
+        "Standard",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/URI": {
+    "labels": [
+      [
+        "URI",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/dc/terms/W3CDTF": {
+    "labels": [
+      [
+        "W3C-DTF",
+        "en"
+      ]
+    ]
+  },
+  "http://purl.org/spar/cito/CitationAct": {
+    "labels": [
+      [
+        "citation act",
+        "en"
+      ]
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#Feature": {
+    "labels": [
+      [
+        "Feature",
+        "en"
+      ]
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#Geometry": {
+    "labels": [
+      [
+        "Geometry",
+        "en"
+      ]
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#SpatialObject": {
+    "labels": [
+      [
+        "SpatialObject",
+        "en"
+      ]
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#gmlLiteral": {
+    "labels": [
+      [
+        "GML Literal",
+        "en"
+      ]
+    ]
+  },
+  "http://www.opengis.net/ont/geosparql#wktLiteral": {
+    "labels": [
+      [
+        "Well-known Text Literal",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt": {
+    "labels": [
+      [
+        "Alt",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag": {
+    "labels": [
+      [
+        "Bag",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML": {
+    "labels": [
+      [
+        "HTML",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#List": {
+    "labels": [
+      [
+        "List",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral": {
+    "labels": [
+      [
+        "PlainLiteral",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property": {
+    "labels": [
+      [
+        "Property",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq": {
+    "labels": [
+      [
+        "Seq",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement": {
+    "labels": [
+      [
+        "Statement",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral": {
+    "labels": [
+      [
+        "XMLLiteral",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString": {
+    "labels": [
+      [
+        "langString",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2000/01/rdf-schema#Class": {
+    "labels": [
+      [
+        "Class",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2000/01/rdf-schema#Container": {
+    "labels": [
+      [
+        "Container",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty": {
+    "labels": [
+      [
+        "ContainerMembershipProperty",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2000/01/rdf-schema#Datatype": {
+    "labels": [
+      [
+        "Datatype",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2000/01/rdf-schema#Literal": {
+    "labels": [
+      [
+        "Literal",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2000/01/rdf-schema#Resource": {
+    "labels": [
+      [
+        "Resource",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#AllDifferent": {
+    "labels": [
+      [
+        "AllDifferent",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#AllDisjointClasses": {
+    "labels": [
+      [
+        "AllDisjointClasses",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#AllDisjointProperties": {
+    "labels": [
+      [
+        "AllDisjointProperties",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#Annotation": {
+    "labels": [
+      [
+        "Annotation",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#AnnotationProperty": {
+    "labels": [
+      [
+        "AnnotationProperty",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#AsymmetricProperty": {
+    "labels": [
+      [
+        "AsymmetricProperty",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#Axiom": {
+    "labels": [
+      [
+        "Axiom",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#Class": {
+    "labels": [
+      [
+        "Class",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#DataRange": {
+    "labels": [
+      [
+        "DataRange",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#DatatypeProperty": {
+    "labels": [
+      [
+        "DatatypeProperty",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#DeprecatedClass": {
+    "labels": [
+      [
+        "DeprecatedClass",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#DeprecatedProperty": {
+    "labels": [
+      [
+        "DeprecatedProperty",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#FunctionalProperty": {
+    "labels": [
+      [
+        "FunctionalProperty",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#InverseFunctionalProperty": {
+    "labels": [
+      [
+        "InverseFunctionalProperty",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#IrreflexiveProperty": {
+    "labels": [
+      [
+        "IrreflexiveProperty",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#NamedIndividual": {
+    "labels": [
+      [
+        "NamedIndividual",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#NegativePropertyAssertion": {
+    "labels": [
+      [
+        "NegativePropertyAssertion",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#Nothing": {
+    "labels": [
+      [
+        "Nothing",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#ObjectProperty": {
+    "labels": [
+      [
+        "ObjectProperty",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#Ontology": {
+    "labels": [
+      [
+        "Ontology",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#OntologyProperty": {
+    "labels": [
+      [
+        "OntologyProperty",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#ReflexiveProperty": {
+    "labels": [
+      [
+        "ReflexiveProperty",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#Restriction": {
+    "labels": [
+      [
+        "Restriction",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#SymmetricProperty": {
+    "labels": [
+      [
+        "SymmetricProperty",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#Thing": {
+    "labels": [
+      [
+        "Thing",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#TransitiveProperty": {
+    "labels": [
+      [
+        "TransitiveProperty",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2003/01/geo/wgs84_pos#Point": {
+    "labels": [
+      [
+        "point",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing": {
+    "labels": [
+      [
+        "Spatial Thing",
+        null
+      ],
+      [
+        "SpatialThing",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#Collection": {
+    "labels": [
+      [
+        "Collection",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#Concept": {
+    "labels": [
+      [
+        "Concept",
+        "en"
+      ]
+    ],
+    "shape": [
+      "http://purl.org/dc/terms/title",
+      "http://purl.org/dc/terms/description",
+      "http://purl.org/dc/terms/coverage",
+      "http://purl.org/dc/terms/bibliographicCitation",
+      "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "http://www.w3.org/2004/02/skos/core#altLabel",
+      "http://www.w3.org/2004/02/skos/core#scopeNote",
+      "http://www.w3.org/2004/02/skos/core#inScheme",
+      "http://purl.org/spar/cito/citesForInformation",
+      "http://purl.org/spar/cito/citesAsEvidence",
+      "http://purl.org/spar/cito/citesAsRelated",
+      "http://xmlns.com/foaf/0.1/primaryTopic",
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#ConceptScheme": {
+    "labels": [
+      [
+        "Concept Scheme",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/2004/02/skos/core#OrderedCollection": {
+    "labels": [
+      [
+        "Ordered Collection",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Accept": {
+    "labels": [
+      [
+        "Accept",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Activity": {
+    "labels": [
+      [
+        "Activity",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#ActivityInfluence": {
+    "labels": [
+      [
+        "ActivityInfluence",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Agent": {
+    "labels": [
+      [
+        "Agent",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#AgentInfluence": {
+    "labels": [
+      [
+        "AgentInfluence",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Association": {
+    "labels": [
+      [
+        "Association",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Attribution": {
+    "labels": [
+      [
+        "Attribution",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Bundle": {
+    "labels": [
+      [
+        "Bundle",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Collection": {
+    "labels": [
+      [
+        "Collection",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Communication": {
+    "labels": [
+      [
+        "Communication",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Contribute": {
+    "labels": [
+      [
+        "Contribute\n",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Contributor": {
+    "labels": [
+      [
+        "Contributor",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Copyright": {
+    "labels": [
+      [
+        "Copyright",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Create": {
+    "labels": [
+      [
+        "Create",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Creator": {
+    "labels": [
+      [
+        "Creator",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Delegation": {
+    "labels": [
+      [
+        "Delegation",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Derivation": {
+    "labels": [
+      [
+        "Derivation",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Dictionary": {
+    "labels": [
+      [
+        "Dictionary",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#DirectQueryService": {
+    "labels": [
+      [
+        "ProvenanceService",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#EmptyCollection": {
+    "labels": [
+      [
+        "EmptyCollection",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#EmptyDictionary": {
+    "labels": [
+      [
+        "Empty Dictionary",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#End": {
+    "labels": [
+      [
+        "End",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Entity": {
+    "labels": [
+      [
+        "Entity",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#EntityInfluence": {
+    "labels": [
+      [
+        "EntityInfluence",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Generation": {
+    "labels": [
+      [
+        "Generation",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Influence": {
+    "labels": [
+      [
+        "Influence",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Insertion": {
+    "labels": [
+      [
+        "Insertion",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#InstantaneousEvent": {
+    "labels": [
+      [
+        "InstantaneousEvent",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Invalidation": {
+    "labels": [
+      [
+        "Invalidation",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#KeyEntityPair": {
+    "labels": [
+      [
+        "Key-Entity Pair",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Location": {
+    "labels": [
+      [
+        "Location",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Modify": {
+    "labels": [
+      [
+        "Modify",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Organization": {
+    "labels": [
+      [
+        "Organization",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Person": {
+    "labels": [
+      [
+        "Person",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Plan": {
+    "labels": [
+      [
+        "Plan",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#PrimarySource": {
+    "labels": [
+      [
+        "PrimarySource",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Publish": {
+    "labels": [
+      [
+        "Publish",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Publisher": {
+    "labels": [
+      [
+        "Publisher",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Quotation": {
+    "labels": [
+      [
+        "Quotation",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Removal": {
+    "labels": [
+      [
+        "Removal",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Replace": {
+    "labels": [
+      [
+        "Replace",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Revision": {
+    "labels": [
+      [
+        "Revision",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#RightsAssignment": {
+    "labels": [
+      [
+        "RightsAssignment",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#RightsHolder": {
+    "labels": [
+      [
+        "RightsHolder",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Role": {
+    "labels": [
+      [
+        "Role",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#ServiceDescription": {
+    "labels": [
+      [
+        "ServiceDescription",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#SoftwareAgent": {
+    "labels": [
+      [
+        "SoftwareAgent",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Start": {
+    "labels": [
+      [
+        "Start",
+        null
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Submit": {
+    "labels": [
+      [
+        "Submit",
+        "en"
+      ]
+    ]
+  },
+  "http://www.w3.org/ns/prov#Usage": {
+    "labels": [
+      [
+        "Usage",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/Agent": {
+    "labels": [
+      [
+        "Agent",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/Document": {
+    "labels": [
+      [
+        "Document",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/Group": {
+    "labels": [
+      [
+        "Group",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/Image": {
+    "labels": [
+      [
+        "Image",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/LabelProperty": {
+    "labels": [
+      [
+        "Label Property",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/OnlineAccount": {
+    "labels": [
+      [
+        "Online Account",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/OnlineChatAccount": {
+    "labels": [
+      [
+        "Online Chat Account",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/OnlineEcommerceAccount": {
+    "labels": [
+      [
+        "Online E-commerce Account",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/OnlineGamingAccount": {
+    "labels": [
+      [
+        "Online Gaming Account",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/Organization": {
+    "labels": [
+      [
+        "Organization",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/Person": {
+    "labels": [
+      [
+        "Person",
+        null
+      ]
+    ],
+    "shape": [
+      "http://xmlns.com/foaf/0.1/name"
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/PersonalProfileDocument": {
+    "labels": [
+      [
+        "PersonalProfileDocument",
+        null
+      ]
+    ]
+  },
+  "http://xmlns.com/foaf/0.1/Project": {
+    "labels": [
+      [
+        "Project",
+        null
+      ]
+    ]
+  }
+}
