@@ -11,7 +11,7 @@ const TextButton = ({text, onClick}) => (
 
 TextButton.propTypes =
   { text: React.PropTypes.string.isRequired
-  , onClick: React.PropTypes.func.isRequired
+  , onClick: React.PropTypes.func
   }
 
 module.exports = TextButton

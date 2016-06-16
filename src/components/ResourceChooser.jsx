@@ -35,7 +35,7 @@ ResourceChooser.propTypes =
   , onChange: React.PropTypes.func.isRequired
   , onSuggestionSelected: React.PropTypes.func.isRequired
   , onCancel: React.PropTypes.func.isRequired
-  , onAccept: React.PropTypes.func.isRequired
+  , onAccept: React.PropTypes.func
   }
 
 module.exports = ResourceChooser

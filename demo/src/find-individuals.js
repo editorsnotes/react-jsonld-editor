@@ -5,7 +5,7 @@
 const N3 = require('n3')
     , fs = require('fs')
     , {Map, List, Set} = require('immutable')
-    , {RDF, RDFS, OWL, SKOS} = require('./namespaces')
+    , {RDF, RDFS, OWL, SKOS} = require('../../lib/namespaces')
 
 const excluded = Set(
   [ OWL.Class

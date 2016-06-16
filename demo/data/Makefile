@@ -21,10 +21,6 @@ ALL = $(PLEIADES) $(REMOTE)
 
 all: indexes indexes/individuals.json
 
-shapes.json:
-	node --max-old-space-size=5000 \
-		../lib/learn-shapes.js test/pleiades-latest/*.ttl > $@
-
 indexes/individuals.json: indexes/classes.json indexes/properties.json
 	node ../lib/find-individuals.js test/pleiades-latest/*.ttl | jq \
 		--slurpfile classes indexes/classes.json \

@@ -1,5 +1,6 @@
 const {List} = require('immutable')
 
+const UPDATE_UNIVERSE = 'UPDATE_UNIVERSE'
 const DELETE_IN = 'DELETE_IN'
 const UPDATE_INPUT = 'UPDATE_INPUT'
 const UPDATE_SELECTED_SUGGESTION = 'UPDATE_SELECTED_SUGGESTION'
@@ -7,12 +8,19 @@ const UPDATE_CHANGE = 'UPDATE_CHANGE'
 const ACCEPT_CHANGE = 'ACCEPT_CHANGE'
 const CANCEL_CHANGE = 'CANCEL_CHANGE'
 
+exports.UPDATE_UNIVERSE = UPDATE_UNIVERSE
 exports.DELETE_IN = DELETE_IN
 exports.UPDATE_INPUT = UPDATE_INPUT
 exports.UPDATE_SELECTED_SUGGESTION = UPDATE_SELECTED_SUGGESTION
 exports.UPDATE_CHANGE = UPDATE_CHANGE
 exports.ACCEPT_CHANGE = ACCEPT_CHANGE
 exports.CANCEL_CHANGE = CANCEL_CHANGE
+
+exports.updateUniverse = universe => (
+  { type: UPDATE_UNIVERSE
+  , universe
+  }
+)
 
 exports.deleteIn = path => (
   { type: DELETE_IN
@@ -60,12 +68,15 @@ exports.appendProperty = (path, change, predicate) => updateChange(
   path, change.update(predicate, (list = List()) => list), true
 )
 
-exports.acceptChange = (path, change) => (
+const acceptChange = (path, change) => (
   { type: ACCEPT_CHANGE
   , path
   , change
   }
 )
+exports.acceptChange = acceptChange
+
+exports.updateNode = node => acceptChange(List(), node)
 
 exports.cancelChange = () => (
   { type: CANCEL_CHANGE }
