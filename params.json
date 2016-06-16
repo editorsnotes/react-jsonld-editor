@@ -1,0 +1,6 @@
+{
+  "name": "react-jsonld-editor",
+  "tagline": "generic JSON-LD editor",
+  "body": "Try the [demo](demo/).\r\n\r\nOr run it locally:\r\n```Shell\r\n$ git clone git@github.com:rybesh/react-jsonld-editor.git\r\n$ cd react-jsonld-editor\r\n$ npm install\r\n$ npm run develop-demo\r\n```\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
