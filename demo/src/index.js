@@ -1,27 +1,32 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {render} = require('react-dom')
-    , {fromJS} = require('immutable')
+    , {Map} = require('immutable')
     , {fromExpandedJSONLD} = require('immutable-jsonld')
     , Editor = require('../../lib/Editor')
+
+const NODE = require('../data/test/africa.json')
+    , CLASSES = require('../data/indexes/classes.json')
+    , PROPERTIES = require('../data/indexes/properties.json')
+    , INDIVIDUALS = require('../data/indexes/individuals.json')
+
+const indexByID = nodes => Map(nodes.map(node => [node.id, node]))
+
+const load = json => indexByID(fromExpandedJSONLD(json))
 
 const mount = document.createElement('div')
 document.body.appendChild(mount)
 
-const node = fromExpandedJSONLD(require('../data/test/africa.json')).first()
-
-const universe = fromJS(
-  { individuals: require('../data/indexes/individuals.json')
-  , classes: require('../data/indexes/classes.json')
-  , properties: require('../data/indexes/properties.json')
-  , datatypeProperties: require('../data/indexes/datatype-properties.json')
+const props =
+  { node: load(NODE).first()
+  , classes: load(CLASSES)
+  , properties: load(PROPERTIES)
+  , individuals: load(INDIVIDUALS)
   }
-)
 
 render((
   <div className="max-width-4">
     <Editor
-      node={node}
-      universe={universe}
+      {...props}
       onSave={node => console.log(node.toJS())}
     />
   </div>

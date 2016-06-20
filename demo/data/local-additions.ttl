@@ -1,0 +1,8 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://www.w3.org/ns/prov#wasDerivedFrom> skos:prefLabel "was derived from"@en .
+<http://www.w3.org/2000/01/rdf-schema#seeAlso> skos:prefLabel "see also"@en .
+
+<http://data.ordnancesurvey.co.uk/ontology/geometry/asGeoJSON> a owl:DatatypeProperty ;
+    skos:prefLabel "as GeoJSON"@en .
