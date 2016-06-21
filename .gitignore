@@ -3,5 +3,6 @@ demo/data/indexes/
 demo/data/vocabs/*
 !demo/data/vocabs/pleiades
 demo/lib/
+demo/standalone/
 lib/
 node_modules/
