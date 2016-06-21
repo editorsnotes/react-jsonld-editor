@@ -20,6 +20,9 @@ exports.UPDATE_CHANGE = UPDATE_CHANGE
 exports.ACCEPT_CHANGE = ACCEPT_CHANGE
 exports.CANCEL_CHANGE = CANCEL_CHANGE
 
+const NO_CHANGE = Symbol('NO CHANGE')
+exports.NO_CHANGE = NO_CHANGE
+
 exports.updateClasses = classes => (
   { type: UPDATE_CLASSES
   , classes
@@ -97,5 +100,3 @@ exports.updateNode = node => acceptChange(List(), node)
 exports.cancelChange = () => (
   { type: CANCEL_CHANGE }
 )
-
-exports.NO_CHANGE = Symbol('NO CHANGE')

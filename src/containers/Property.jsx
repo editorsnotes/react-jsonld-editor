@@ -12,23 +12,16 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {updateChange, deleteProperty} = require('../actions')
     , Property = require('../components/Property')
 
-const mapStateToProps = (state, {path, label, appendable = true}) => {
-  return { objects:
-      getEditedNode(state).getIn(path, List())
-  , objectCreator:
-      getEmptyObjectCreator(state)
-  , label:
-      label || getLabelResolver(state)(path.last()).value
+const mapStateToProps = (state, {path, label, appendable = true}) => (
+  { objects: getEditedNode(state).getIn(path, List())
+  , objectCreator: getEmptyObjectCreator(state)
+  , label: label || getLabelResolver(state)(path.last())
   , appendable: appendable && (! (isEditingProperties(state)))
   , deletable:
-      ( isEditingProperties(state)
-        && path.last() !== '@type'
-        && path.butLast().equals(getEditPath(state))
-      )
-  , change:
-      getChange(state)
+      isEditingProperties(state) && path.butLast().equals(getEditPath(state))
+  , change: getChange(state)
   }
-}
+)
 
 const mapDispatchToProps = dispatch => bindActionCreators(
   {updateChange, deleteProperty}, dispatch)

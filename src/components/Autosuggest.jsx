@@ -6,15 +6,31 @@ const getSuggestionValue = suggestion => suggestion.label
 
 const renderSuggestion = suggestion => <span>{suggestion.label}</span>
 
+const matches = (inputValue, inputLength) => label => label
+  ? label.value.toLowerCase().slice(0, inputLength) === inputValue
+  : false
+
+const getSuggestions = (input, domain) => {
+  const inputValue = String(input).trim().toLowerCase()
+  const inputLength = inputValue.length
+  const matchesInput = matches(inputValue, inputLength)
+  return inputLength === 0
+    ? []
+    : domain.valueSeq()
+        .filter(node => matchesInput(node.preferredLabel()))
+        .map(node => ({id: node.id, label: node.preferredLabel().value}))
+        .toArray()
+}
+
 module.exports = (
-  { suggestions
-  , onSuggestionSelected
-  , input
+  { input
+  , domain
   , onChange
+  , onSuggestionSelected
   , onKeyUp
   }) => (
   <Autosuggest
-    suggestions={suggestions}
+    suggestions={getSuggestions(input, domain)}
     onSuggestionSelected={onSuggestionSelected}
     getSuggestionValue={getSuggestionValue}
     renderSuggestion={renderSuggestion}

@@ -1,20 +1,21 @@
 const React = require('react') // eslint-disable-line no-unused-vars
+    , {Set} = require('immutable')
     , {JSONLDValue} = require('immutable-jsonld')
     , RoundedRectangle = require('./RoundedRectangle')
-    , {XSD} = require('../namespaces')
+    , {xsd} = require('../namespaces')
+
+const NON_TEXT_TYPES = Set.of(
+  xsd('dateTime'),
+  xsd('float'),
+  xsd('integer'),
+  xsd('gYear')
+)
+const notText = type => NON_TEXT_TYPES.includes(type)
 
 const show = value => {
   switch (typeof(value.value)) {
     case 'string':
-      switch (value.type) {
-        case XSD.dateTime:
-        case XSD.float:
-        case XSD.integer:
-        case XSD.gYear:
-          return `${value.value}`
-        default:
-          return `“${value.value}”`
-      }
+      return notText(value.type) ? `${value.value}` : `“${value.value}”`
     default:
       return `${value.value}`
   }

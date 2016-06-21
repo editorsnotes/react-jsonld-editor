@@ -2,19 +2,23 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {List} = require('immutable')
     , {getEditPath, isEditingProperties} = require('../selectors')
-    , EditIdentifier = require('./EditIdentifier')
     , ShowNode = require('./ShowNode')
+    , AddNode = require('./AddNode')
     , EditNodeProperties = require('./EditNodeProperties')
 
-const Node = ({path, editpath, isEditingProperties}) => (
-  (! path.equals(editpath))
-    ? <ShowNode path={path} />
-    : isEditingProperties
-        ? <EditNodeProperties path={path} />
-        : path.isEmpty()
-            ? <ShowNode path={path} />
-            : <EditIdentifier path={path.push('@id')} />
-)
+const Node = ({path, editpath, isEditingProperties}) => path.equals(editpath)
+  // editing
+  ? isEditingProperties
+      // property editing mode
+      ? <EditNodeProperties path={path} />
+      // value editing mode
+      : path.isEmpty()
+          // can't edit identifier of root node
+          ? <ShowNode path={path} />
+          // show component for selecting an @id
+          : <AddNode path={path.push('@id')} />
+  // showing
+  : <ShowNode path={path} />
 
 Node.propTypes = {
   path: React.PropTypes.instanceOf(List).isRequired,

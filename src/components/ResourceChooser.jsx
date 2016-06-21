@@ -1,40 +1,41 @@
 const React = require('react')
+    , {Map} = require('immutable')
     , Autosuggest = require('./Autosuggest')
     , TextButton = require('./TextButton')
 
 const ResourceChooser = (
   { input = ''
-  , suggestions = []
-  , suggestionSelected
+  , selectedSuggestion = {}
+  , domain
+  , cancelChange
   , onChange
   , onSuggestionSelected
-  , onCancel
   , onAccept}) => (
 
   <div>
     <Autosuggest
       input={input}
-      suggestions={suggestions}
+      domain={domain}
       onChange={onChange}
+      onSuggestionSelected={onSuggestionSelected}
       onKeyUp={event => {
-        if (suggestionSelected && event.key === 'Enter') {
+        if (selectedSuggestion.id && event.key === 'Enter') {
           onAccept()
         }
       }}
-      onSuggestionSelected={onSuggestionSelected}
     />
-    <TextButton text="Cancel" onClick={onCancel} />
+    <TextButton text="Cancel" onClick={() => cancelChange()} />
     <TextButton text="Save" onClick={onAccept} />
   </div>
 )
 
 ResourceChooser.propTypes =
   { input: React.PropTypes.string
-  , suggestions: React.PropTypes.array
-  , suggestionSelected: React.PropTypes.bool
+  , selectedSuggestion: React.PropTypes.object
+  , domain: React.PropTypes.instanceOf(Map).isRequired
+  , cancelChange: React.PropTypes.func.isRequired
   , onChange: React.PropTypes.func.isRequired
   , onSuggestionSelected: React.PropTypes.func.isRequired
-  , onCancel: React.PropTypes.func.isRequired
   , onAccept: React.PropTypes.func
   }
 

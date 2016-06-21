@@ -4,18 +4,23 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {List} = require('immutable')
     , {JSONLDValue} = require('immutable-jsonld')
     , ResourceChooser = require('../components/ResourceChooser')
-    , {RDFS, XSD} = require('../namespaces')
-    , {getInput, getSuggestions, getChange} = require('../selectors')
+    , {rdfs, xsd} = require('../namespaces')
+    , { getInput
+      , getSelectedSuggestion
+      , getIndividuals
+      , getChange
+      } = require('../selectors')
     , {updateChange, acceptChange, cancelChange} = require('../actions')
 
 const setLabel = (node, label) => node.set(
-  RDFS.label,
-  List.of(JSONLDValue({'@type': XSD.string, '@value': label}))
+  rdfs('label'),
+  List.of(JSONLDValue({'@type': xsd('string'), '@value': label}))
 )
 
 const mapStateToProps = state => (
   { input: getInput(state)
-  , suggestions: getSuggestions(state)
+  , selectedSuggestion: getSelectedSuggestion(state)
+  , domain: getIndividuals(state)
   , change: getChange(state)
   }
 )
@@ -24,12 +29,14 @@ const mapDispatchToProps = dispatch => bindActionCreators(
   {updateChange, acceptChange, cancelChange}, dispatch)
 
 const mergeProps = (
-  {input, suggestions, change},
+  {input, selectedSuggestion, domain, change},
   {updateChange, acceptChange, cancelChange},
   {path}) => (
 
   { input
-  , suggestions
+  , selectedSuggestion
+  , domain
+  , cancelChange
 
   , onChange: e => updateChange(
       path.butLast(),
@@ -40,14 +47,13 @@ const mergeProps = (
   , onSuggestionSelected: (_, {suggestion}) => updateChange(
       path.butLast(),
       change
-        .remove(RDFS.label)
+        .remove(rdfs('label'))
         .set('@id', suggestion.id),
       false,
       suggestion.label,
       suggestion)
 
   , onAccept: () => acceptChange(path.butLast(), change)
-  , onCancel: () => cancelChange()
   }
 )
 

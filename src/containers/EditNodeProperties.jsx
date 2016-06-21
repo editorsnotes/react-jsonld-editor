@@ -2,6 +2,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
     , ShowIdentifier = require('./ShowIdentifier')
+    , Type = require('./Type')
     , Property = require('./Property')
     , AddSuggestion = require('../components/AddSuggestion')
     , TextButton = require('../components/TextButton')
@@ -9,12 +10,12 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , { getEditedNode
       , getChange
       , getInput
-      , getSuggestions
+      , getProperties
       , getSelectedSuggestion
       } = require('../selectors')
 
 const Node = (
-  { node, change, input, suggestions, selectedSuggestion, path , updateInput
+  { node, change, input, properties, selectedSuggestion, path , updateInput
   , updateSelectedSuggestion, appendProperty, acceptChange, cancelChange
   } ) => (
   <div className={
@@ -30,7 +31,7 @@ const Node = (
       : null
     }
     <ul className="list-reset">
-      <Property label="is a" path={path.push('@type')} />
+      <Type path={path.push('@type')} />
       {node.propertySeq().map(([predicate, ]) => (
         <Property
           key={predicate}
@@ -39,7 +40,7 @@ const Node = (
       }
       <AddSuggestion
         input={input}
-        suggestions={suggestions}
+        domain={properties}
         onChange={e => updateInput(e.target.value)}
         onSuggestionSelected={
           (_, {suggestion}) => updateSelectedSuggestion(suggestion)
@@ -65,7 +66,7 @@ const mapStateToProps = (state, {path}) => (
   { node: getEditedNode(state).getIn(path)
   , change: getChange(state)
   , input: getInput(state)
-  , suggestions: getSuggestions(state)
+  , properties: getProperties(state)
   , selectedSuggestion: getSelectedSuggestion(state)
   , path
   }

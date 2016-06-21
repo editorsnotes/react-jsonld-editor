@@ -2,6 +2,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
     , ShowIdentifier = require('./ShowIdentifier')
+    , Type = require('./Type')
     , Property = require('./Property')
     , DeleteButton = require('../components/DeleteButton')
     , TextButton = require('../components/TextButton')
@@ -41,8 +42,7 @@ const Node = (
             )
     }
     <ul className="list-reset">
-      <Property
-        label="is a"
+      <Type
         path={path.push('@type')}
         appendable={canEditTypes}
       />
