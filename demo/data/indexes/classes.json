@@ -1,1322 +1,1633 @@
-{
-  "http://data.ordnancesurvey.co.uk/ontology/geometry/1kmGridSquare": {
-    "labels": [
-      [
-        "1 km Grid Square",
-        null
-      ]
-    ]
-  },
-  "http://data.ordnancesurvey.co.uk/ontology/geometry/20kmGridSquare": {
-    "labels": [
-      [
-        "20km Grid Square",
-        null
-      ]
-    ]
-  },
-  "http://data.ordnancesurvey.co.uk/ontology/geometry/AbstractGeometry": {
-    "labels": [
-      [
-        "Abstract Geometry",
-        null
-      ]
+[
+  {
+    "@id": "http://www.w3.org/ns/prov#Dictionary",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "shape": [
-      "http://data.ordnancesurvey.co.uk/ontology/geometry/asGeoJSON"
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Dictionary"
+      }
     ]
   },
-  "http://geovocab.org/spatial#Feature": {
-    "labels": [
-      [
-        "Feature",
-        null
-      ]
+  {
+    "@id": "http://purl.org/dc/terms/Policy",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
     ],
-    "shape": [
-      "http://www.w3.org/2000/01/rdf-schema#label",
-      "http://www.w3.org/2000/01/rdf-schema#comment",
-      "http://geovocab.org/spatial#C"
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Policy"
+      }
     ]
   },
-  "http://pleiades.stoa.org/places/vocab#Location": {
-    "labels": [
-      [
-        "Location",
-        "en"
-      ]
+  {
+    "@id": "http://purl.org/dc/terms/AgentClass",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
     ],
-    "shape": [
-      "http://purl.org/dc/terms/title",
-      "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/partiallyOverlaps",
-      "http://www.w3.org/ns/prov#wasDerivedFrom"
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Agent Class"
+      }
     ]
   },
-  "http://pleiades.stoa.org/places/vocab#Name": {
-    "labels": [
-      [
-        "Name",
-        "en"
-      ]
+  {
+    "@id": "http://www.w3.org/2002/07/owl#AsymmetricProperty",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
     ],
-    "shape": [
-      "http://purl.org/dc/terms/title",
-      "http://purl.org/dc/terms/description",
-      "http://purl.org/dc/terms/bibliographicCitation",
-      "http://pleiades.stoa.org/places/vocab#nameAttested",
-      "http://pleiades.stoa.org/places/vocab#nameRomanized",
-      "http://pleiades.stoa.org/places/vocab#during",
-      "http://pleiades.stoa.org/places/vocab#start_date",
-      "http://pleiades.stoa.org/places/vocab#end_date",
-      "http://purl.org/spar/cito/cites",
-      "http://purl.org/spar/cito/citesAsEvidence",
-      "http://purl.org/spar/cito/citesForInformation",
-      "http://www.w3.org/ns/prov#wasDerivedFrom"
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "AsymmetricProperty"
+      }
     ]
   },
-  "http://pleiades.stoa.org/places/vocab#Place": {
-    "labels": [
-      [
-        "Place",
-        "en"
-      ]
+  {
+    "@id": "http://www.w3.org/2002/07/owl#Annotation",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
     ],
-    "shape": [
-      "http://pleiades.stoa.org/places/vocab#hasName",
-      "http://pleiades.stoa.org/places/vocab#hasFeatureType",
-      "http://pleiades.stoa.org/places/vocab#hasLocation",
-      "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within",
-      "http://www.w3.org/ns/prov#wasDerivedFrom"
-    ]
-  },
-  "http://purl.org/dc/terms/Agent": {
-    "labels": [
-      [
-        "Agent",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/AgentClass": {
-    "labels": [
-      [
-        "Agent Class",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/BibliographicResource": {
-    "labels": [
-      [
-        "Bibliographic Resource",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/Box": {
-    "labels": [
-      [
-        "DCMI Box",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/FileFormat": {
-    "labels": [
-      [
-        "File Format",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/Frequency": {
-    "labels": [
-      [
-        "Frequency",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/ISO3166": {
-    "labels": [
-      [
-        "ISO 3166",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/ISO639-2": {
-    "labels": [
-      [
-        "ISO 639-2",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/ISO639-3": {
-    "labels": [
-      [
-        "ISO 639-3",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/Jurisdiction": {
-    "labels": [
-      [
-        "Jurisdiction",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/LicenseDocument": {
-    "labels": [
-      [
-        "License Document",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/LinguisticSystem": {
-    "labels": [
-      [
-        "Linguistic System",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/Location": {
-    "labels": [
-      [
-        "Location",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/LocationPeriodOrJurisdiction": {
-    "labels": [
-      [
-        "Location, Period, or Jurisdiction",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/MediaType": {
-    "labels": [
-      [
-        "Media Type",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/MediaTypeOrExtent": {
-    "labels": [
-      [
-        "Media Type or Extent",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/MethodOfAccrual": {
-    "labels": [
-      [
-        "Method of Accrual",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/MethodOfInstruction": {
-    "labels": [
-      [
-        "Method of Instruction",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/Period": {
-    "labels": [
-      [
-        "DCMI Period",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/PeriodOfTime": {
-    "labels": [
-      [
-        "Period of Time",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/PhysicalMedium": {
-    "labels": [
-      [
-        "Physical Medium",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/PhysicalResource": {
-    "labels": [
-      [
-        "Physical Resource",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/Point": {
-    "labels": [
-      [
-        "DCMI Point",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/Policy": {
-    "labels": [
-      [
-        "Policy",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/ProvenanceStatement": {
-    "labels": [
-      [
-        "Provenance Statement",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/RFC1766": {
-    "labels": [
-      [
-        "RFC 1766",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/RFC3066": {
-    "labels": [
-      [
-        "RFC 3066",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/RFC4646": {
-    "labels": [
-      [
-        "RFC 4646",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/RFC5646": {
-    "labels": [
-      [
-        "RFC 5646",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/RightsStatement": {
-    "labels": [
-      [
-        "Rights Statement",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/SizeOrDuration": {
-    "labels": [
-      [
-        "Size or Duration",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/Standard": {
-    "labels": [
-      [
-        "Standard",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/URI": {
-    "labels": [
-      [
-        "URI",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/dc/terms/W3CDTF": {
-    "labels": [
-      [
-        "W3C-DTF",
-        "en"
-      ]
-    ]
-  },
-  "http://purl.org/spar/cito/CitationAct": {
-    "labels": [
-      [
-        "citation act",
-        "en"
-      ]
-    ]
-  },
-  "http://www.opengis.net/ont/geosparql#Feature": {
-    "labels": [
-      [
-        "Feature",
-        "en"
-      ]
-    ]
-  },
-  "http://www.opengis.net/ont/geosparql#Geometry": {
-    "labels": [
-      [
-        "Geometry",
-        "en"
-      ]
-    ]
-  },
-  "http://www.opengis.net/ont/geosparql#SpatialObject": {
-    "labels": [
-      [
-        "SpatialObject",
-        "en"
-      ]
-    ]
-  },
-  "http://www.opengis.net/ont/geosparql#gmlLiteral": {
-    "labels": [
-      [
-        "GML Literal",
-        "en"
-      ]
-    ]
-  },
-  "http://www.opengis.net/ont/geosparql#wktLiteral": {
-    "labels": [
-      [
-        "Well-known Text Literal",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt": {
-    "labels": [
-      [
-        "Alt",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag": {
-    "labels": [
-      [
-        "Bag",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML": {
-    "labels": [
-      [
-        "HTML",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#List": {
-    "labels": [
-      [
-        "List",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral": {
-    "labels": [
-      [
-        "PlainLiteral",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property": {
-    "labels": [
-      [
-        "Property",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq": {
-    "labels": [
-      [
-        "Seq",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement": {
-    "labels": [
-      [
-        "Statement",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral": {
-    "labels": [
-      [
-        "XMLLiteral",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString": {
-    "labels": [
-      [
-        "langString",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2000/01/rdf-schema#Class": {
-    "labels": [
-      [
-        "Class",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2000/01/rdf-schema#Container": {
-    "labels": [
-      [
-        "Container",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty": {
-    "labels": [
-      [
-        "ContainerMembershipProperty",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2000/01/rdf-schema#Datatype": {
-    "labels": [
-      [
-        "Datatype",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2000/01/rdf-schema#Literal": {
-    "labels": [
-      [
-        "Literal",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2000/01/rdf-schema#Resource": {
-    "labels": [
-      [
-        "Resource",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#AllDifferent": {
-    "labels": [
-      [
-        "AllDifferent",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#AllDisjointClasses": {
-    "labels": [
-      [
-        "AllDisjointClasses",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#AllDisjointProperties": {
-    "labels": [
-      [
-        "AllDisjointProperties",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#Annotation": {
-    "labels": [
-      [
-        "Annotation",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#AnnotationProperty": {
-    "labels": [
-      [
-        "AnnotationProperty",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#AsymmetricProperty": {
-    "labels": [
-      [
-        "AsymmetricProperty",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#Axiom": {
-    "labels": [
-      [
-        "Axiom",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#Class": {
-    "labels": [
-      [
-        "Class",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#DataRange": {
-    "labels": [
-      [
-        "DataRange",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#DatatypeProperty": {
-    "labels": [
-      [
-        "DatatypeProperty",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#DeprecatedClass": {
-    "labels": [
-      [
-        "DeprecatedClass",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#DeprecatedProperty": {
-    "labels": [
-      [
-        "DeprecatedProperty",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#FunctionalProperty": {
-    "labels": [
-      [
-        "FunctionalProperty",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#InverseFunctionalProperty": {
-    "labels": [
-      [
-        "InverseFunctionalProperty",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#IrreflexiveProperty": {
-    "labels": [
-      [
-        "IrreflexiveProperty",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#NamedIndividual": {
-    "labels": [
-      [
-        "NamedIndividual",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#NegativePropertyAssertion": {
-    "labels": [
-      [
-        "NegativePropertyAssertion",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#Nothing": {
-    "labels": [
-      [
-        "Nothing",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#ObjectProperty": {
-    "labels": [
-      [
-        "ObjectProperty",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#Ontology": {
-    "labels": [
-      [
-        "Ontology",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#OntologyProperty": {
-    "labels": [
-      [
-        "OntologyProperty",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#ReflexiveProperty": {
-    "labels": [
-      [
-        "ReflexiveProperty",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#Restriction": {
-    "labels": [
-      [
-        "Restriction",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#SymmetricProperty": {
-    "labels": [
-      [
-        "SymmetricProperty",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#Thing": {
-    "labels": [
-      [
-        "Thing",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2002/07/owl#TransitiveProperty": {
-    "labels": [
-      [
-        "TransitiveProperty",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2003/01/geo/wgs84_pos#Point": {
-    "labels": [
-      [
-        "point",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing": {
-    "labels": [
-      [
-        "Spatial Thing",
-        null
-      ],
-      [
-        "SpatialThing",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/2004/02/skos/core#Collection": {
-    "labels": [
-      [
-        "Collection",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/2004/02/skos/core#Concept": {
-    "labels": [
-      [
-        "Concept",
-        "en"
-      ]
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Annotation"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Contribute",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "shape": [
-      "http://purl.org/dc/terms/title",
-      "http://purl.org/dc/terms/description",
-      "http://purl.org/dc/terms/coverage",
-      "http://purl.org/dc/terms/bibliographicCitation",
-      "http://www.w3.org/2004/02/skos/core#prefLabel",
-      "http://www.w3.org/2004/02/skos/core#altLabel",
-      "http://www.w3.org/2004/02/skos/core#scopeNote",
-      "http://www.w3.org/2004/02/skos/core#inScheme",
-      "http://purl.org/spar/cito/citesForInformation",
-      "http://purl.org/spar/cito/citesAsEvidence",
-      "http://purl.org/spar/cito/citesAsRelated",
-      "http://xmlns.com/foaf/0.1/primaryTopic",
-      "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Contribute\n"
+      }
     ]
   },
-  "http://www.w3.org/2004/02/skos/core#ConceptScheme": {
-    "labels": [
-      [
-        "Concept Scheme",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/2004/02/skos/core#OrderedCollection": {
-    "labels": [
-      [
-        "Ordered Collection",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Accept": {
-    "labels": [
-      [
-        "Accept",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Activity": {
-    "labels": [
-      [
-        "Activity",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#ActivityInfluence": {
-    "labels": [
-      [
-        "ActivityInfluence",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Agent": {
-    "labels": [
-      [
-        "Agent",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#AgentInfluence": {
-    "labels": [
-      [
-        "AgentInfluence",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Association": {
-    "labels": [
-      [
-        "Association",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Attribution": {
-    "labels": [
-      [
-        "Attribution",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Bundle": {
-    "labels": [
-      [
-        "Bundle",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Collection": {
-    "labels": [
-      [
-        "Collection",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Communication": {
-    "labels": [
-      [
-        "Communication",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Contribute": {
-    "labels": [
-      [
-        "Contribute\n",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Contributor": {
-    "labels": [
-      [
-        "Contributor",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Copyright": {
-    "labels": [
-      [
-        "Copyright",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Create": {
-    "labels": [
-      [
-        "Create",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Creator": {
-    "labels": [
-      [
-        "Creator",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Delegation": {
-    "labels": [
-      [
-        "Delegation",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Derivation": {
-    "labels": [
-      [
-        "Derivation",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Dictionary": {
-    "labels": [
-      [
-        "Dictionary",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#DirectQueryService": {
-    "labels": [
-      [
-        "ProvenanceService",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#EmptyCollection": {
-    "labels": [
-      [
-        "EmptyCollection",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#EmptyDictionary": {
-    "labels": [
-      [
-        "Empty Dictionary",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#End": {
-    "labels": [
-      [
-        "End",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Entity": {
-    "labels": [
-      [
-        "Entity",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#EntityInfluence": {
-    "labels": [
-      [
-        "EntityInfluence",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Generation": {
-    "labels": [
-      [
-        "Generation",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Influence": {
-    "labels": [
-      [
-        "Influence",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Insertion": {
-    "labels": [
-      [
-        "Insertion",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#InstantaneousEvent": {
-    "labels": [
-      [
-        "InstantaneousEvent",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Invalidation": {
-    "labels": [
-      [
-        "Invalidation",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#KeyEntityPair": {
-    "labels": [
-      [
-        "Key-Entity Pair",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Location": {
-    "labels": [
-      [
-        "Location",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Modify": {
-    "labels": [
-      [
-        "Modify",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Organization": {
-    "labels": [
-      [
-        "Organization",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Person": {
-    "labels": [
-      [
-        "Person",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Plan": {
-    "labels": [
-      [
-        "Plan",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#PrimarySource": {
-    "labels": [
-      [
-        "PrimarySource",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Publish": {
-    "labels": [
-      [
-        "Publish",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Publisher": {
-    "labels": [
-      [
-        "Publisher",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Quotation": {
-    "labels": [
-      [
-        "Quotation",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Removal": {
-    "labels": [
-      [
-        "Removal",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Replace": {
-    "labels": [
-      [
-        "Replace",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Revision": {
-    "labels": [
-      [
-        "Revision",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#RightsAssignment": {
-    "labels": [
-      [
-        "RightsAssignment",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#RightsHolder": {
-    "labels": [
-      [
-        "RightsHolder",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Role": {
-    "labels": [
-      [
-        "Role",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#ServiceDescription": {
-    "labels": [
-      [
-        "ServiceDescription",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#SoftwareAgent": {
-    "labels": [
-      [
-        "SoftwareAgent",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Start": {
-    "labels": [
-      [
-        "Start",
-        null
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Submit": {
-    "labels": [
-      [
-        "Submit",
-        "en"
-      ]
-    ]
-  },
-  "http://www.w3.org/ns/prov#Usage": {
-    "labels": [
-      [
-        "Usage",
-        null
-      ]
-    ]
-  },
-  "http://xmlns.com/foaf/0.1/Agent": {
-    "labels": [
-      [
-        "Agent",
-        null
-      ]
-    ]
-  },
-  "http://xmlns.com/foaf/0.1/Document": {
-    "labels": [
-      [
-        "Document",
-        null
-      ]
-    ]
-  },
-  "http://xmlns.com/foaf/0.1/Group": {
-    "labels": [
-      [
-        "Group",
-        null
-      ]
-    ]
-  },
-  "http://xmlns.com/foaf/0.1/Image": {
-    "labels": [
-      [
-        "Image",
-        null
-      ]
-    ]
-  },
-  "http://xmlns.com/foaf/0.1/LabelProperty": {
-    "labels": [
-      [
-        "Label Property",
-        null
-      ]
-    ]
-  },
-  "http://xmlns.com/foaf/0.1/OnlineAccount": {
-    "labels": [
-      [
-        "Online Account",
-        null
-      ]
-    ]
-  },
-  "http://xmlns.com/foaf/0.1/OnlineChatAccount": {
-    "labels": [
-      [
-        "Online Chat Account",
-        null
-      ]
-    ]
-  },
-  "http://xmlns.com/foaf/0.1/OnlineEcommerceAccount": {
-    "labels": [
-      [
-        "Online E-commerce Account",
-        null
-      ]
-    ]
-  },
-  "http://xmlns.com/foaf/0.1/OnlineGamingAccount": {
-    "labels": [
-      [
-        "Online Gaming Account",
-        null
-      ]
-    ]
-  },
-  "http://xmlns.com/foaf/0.1/Organization": {
-    "labels": [
-      [
-        "Organization",
-        null
-      ]
-    ]
-  },
-  "http://xmlns.com/foaf/0.1/Person": {
-    "labels": [
-      [
-        "Person",
-        null
-      ]
+  {
+    "@id": "http://www.w3.org/ns/prov#Start",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "shape": [
-      "http://xmlns.com/foaf/0.1/name"
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Start"
+      }
     ]
   },
-  "http://xmlns.com/foaf/0.1/PersonalProfileDocument": {
-    "labels": [
-      [
-        "PersonalProfileDocument",
-        null
-      ]
+  {
+    "@id": "http://www.w3.org/ns/prov#Usage",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Usage"
+      }
     ]
   },
-  "http://xmlns.com/foaf/0.1/Project": {
-    "labels": [
-      [
-        "Project",
-        null
-      ]
+  {
+    "@id": "http://www.w3.org/2002/07/owl#OntologyProperty",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "OntologyProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/LicenseDocument",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "License Document"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#DataRange",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "DataRange"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/Document",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Document"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.ordnancesurvey.co.uk/ontology/geometry/1kmGridSquare",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "1 km Grid Square"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/MediaType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Media Type"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/Standard",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Standard"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/cito/CitationAct",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "citation act"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/Person",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Person"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#InverseFunctionalProperty",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "InverseFunctionalProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#SoftwareAgent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "SoftwareAgent"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/LinguisticSystem",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Linguistic System"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Revision",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Revision"
+      }
+    ]
+  },
+  {
+    "@id": "http://pleiades.stoa.org/places/vocab#Name",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Name"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Concept Scheme"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#DirectQueryService",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProvenanceService"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#ObjectProperty",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ObjectProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#ReflexiveProperty",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ReflexiveProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.opengis.net/ont/geosparql#SpatialObject",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "SpatialObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "SpatialObject"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Activity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Activity"
+      }
+    ]
+  },
+  {
+    "@id": "http://pleiades.stoa.org/places/vocab#Location",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Location"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/PersonalProfileDocument",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "PersonalProfileDocument"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Generation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Generation"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/MediaTypeOrExtent",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Media Type or Extent"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Statement"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Invalidation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Invalidation"
+      }
+    ]
+  },
+  {
+    "@id": "http://geovocab.org/spatial#Feature",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Feature"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Bag"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/PhysicalResource",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Physical Resource"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Role",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Role"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Submit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Submit"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Collection",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Collection"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/OnlineChatAccount",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Online Chat Account"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#Restriction",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Restriction"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Removal",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Removal"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/PeriodOfTime",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Period of Time"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Attribution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Attribution"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Person",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Person"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Publish",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Publish"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/PhysicalMedium",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Physical Medium"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#IrreflexiveProperty",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "IrreflexiveProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#EntityInfluence",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "EntityInfluence"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/Jurisdiction",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Jurisdiction"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#AllDisjointProperties",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "AllDisjointProperties"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/Organization",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Organization"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Accept",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Accept"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#EmptyCollection",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "EmptyCollection"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/OnlineGamingAccount",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Online Gaming Account"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#InstantaneousEvent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "InstantaneousEvent"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Copyright",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Copyright"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/BibliographicResource",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Bibliographic Resource"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#AnnotationProperty",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "AnnotationProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/OnlineAccount",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Online Account"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Quotation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Quotation"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Delegation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Delegation"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Organization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Organization"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "point"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/MethodOfInstruction",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Method of Instruction"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Contributor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Contributor"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2000/01/rdf-schema#Container",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Container"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#End",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "End"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#DeprecatedProperty",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "DeprecatedProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Derivation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Derivation"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#SymmetricProperty",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "SymmetricProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#DeprecatedClass",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "DeprecatedClass"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/Agent",
+    "@type": [
+      "http://purl.org/dc/terms/AgentClass",
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Agent"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#ActivityInfluence",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ActivityInfluence"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "DatatypeProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#NamedIndividual",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "NamedIndividual"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#PrimarySource",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "PrimarySource"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.ordnancesurvey.co.uk/ontology/geometry/AbstractGeometry",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Abstract Geometry"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Spatial Thing"
+      },
+      {
+        "@value": "SpatialThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/Agent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Agent"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/MethodOfAccrual",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Method of Accrual"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Bundle",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Bundle"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#Collection",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Collection"
+      }
+    ]
+  },
+  {
+    "@id": "http://pleiades.stoa.org/places/vocab#Place",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Place"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#Nothing",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Nothing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/LocationPeriodOrJurisdiction",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Location, Period, or Jurisdiction"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#Thing",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Thing"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Communication",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Communication"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/FileFormat",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "File Format"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Create",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Create"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#List",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "List"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ContainerMembershipProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#OrderedCollection",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Ordered Collection"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/Frequency",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Frequency"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#Ontology",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Ontology"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Property"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Insertion",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Insertion"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2000/01/rdf-schema#Resource",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Resource"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#EmptyDictionary",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Empty Dictionary"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Entity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Entity"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2000/01/rdf-schema#Datatype",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Datatype"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.ordnancesurvey.co.uk/ontology/geometry/20kmGridSquare",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "20km Grid Square"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#Axiom",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Axiom"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/ProvenanceStatement",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Provenance Statement"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Alt"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/Location",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Location"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Association",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Association"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Modify",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Modify"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/LabelProperty",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Label Property"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Location",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Location"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#RightsHolder",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "RightsHolder"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Concept"
+      },
+      {
+        "@language": "en",
+        "@value": "Concept"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.opengis.net/ont/geosparql#Feature",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Feature"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Feature"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "FunctionalProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Creator",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Creator"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2000/01/rdf-schema#Class",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Class"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/RightsStatement",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Rights Statement"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Influence",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Influence"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/Project",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Project"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#KeyEntityPair",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Key-Entity Pair"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#TransitiveProperty",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "TransitiveProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#RightsAssignment",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "RightsAssignment"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.opengis.net/ont/geosparql#Geometry",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Geometry"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Geometry"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/SizeOrDuration",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Size or Duration"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#AllDisjointClasses",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "AllDisjointClasses"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#Class",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Class"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/Image",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Image"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#NegativePropertyAssertion",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "NegativePropertyAssertion"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Plan",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Plan"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Literal"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/OnlineEcommerceAccount",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Online E-commerce Account"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Publisher",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Publisher"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Seq"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#ServiceDescription",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ServiceDescription"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#AllDifferent",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "AllDifferent"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Agent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Agent"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Replace",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Replace"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/Group",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Group"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#AgentInfluence",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "AgentInfluence"
+      }
     ]
   }
-}
+]
