@@ -1,20 +1,16 @@
 const {createSelector} = require('reselect')
-    , {List, Map} = require('immutable')
+    , {List} = require('immutable')
     , {JSONLDNode, JSONLDValue} = require('immutable-jsonld')
     , {NO_CHANGE} = require('../actions')
+    , {rdfs, owl} = require('../namespaces')
 
 const getNode = state => state.node
-const getUniverse = state => state.universe
+const getClasses = state => state.classes
+const getProperties = state => state.properties
+const getIndividuals = state => state.individuals
 
-exports.getLabelResolver = createSelector(
-  [getUniverse],
-  universe => id => {
-    let candidates = universe.getIn(['individuals', id, 'labels'], List())
-    return candidates.isEmpty()
-      ? id
-      : candidates.first().first()
-  }
-)
+exports.getClasses = getClasses
+exports.getProperties = getProperties
 
 const getEditPath = state => state.editpath
 const getChange = state => state.change
@@ -35,12 +31,23 @@ const pointsToType = path => (
 )
 
 const getDomain = createSelector(
-  [getUniverse, getEditPath, isEditingProperties],
-  (universe, editpath, isEditingProperties) => pointsToType(editpath)
-    ? universe.get('classes', Map())
-    : isEditingProperties
-        ? universe.get('properties', Map())
-        : universe.get('individuals', Map())
+  [getClasses, getProperties, getIndividuals, getEditPath, isEditingProperties],
+  (classes, properties, individuals, editpath, isEditingProperties) => (
+    pointsToType(editpath)
+      ? classes
+      : isEditingProperties
+          ? properties
+          : individuals
+  )
+)
+
+exports.getLabelResolver = createSelector(
+  [getClasses, getProperties, getIndividuals],
+  (classes, properties, individuals) => id => {
+    const domain = List.of(classes, properties, individuals)
+      .find(domain => domain.has(id))
+    return domain ? (domain.get(id).preferredLabel() || id) : id
+  }
 )
 
 exports.getEditedNode = createSelector(
@@ -63,33 +70,29 @@ exports.getSuggestions = createSelector(
     const matchesInput = matches(inputValue, inputLength)
     return inputLength === 0
       ? []
-      : domain.filter(m => m.get('labels', List()).some(matchesInput))
-          .entrySeq()
-          .map(([id, m]) => (
-            {id, label: m.get('labels').find(matchesInput).first()}))
+      : domain.valueSeq()
+          .filter(node => matchesInput(node.preferredLabel()))
+          .map(node => ({id: node.id, label: node.preferredLabel()}))
           .toJS()
   }
 )
 
-const getRangesForProperty = (predicate, universe) => (
-  universe.getIn(['properties', predicate, 'ranges'], List())
-)
-
-const getRangeForDatatypeProperty = (predicate, universe) => {
-  let ranges = universe.getIn(
-    ['datatype-properties', predicate, 'ranges'], List())
-  return ranges.isEmpty() ? undefined : ranges.first()
+const getRangeForDatatypeProperty = property => {
+  let ranges = property.get(rdfs('range'), List())
+  return ranges.isEmpty() ? undefined : ranges.first().id
 }
 
+const createObject = property => (
+  property.types.includes(owl('DatatypeProperty'))
+    ? JSONLDValue().set('@type', getRangeForDatatypeProperty(property))
+    : JSONLDNode().set('@type', property.get(rdfs('range'), List()))
+)
+
 exports.getEmptyObjectCreator = createSelector(
-  [getUniverse],
-  (universe) => {
-    return predicate => predicate === '@type'
-      ? ''
-      : universe.get('datatype-properties', Map()).has(predicate)
-          ? JSONLDValue()
-              .set('@type', getRangeForDatatypeProperty(predicate, universe))
+  [getProperties],
+  properties => predicate => predicate === '@type'
+      ? '' // empty string
+      : properties.has(predicate)
+          ? createObject(properties.get(predicate))
           : JSONLDNode()
-              .set('@type', getRangesForProperty(predicate, universe))
-  }
 )

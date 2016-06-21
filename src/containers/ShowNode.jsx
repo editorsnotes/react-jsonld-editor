@@ -6,11 +6,21 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , DeleteButton = require('../components/DeleteButton')
     , TextButton = require('../components/TextButton')
     , {deleteIn, startEditingProperties} = require('../actions')
-    , {getEditedNode, isEditingProperties} = require('../selectors')
+    , { getClasses
+      , getProperties
+      , getEditedNode
+      , isEditingProperties
+      } = require('../selectors')
 
 const Node = (
-  {node, path, isEditingProperties, deleteIn, startEditingProperties}
-  ) => (
+  { node
+  , path
+  , canEditTypes
+  , canEditProperties
+  , isEditingProperties
+  , deleteIn
+  , startEditingProperties
+  }) => (
   <div className={
     `border border-silver py1 pl1 ${node.id ? 'pr1' : 'pr3'} relative`}
   >
@@ -21,15 +31,21 @@ const Node = (
             disabled={path.isEmpty()}
           />
         )
-      : ( // node is blank / anonymous
-          <DeleteButton
-            classes="absolute top-0 right-0"
-            onClick={() => deleteIn(path)}
-          />
-        )
+      : path.isEmpty()
+          ? null // root node can't be deleted
+          : ( // node is blank / anonymous
+              <DeleteButton
+                classes="absolute top-0 right-0"
+                onClick={() => deleteIn(path)}
+              />
+            )
     }
     <ul className="list-reset">
-      <Property label="is a" path={path.push('@type')} />
+      <Property
+        label="is a"
+        path={path.push('@type')}
+        appendable={canEditTypes}
+      />
       {node.propertySeq().map(([predicate, ]) => (
         <Property
           key={predicate}
@@ -37,18 +53,27 @@ const Node = (
         />))
       }
     </ul>
-    <div className={isEditingProperties ? 'hidden' : ''}>
-      <TextButton
-        text={`${node.propertySeq().count() > 0 ? 'Edit' : 'Add'} properties`}
-        onClick={() => startEditingProperties(path, node)}
-      />
-    </div>
+    {canEditProperties
+      ? (
+          <div className={isEditingProperties ? 'hidden' : ''}>
+            <TextButton
+              text={
+                `${node.propertySeq().count() > 0 ? 'Edit' : 'Add'} properties`
+              }
+              onClick={() => startEditingProperties(path, node)}
+            />
+          </div>
+        )
+      : null
+    }
   </div>
 )
 
 const mapStateToProps = (state, {path}) => (
   { node: getEditedNode(state).getIn(path)
   , path
+  , canEditTypes: (! getClasses(state).isEmpty())
+  , canEditProperties: (! getProperties(state).isEmpty())
   , isEditingProperties: isEditingProperties(state)
   }
 )

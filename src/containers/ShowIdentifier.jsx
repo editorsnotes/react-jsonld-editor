@@ -13,7 +13,7 @@ const mapStateToProps = (state, {path, disabled = false}) => {
   return (
     { id
     , path
-    , label: getLabelResolver(state)(id)
+    , label: getLabelResolver(state)(id).value
     , interactive: (! (disabled || isEditingProperties(state)))
     }
   )

@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "description": "React component for editing JSON-LD",
+  "files": [
+    "lib",
+    "src/style.css"
+  ],
   "main": "lib/Editor.js",
   "scripts": {
     "lint": "eslint --ext .jsx src demo/src test",
@@ -10,7 +14,7 @@
     "compile": "babel src -d lib --source-maps inline",
     "css": "cssnext src/src.css src/style.css",
     "develop-target": "budo $npm_config_target --css src/style.css --live -- -t [ babelify --sourceMaps inline ] --extension=.jsx",
-    "develop": "npm -s run develop-target --target=src",
+    "develop": "npm -s run develop-target --target=src/develop.js",
     "precompile-demo": "npm -s run compile",
     "compile-demo": "babel demo/src -d demo/lib",
     "prestandalone-demo": "mkdir -p demo/standalone",
@@ -51,7 +55,7 @@
   },
   "dependencies": {
     "immutable": "^3.7.6",
-    "immutable-jsonld": "^1.0.1",
+    "immutable-jsonld": "^1.1.1",
     "language-tags": "^1.0.5",
     "react": "^0.14.7",
     "react-autosuggest": "^3.7.4",

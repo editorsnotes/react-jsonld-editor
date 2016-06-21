@@ -40,8 +40,8 @@ const Property = (
       />
       <span
         className={
-          `inline-block align-middle bold cursor-pointer lowercase black
-           ${onAppend ? '' : 'muted'}`
+          `inline-block align-middle bold lowercase black
+           ${onAppend ? 'cursor-pointer' : 'muted'}`
         }
         onClick={onAppend ? () => onAppend(objects.count()) : null}
       >

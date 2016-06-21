@@ -1,7 +1,9 @@
 const {JSONLDNode} = require('immutable-jsonld')
-    , {Map, List, Set} = require('immutable')
+    , {Map, List} = require('immutable')
     , {combineReducers} = require('redux')
-    , { UPDATE_UNIVERSE
+    , { UPDATE_CLASSES
+      , UPDATE_PROPERTIES
+      , UPDATE_INDIVIDUALS
       , DELETE_IN
       , UPDATE_INPUT
       , UPDATE_SELECTED_SUGGESTION
@@ -26,19 +28,33 @@ const node = (node = JSONLDNode(), action) => {
   }
 }
 
-const EMPTY_UNIVERSE = Map.of(
-  'classes', Set(),
-  'properties', Set(),
-  'datatypeProperties', Set(),
-  'individuals', Set()
-)
-const universe = (universe = EMPTY_UNIVERSE, action) => {
+const classes = (classes = Map(), action) => {
   switch (action.type) {
-    case UPDATE_UNIVERSE:
-      return action.universe
+    case UPDATE_CLASSES:
+      return action.classes
 
     default:
-      return universe
+      return classes
+  }
+}
+
+const properties = (properties = Map(), action) => {
+  switch (action.type) {
+    case UPDATE_PROPERTIES:
+      return action.properties
+
+    default:
+      return properties
+  }
+}
+
+const individuals = (individuals = Map(), action) => {
+  switch (action.type) {
+    case UPDATE_INDIVIDUALS:
+      return action.individuals
+
+    default:
+      return individuals
   }
 }
 
@@ -125,7 +141,9 @@ const editingProperties = (editingProperties = false, action) => {
 
 module.exports = combineReducers(
   { node
-  , universe
+  , classes
+  , properties
+  , individuals
   , editpath
   , change
   , input

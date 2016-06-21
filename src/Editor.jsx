@@ -1,13 +1,15 @@
 const React = require('react')
     , {Provider} = require('react-redux')
-    , {Map} = require('immutable')
+    , {Map, List} = require('immutable')
     , {JSONLDNode} = require('immutable-jsonld')
     , configureStore = require('./store/configureStore')
-    , {updateUniverse, updateNode} = require('./actions')
+    , { updateClasses
+      , updateProperties
+      , updateIndividuals
+      , updateNode
+      , NO_CHANGE
+      } = require('./actions')
     , Node = require('./containers/Node')
-
-const newError = (propName, componentName) => reason => new Error(
-  `Invalid prop '${propName}' supplied to ${componentName}: ${reason}`)
 
 const subscribe = (store, node, onSave) => store.subscribe(() => {
   const changedNode = store.getState().node
@@ -18,28 +20,37 @@ const subscribe = (store, node, onSave) => store.subscribe(() => {
 
 module.exports = React.createClass(
   { propTypes:
-      { universe: (props, propName, componentName) => {
-          const error = newError(propName, componentName)
-          if (! Map.isMap(props[propName])) {
-            return error('must be an Immutable Map')
-          }
-          for (let domain of ['classes', 'properties', 'datatypeProperties']) {
-            if (! props[propName].has(domain)) {
-              return error(`must have the key '${domain}'`)
-            }
-          }
-        }
-      , onSave: React.PropTypes.func.isRequired
+      { classes: React.PropTypes.instanceOf(Map)
+      , properties: React.PropTypes.instanceOf(Map)
+      , individuals: React.PropTypes.instanceOf(Map)
       , node: React.PropTypes.instanceOf(JSONLDNode)
+      , onSave: React.PropTypes.func
       }
 
   , getDefaultProps: function() {
-      return {node: JSONLDNode()}
+      return (
+        { classes: Map()
+        , properties: Map()
+        , individuals: Map()
+        , node: JSONLDNode()
+        , onSave: () => {}
+        }
+      )
     }
 
   , getInitialState: function() {
-      const {universe, node, onSave} = this.props
-          , store = configureStore({universe, node})
+      const {classes, properties, individuals, node, onSave} = this.props
+      const store = configureStore(
+        { editpath: List()
+        , change: NO_CHANGE
+        , input: ''
+        , selectedSuggestion: {}
+        , editingProperties: false
+        , classes
+        , properties
+        , individuals
+        , node}
+      )
       return {store, unsubscribe: subscribe(store, node, onSave)}
     }
 
@@ -49,8 +60,14 @@ module.exports = React.createClass(
 
   , componentWillReceiveProps: function(next) {
       const current = this.state.store.getState()
-      if (! next.universe.equals(current.universe)) {
-        this.dispatch(updateUniverse(next.universe))
+      if (! next.classes.equals(current.classes)) {
+        this.dispatch(updateClasses(next.classes))
+      }
+      if (! next.properties.equals(current.properties)) {
+        this.dispatch(updateProperties(next.properties))
+      }
+      if (! next.individuals.equals(current.individuals)) {
+        this.dispatch(updateIndividuals(next.individuals))
       }
       if (! next.node.equals(current.node)) {
         this.dispatch(updateNode(next.node))

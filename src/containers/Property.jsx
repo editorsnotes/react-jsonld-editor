@@ -12,14 +12,14 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {updateChange, deleteProperty} = require('../actions')
     , Property = require('../components/Property')
 
-const mapStateToProps = (state, {path, label}) => {
+const mapStateToProps = (state, {path, label, appendable = true}) => {
   return { objects:
       getEditedNode(state).getIn(path, List())
   , objectCreator:
       getEmptyObjectCreator(state)
   , label:
-      label || getLabelResolver(state)(path.last())
-  , appendable: (! isEditingProperties(state))
+      label || getLabelResolver(state)(path.last()).value
+  , appendable: appendable && (! (isEditingProperties(state)))
   , deletable:
       ( isEditingProperties(state)
         && path.last() !== '@type'
