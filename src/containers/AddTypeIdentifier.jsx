@@ -3,7 +3,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {bindActionCreators} = require('redux')
     , ResourceChooser = require('../components/ResourceChooser')
     , { getInput
-      , getClasses
+      , getClassSuggestions
       , getSelectedSuggestion
       } = require('../selectors')
     , { updateInput
@@ -13,8 +13,8 @@ const React = require('react') // eslint-disable-line no-unused-vars
 
 const mapStateToProps = state => (
   { input: getInput(state)
+  , suggestions: getClassSuggestions(state)
   , selectedSuggestion: getSelectedSuggestion(state)
-  , domain: getClasses(state)
   }
 )
 
@@ -22,13 +22,13 @@ const mapDispatchToProps = dispatch => bindActionCreators(
   {updateInput, updateSelectedSuggestion, cancelChange}, dispatch)
 
 const mergeProps = (
-  {input, selectedSuggestion, domain},
+  {input, suggestions,selectedSuggestion},
   {updateInput, updateSelectedSuggestion, cancelChange},
   {onAccept}) => (
 
   { input
+  , suggestions
   , selectedSuggestion
-  , domain
   , cancelChange
   , onChange:
       e => updateInput(e.target.value)

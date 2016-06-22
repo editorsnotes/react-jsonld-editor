@@ -1,11 +1,10 @@
 const React = require('react') // eslint-disable-line no-unused-vars
-    , {Map} = require('immutable')
     , AddButton = require('../components/AddButton')
     , Autosuggest = require('../components/Autosuggest')
 
 const AddSuggestion = (
   { input
-  , domain
+  , suggestions
   , onChange
   , onSuggestionSelected
   , onAdd = null
@@ -17,7 +16,7 @@ const AddSuggestion = (
     }
     <Autosuggest
       input={input}
-      domain={domain}
+      suggestions={suggestions}
       onChange={onChange}
       onSuggestionSelected={onSuggestionSelected}
     />
@@ -26,7 +25,7 @@ const AddSuggestion = (
 
 AddSuggestion.propTypes =
   { input: React.PropTypes.string.isRequired
-  , domain: React.PropTypes.instanceOf(Map).isRequired
+  , suggestions: React.PropTypes.array.isRequired
   , onChange: React.PropTypes.func.isRequired
   , onSuggestionSelected: React.PropTypes.func.isRequired
   , onAdd: React.PropTypes.func

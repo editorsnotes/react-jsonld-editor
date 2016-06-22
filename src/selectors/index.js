@@ -1,5 +1,5 @@
 const {createSelector} = require('reselect')
-    , {List} = require('immutable')
+    , {Map, List, Seq} = require('immutable')
     , {JSONLDNode, JSONLDValue} = require('immutable-jsonld')
     , {NO_CHANGE} = require('../actions')
     , {rdfs, owl} = require('../namespaces')
@@ -9,9 +9,22 @@ const getClasses = state => state.classes
 const getProperties = state => state.properties
 const getIndividuals = state => state.individuals
 
-exports.getClasses = getClasses
-exports.getProperties = getProperties
-exports.getIndividuals = getIndividuals
+exports.canEditTypes = state => (! getClasses(state).isEmpty())
+exports.canEditProperties = state => (! getProperties(state).isEmpty())
+
+const getLabels = createSelector(
+  [getClasses, getProperties, getIndividuals],
+  (...domains) => Map(
+    Seq(domains)
+      .flatMap(domain => domain.valueSeq())
+      .map(node => [node.id, node.preferredLabel()])
+  )
+)
+
+exports.getLabelResolver = createSelector(
+  [getLabels],
+  labels => id => labels.has(id) ? labels.get(id).value : id
+)
 
 const getEditPath = state => state.editpath
 const getChange = state => state.change
@@ -25,15 +38,33 @@ exports.getInput = getInput
 exports.getSelectedSuggestion = getSelectedSuggestion
 exports.isEditingProperties = isEditingProperties
 
-exports.getLabelResolver = createSelector(
-  [getClasses, getProperties, getIndividuals],
-  (classes, properties, individuals) => id => {
-    const domain = List.of(classes, properties, individuals)
-      .find(domain => domain.has(id))
-    if (! domain) return id
-    const label = domain.get(id).preferredLabel()
-    return label ? label.value : id
-  }
+const matches = (inputValue, inputLength) => label => label
+  ? label.value.toLowerCase().slice(0, inputLength) === inputValue
+  : false
+
+const getSuggestions = (input, domain, labels) => {
+  const inputValue = String(input).trim().toLowerCase()
+  const inputLength = inputValue.length
+  const matchesInput = matches(inputValue, inputLength)
+  return inputLength === 0
+    ? []
+    : domain.valueSeq()
+        .filter(node => matchesInput(labels.get(node.id)))
+        .map(node => ({id: node.id, label: labels.get(node.id).value}))
+        .toArray()
+}
+
+exports.getClassSuggestions = createSelector(
+  [getInput, getClasses, getLabels],
+  (input, classes, labels) => getSuggestions(input, classes, labels)
+)
+exports.getPropertySuggestions = createSelector(
+  [getInput, getProperties, getLabels],
+  (input, properties, labels) => getSuggestions(input, properties, labels)
+)
+exports.getIndividualSuggestions = createSelector(
+  [getInput, getIndividuals, getLabels],
+  (input, individuals, labels) => getSuggestions(input, individuals, labels)
 )
 
 exports.getEditedNode = createSelector(

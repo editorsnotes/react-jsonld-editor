@@ -7,7 +7,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {rdfs, xsd} = require('../namespaces')
     , { getInput
       , getSelectedSuggestion
-      , getIndividuals
+      , getIndividualSuggestions
       , getChange
       } = require('../selectors')
     , {updateChange, acceptChange, cancelChange} = require('../actions')
@@ -19,8 +19,8 @@ const setLabel = (node, label) => node.set(
 
 const mapStateToProps = state => (
   { input: getInput(state)
+  , suggestions: getIndividualSuggestions(state)
   , selectedSuggestion: getSelectedSuggestion(state)
-  , domain: getIndividuals(state)
   , change: getChange(state)
   }
 )
@@ -29,13 +29,13 @@ const mapDispatchToProps = dispatch => bindActionCreators(
   {updateChange, acceptChange, cancelChange}, dispatch)
 
 const mergeProps = (
-  {input, selectedSuggestion, domain, change},
+  {input, suggestions, selectedSuggestion, change},
   {updateChange, acceptChange, cancelChange},
   {path}) => (
 
   { input
+  , suggestions
   , selectedSuggestion
-  , domain
   , cancelChange
 
   , onChange: e => updateChange(

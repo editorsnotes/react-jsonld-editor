@@ -7,8 +7,8 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , DeleteButton = require('../components/DeleteButton')
     , TextButton = require('../components/TextButton')
     , {deleteIn, startEditingProperties} = require('../actions')
-    , { getClasses
-      , getProperties
+    , { canEditTypes
+      , canEditProperties
       , getEditedNode
       , isEditingProperties
       } = require('../selectors')
@@ -72,8 +72,8 @@ const Node = (
 const mapStateToProps = (state, {path}) => (
   { node: getEditedNode(state).getIn(path)
   , path
-  , canEditTypes: (! getClasses(state).isEmpty())
-  , canEditProperties: (! getProperties(state).isEmpty())
+  , canEditTypes: canEditTypes(state)
+  , canEditProperties: canEditProperties(state)
   , isEditingProperties: isEditingProperties(state)
   }
 )

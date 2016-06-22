@@ -10,12 +10,12 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , { getEditedNode
       , getChange
       , getInput
-      , getProperties
+      , getPropertySuggestions
       , getSelectedSuggestion
       } = require('../selectors')
 
 const Node = (
-  { node, change, input, properties, selectedSuggestion, path , updateInput
+  { node, change, input, suggestions, selectedSuggestion, path , updateInput
   , updateSelectedSuggestion, appendProperty, acceptChange, cancelChange
   } ) => (
   <div className={
@@ -40,7 +40,7 @@ const Node = (
       }
       <AddSuggestion
         input={input}
-        domain={properties}
+        suggestions={suggestions}
         onChange={e => updateInput(e.target.value)}
         onSuggestionSelected={
           (_, {suggestion}) => updateSelectedSuggestion(suggestion)
@@ -66,7 +66,7 @@ const mapStateToProps = (state, {path}) => (
   { node: getEditedNode(state).getIn(path)
   , change: getChange(state)
   , input: getInput(state)
-  , properties: getProperties(state)
+  , suggestions: getPropertySuggestions(state)
   , selectedSuggestion: getSelectedSuggestion(state)
   , path
   }

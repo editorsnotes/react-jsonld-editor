@@ -1,12 +1,11 @@
 const React = require('react')
-    , {Map} = require('immutable')
     , Autosuggest = require('./Autosuggest')
     , TextButton = require('./TextButton')
 
 const ResourceChooser = (
   { input = ''
+  , suggestions
   , selectedSuggestion = {}
-  , domain
   , cancelChange
   , onChange
   , onSuggestionSelected
@@ -15,7 +14,7 @@ const ResourceChooser = (
   <div>
     <Autosuggest
       input={input}
-      domain={domain}
+      suggestions={suggestions}
       onChange={onChange}
       onSuggestionSelected={onSuggestionSelected}
       onKeyUp={event => {
@@ -31,8 +30,8 @@ const ResourceChooser = (
 
 ResourceChooser.propTypes =
   { input: React.PropTypes.string
+  , suggestions: React.PropTypes.array.isRequired
   , selectedSuggestion: React.PropTypes.object
-  , domain: React.PropTypes.instanceOf(Map).isRequired
   , cancelChange: React.PropTypes.func.isRequired
   , onChange: React.PropTypes.func.isRequired
   , onSuggestionSelected: React.PropTypes.func.isRequired
