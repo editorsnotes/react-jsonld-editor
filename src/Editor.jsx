@@ -11,13 +11,6 @@ const React = require('react')
       } = require('./actions')
     , Node = require('./containers/Node')
 
-const subscribe = (store, node, onSave) => store.subscribe(() => {
-  const changedNode = store.getState().node
-  if (! changedNode.equals(node)) {
-    onSave(changedNode)
-  }
-})
-
 module.exports = React.createClass(
   { propTypes:
       { classes: React.PropTypes.instanceOf(Map)
@@ -38,6 +31,19 @@ module.exports = React.createClass(
       )
     }
 
+  , subscribeToNodeUpdates: function(store, onSave) {
+      return store.subscribe(() => {
+        const node = store.getState().node
+        if (! node.equals(this.props.node)) {
+          onSave(node)
+        }
+      })
+    }
+
+  , dispatch: function(action) {
+      this.state.store.dispatch(action)
+    }
+
   , getInitialState: function() {
       const {classes, properties, individuals, node, onSave} = this.props
       const store = configureStore(
@@ -51,11 +57,7 @@ module.exports = React.createClass(
         , individuals
         , node}
       )
-      return {store, unsubscribe: subscribe(store, node, onSave)}
-    }
-
-  , dispatch: function(action) {
-      this.state.store.dispatch(action)
+      return {store, unsubscribe: this.subscribeToNodeUpdates(store, onSave)}
     }
 
   , componentWillReceiveProps: function(next) {
@@ -72,10 +74,11 @@ module.exports = React.createClass(
       if (! next.node.equals(current.node)) {
         this.dispatch(updateNode(next.node))
       }
-      if (! next.onSave.equals(current.onSave)) {
+      if (next.onSave !== current.onSave) {
         this.state.unsubscribe()
         this.setState({unsubscribe:
-          subscribe(this.state.store, this.props.node, next.onSave)})
+          this.subscribeToNodeUpdates(this.state.store, next.onSave)
+        })
       }
     }
 
