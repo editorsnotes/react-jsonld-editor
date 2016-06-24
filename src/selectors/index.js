@@ -18,7 +18,8 @@ const getLabels = createSelector(
     Seq(domains)
       .flatMap(domain => domain.valueSeq())
       .map(node => [node.id, node.preferredLabel()])
-  )
+  ).set(rdfs('label'), JSONLDValue( // always need this one
+    {'@value': 'label', '@language': 'en'}))
 )
 
 exports.getLabelResolver = createSelector(
