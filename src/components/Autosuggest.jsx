@@ -12,6 +12,7 @@ module.exports = (
   , onChange
   , onSuggestionSelected
   , onKeyUp
+  , autofocus
   }) => (
   <Autosuggest
     suggestions={suggestions}
@@ -23,7 +24,7 @@ module.exports = (
       { value: input
       , onChange
       , onKeyUp
-      , ref: positionInputCaret(input.length)
+      , ref: positionInputCaret(input.length, autofocus)
       }
     }
     theme={

@@ -9,10 +9,10 @@ module.exports = {
 
   isScrolledIntoView,
 
-  positionInputCaret: pos => input => {
+  positionInputCaret: (pos, focus) => input => {
     if (input !== null) {
       input.setSelectionRange(pos, pos)
-      if (isScrolledIntoView(input)) {
+      if (focus && isScrolledIntoView(input)) {
         input.focus()
       }
     }

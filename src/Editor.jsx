@@ -11,7 +11,7 @@ const React = require('react')
       } = require('./actions')
     , Node = require('./containers/Node')
 
-module.exports = React.createClass(
+const Editor = React.createClass(
   { propTypes:
       { classes: React.PropTypes.instanceOf(Map)
       , properties: React.PropTypes.instanceOf(Map)
@@ -91,3 +91,7 @@ module.exports = React.createClass(
     }
   }
 )
+
+Editor.components = { AddSuggestion: require('./components/AddSuggestion') }
+
+module.exports = Editor

@@ -8,8 +8,9 @@ const AddSuggestion = (
   , onChange
   , onSuggestionSelected
   , onAdd = null
+  , autofocus = false
   }) => (
-  <li className="mb1 relative">
+  <div>
     { onAdd === null
         ? <AddButton color="#dddddd" />
         : <AddButton onClick={onAdd} />
@@ -19,8 +20,9 @@ const AddSuggestion = (
       suggestions={suggestions}
       onChange={onChange}
       onSuggestionSelected={onSuggestionSelected}
+      autofocus={autofocus}
     />
-  </li>
+  </div>
 )
 
 AddSuggestion.propTypes =
@@ -29,6 +31,7 @@ AddSuggestion.propTypes =
   , onChange: React.PropTypes.func.isRequired
   , onSuggestionSelected: React.PropTypes.func.isRequired
   , onAdd: React.PropTypes.func
+  , autofocus: React.PropTypes.bool
   }
 
 module.exports = AddSuggestion

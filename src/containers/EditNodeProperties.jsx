@@ -38,18 +38,21 @@ const Node = (
           path={path.push(predicate)}
         />))
       }
-      <AddSuggestion
-        input={input}
-        suggestions={suggestions}
-        onChange={e => updateInput(e.target.value)}
-        onSuggestionSelected={
-          (_, {suggestion}) => updateSelectedSuggestion(suggestion)
-        }
-        onAdd={selectedSuggestion.id
-          ? () => appendProperty(path, change, selectedSuggestion.id)
-          : null
-        }
-      />
+      <li className="mb1 relative">
+        <AddSuggestion
+          input={input}
+          autofocus={true}
+          suggestions={suggestions}
+          onChange={e => updateInput(e.target.value)}
+          onSuggestionSelected={
+            (_, {suggestion}) => updateSelectedSuggestion(suggestion)
+          }
+          onAdd={selectedSuggestion.id
+            ? () => appendProperty(path, change, selectedSuggestion.id)
+            : null
+          }
+        />
+      </li>
     </ul>
     <div>
       <TextButton
