@@ -4,6 +4,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , ShowIdentifier = require('./ShowIdentifier')
     , Type = require('./Type')
     , Property = require('./Property')
+    , Value = require('../components/Value')
     , DeleteButton = require('../components/DeleteButton')
     , TextButton = require('../components/TextButton')
     , {deleteIn, startEditingProperties} = require('../actions')
@@ -26,20 +27,24 @@ const Node = (
     `border border-silver py1 pl1 ${node.id ? 'pr1' : 'pr3'} relative`}
   >
     {node.id
-      ? ( // node is named
+      ? (
           <ShowIdentifier
             path={path.push('@id')}
             disabled={path.isEmpty()}
           />
         )
-      : path.isEmpty()
-          ? null // root node can't be deleted
-          : ( // node is blank / anonymous
-              <DeleteButton
-                classes="absolute top-0 right-0"
-                onClick={() => deleteIn(path)}
-              />
-            )
+      : node.preferredLabel()
+        ? <Value value={node.preferredLabel()} />
+        : null
+    }
+    {path.isEmpty()
+      ? null // root node can't be deleted
+      : ( // node is blank / anonymous
+          <DeleteButton
+            classes="absolute top-0 right-0"
+            onClick={() => deleteIn(path)}
+          />
+        )
     }
     <ul className="list-reset">
       <Type
