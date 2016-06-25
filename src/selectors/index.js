@@ -43,7 +43,7 @@ const matches = (inputValue, inputLength) => label => label
   ? label.value.toLowerCase().slice(0, inputLength) === inputValue
   : false
 
-const getSuggestions = (input, domain, labels) => {
+const getSuggestions = (input, domain, labels, labelTransform = x => x) => {
   const inputValue = String(input).trim().toLowerCase()
   const inputLength = inputValue.length
   const matchesInput = matches(inputValue, inputLength)
@@ -52,6 +52,7 @@ const getSuggestions = (input, domain, labels) => {
     : domain.valueSeq()
         .filter(node => matchesInput(labels.get(node.id)))
         .map(node => ({id: node.id, label: labels.get(node.id).value}))
+        .map(({id, label}) => ({id, label: labelTransform(label)}))
         .toArray()
 }
 
@@ -61,7 +62,8 @@ exports.getClassSuggestions = createSelector(
 )
 exports.getPropertySuggestions = createSelector(
   [getInput, getProperties, getLabels],
-  (input, properties, labels) => getSuggestions(input, properties, labels)
+  (input, properties, labels) => getSuggestions(
+    input, properties, labels, label => label.toLowerCase())
 )
 exports.getIndividualSuggestions = createSelector(
   [getInput, getIndividuals, getLabels],
