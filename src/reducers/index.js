@@ -98,7 +98,7 @@ const input = (input = '', action) => {
 
     case UPDATE_INPUT:
     case UPDATE_CHANGE:
-      return action.input
+      return action.input || ''
 
     case UPDATE_SELECTED_SUGGESTION:
       return action.suggestion.label ? action.suggestion.label : input
