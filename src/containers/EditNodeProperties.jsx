@@ -1,22 +1,26 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
+    , {JSONLDNode, JSONLDValue} = require('immutable-jsonld')
     , ShowIdentifier = require('./ShowIdentifier')
     , Type = require('./Type')
     , Property = require('./Property')
     , AddSuggestion = require('../components/AddSuggestion')
     , TextButton = require('../components/TextButton')
     , actions = require('../actions')
+    , {rdf, rdfs} = require('../namespaces')
     , { getEditedNode
       , getChange
       , getInput
       , getPropertySuggestions
       , getSelectedSuggestion
+      , getIdMinter
+      , getProperties
       } = require('../selectors')
 
 const Node = (
-  { node, change, input, suggestions, selectedSuggestion, path , updateInput
-  , updateSelectedSuggestion, appendProperty, acceptChange, cancelChange
+  { node, change, input, suggestions, path, updateInput
+  , updateSelectedSuggestion, acceptChange, cancelChange, onAdd
   } ) => (
   <div className={
     `border border-silver py1 pl1 ${node.id ? 'pr1' : 'pr3'} relative`}
@@ -47,10 +51,7 @@ const Node = (
           onSuggestionSelected={
             (_, {suggestion}) => updateSelectedSuggestion(suggestion)
           }
-          onAdd={selectedSuggestion.id
-            ? () => appendProperty(path, change, selectedSuggestion.id)
-            : null
-          }
+          onAdd={onAdd}
         />
       </li>
     </ul>
@@ -65,17 +66,49 @@ const Node = (
   </div>
 )
 
-const mapStateToProps = (state, {path}) => (
-  { node: getEditedNode(state).getIn(path)
-  , change: getChange(state)
-  , input: getInput(state)
-  , suggestions: getPropertySuggestions(state)
-  , selectedSuggestion: getSelectedSuggestion(state)
-  , path
-  }
-)
+const mapStateToProps = (state, {path}) => {
+  return (
+    { node: getEditedNode(state).getIn(path)
+    , change: getChange(state)
+    , input: getInput(state)
+    , properties: getProperties(state)
+    , suggestions: getPropertySuggestions(state)
+    , selectedSuggestion: getSelectedSuggestion(state)
+    , idMinter: getIdMinter(state)
+    , path
+    }
+  )
+}
 
 const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch)
 
-module.exports = connect(mapStateToProps, mapDispatchToProps)(Node)
+const appendExistingProperty = (
+  {path, change, selectedSuggestion}, {appendProperty}) => {
+    appendProperty(path, change, selectedSuggestion.id)
+}
+
+const appendNewProperty = (
+  {path, change, properties, idMinter, input},
+  {updateProperties, appendProperty}) => {
+    const id = idMinter()
+        , newProperty = JSONLDNode()
+      .set('@id', id)
+      .push('@type', rdf('Property'))
+      .push(rdfs('label'), JSONLDValue({'@value': input}))
+    updateProperties(properties.set(id, newProperty))
+    appendProperty(path, change, id)
+}
+
+const mergeProps = (stateProps, dispatchProps) => (
+  { ...stateProps
+  , ...dispatchProps
+  , onAdd: stateProps.selectedSuggestion.id
+      ? () => appendExistingProperty(stateProps, dispatchProps)
+      : stateProps.idMinter
+          ? () => appendNewProperty(stateProps, dispatchProps)
+          : null
+  }
+)
+
+module.exports = connect(mapStateToProps, mapDispatchToProps, mergeProps)(Node)
 

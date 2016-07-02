@@ -49,6 +49,7 @@
     "cssnext": "^1.8.4",
     "immutablediff": "^0.4.2",
     "n3": "^0.4.5",
+    "node-uuid": "^1.4.7",
     "tap-spec": "^4.1.1",
     "tape": "^4.5.1",
     "uglify": "^0.1.5"

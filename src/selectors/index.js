@@ -8,9 +8,20 @@ const getNode = state => state.node
 const getClasses = state => state.classes
 const getProperties = state => state.properties
 const getIndividuals = state => state.individuals
+const getIdMinter = state => state.idMinter
 
-exports.canEditTypes = state => (! getClasses(state).isEmpty())
-exports.canEditProperties = state => (! getProperties(state).isEmpty())
+exports.getClasses = getClasses
+exports.getProperties = getProperties
+exports.getIdMinter = getIdMinter
+
+exports.canEditTypes = createSelector(
+  [getClasses, getIdMinter],
+  (classes, idMinter) => (! (classes.isEmpty() && idMinter === null))
+)
+exports.canEditProperties = createSelector(
+  [getProperties, getIdMinter],
+  (properties, idMinter) => (! (properties.isEmpty() && idMinter === null))
+)
 
 const getLabels = createSelector(
   [getClasses, getProperties, getIndividuals],

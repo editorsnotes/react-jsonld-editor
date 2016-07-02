@@ -18,6 +18,7 @@ const Editor = React.createClass(
       , individuals: React.PropTypes.instanceOf(Map)
       , node: React.PropTypes.instanceOf(JSONLDNode)
       , onSave: React.PropTypes.func
+      , mintID: React.PropTypes.func
       }
 
   , getDefaultProps: function() {
@@ -27,6 +28,7 @@ const Editor = React.createClass(
         , individuals: Map()
         , node: JSONLDNode()
         , onSave: () => {}
+        , mintID: null
         }
       )
     }
@@ -45,7 +47,13 @@ const Editor = React.createClass(
     }
 
   , getInitialState: function() {
-      const {classes, properties, individuals, node, onSave} = this.props
+      const { classes
+            , properties
+            , individuals
+            , node
+            , onSave
+            , mintID
+            } = this.props
       const store = configureStore(
         { editpath: List()
         , change: NO_CHANGE
@@ -55,7 +63,9 @@ const Editor = React.createClass(
         , classes
         , properties
         , individuals
-        , node}
+        , node
+        , idMinter: mintID
+        }
       )
       return {store, unsubscribe: this.subscribeToNodeUpdates(store, onSave)}
     }

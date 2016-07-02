@@ -139,6 +139,8 @@ const editingProperties = (editingProperties = false, action) => {
   }
 }
 
+const idMinter = (idMinter = null) => idMinter
+
 module.exports = combineReducers(
   { node
   , classes
@@ -149,6 +151,7 @@ module.exports = combineReducers(
   , input
   , selectedSuggestion
   , editingProperties
+  , idMinter
   }
 )
 
