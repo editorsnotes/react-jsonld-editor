@@ -1,7 +1,6 @@
 {
   "name": "react-jsonld-editor",
   "version": "1.0.0",
-  "private": true,
   "description": "React component for editing JSON-LD",
   "files": [
     "lib",
