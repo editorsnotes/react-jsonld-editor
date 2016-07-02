@@ -1,14 +1,14 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
-    , {JSONLDNode, JSONLDValue} = require('immutable-jsonld')
     , ShowIdentifier = require('./ShowIdentifier')
     , Type = require('./Type')
     , Property = require('./Property')
     , AddSuggestion = require('../components/AddSuggestion')
     , TextButton = require('../components/TextButton')
     , actions = require('../actions')
-    , {rdf, rdfs} = require('../namespaces')
+    , {rdf} = require('../namespaces')
+    , {makeNode} = require('../utils')
     , { getEditedNode
       , getChange
       , getInput
@@ -82,30 +82,24 @@ const mapStateToProps = (state, {path}) => {
 
 const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch)
 
-const appendExistingProperty = (
-  {path, change, selectedSuggestion}, {appendProperty}) => {
-    appendProperty(path, change, selectedSuggestion.id)
+const addNewProperty = (id, label, properties, updateProperties) => {
+  updateProperties(properties.set(id, makeNode(id, label, rdf('Property'))))
+  return id
 }
 
-const appendNewProperty = (
-  {path, change, properties, idMinter, input},
-  {updateProperties, appendProperty}) => {
-    const id = idMinter()
-        , newProperty = JSONLDNode()
-      .set('@id', id)
-      .push('@type', rdf('Property'))
-      .push(rdfs('label'), JSONLDValue({'@value': input}))
-    updateProperties(properties.set(id, newProperty))
-    appendProperty(path, change, id)
-}
-
-const mergeProps = (stateProps, dispatchProps) => (
-  { ...stateProps
-  , ...dispatchProps
-  , onAdd: stateProps.selectedSuggestion.id
-      ? () => appendExistingProperty(stateProps, dispatchProps)
-      : stateProps.idMinter
-          ? () => appendNewProperty(stateProps, dispatchProps)
+const mergeProps = (
+  { node, change, input, properties, suggestions, selectedSuggestion
+  , idMinter },
+  { updateInput, updateSelectedSuggestion, updateProperties, acceptChange
+  , cancelChange, appendProperty },
+  { path }) => (
+  { node, change, input, suggestions, path
+  , updateInput, updateSelectedSuggestion, acceptChange, cancelChange
+  , onAdd: selectedSuggestion.id
+      ? () => appendProperty(path, change, selectedSuggestion.id)
+      : idMinter
+          ? () => appendProperty(path, change, addNewProperty(
+              idMinter(), input, properties, updateProperties))
           : null
   }
 )
