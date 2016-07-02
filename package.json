@@ -1,10 +1,10 @@
 {
   "name": "react-jsonld-editor",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "React component for editing JSON-LD",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/rybesh/react-jsonld-editor.git"
+    "type": "git",
+    "url": "https://github.com/rybesh/react-jsonld-editor.git"
   },
   "files": [
     "lib",
