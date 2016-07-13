@@ -48,6 +48,8 @@
     "immutablediff": "^0.4.2",
     "n3": "^0.4.5",
     "node-uuid": "^1.4.7",
+    "react": "0.14.7",
+    "react-dom": "^0.14.7",
     "tap-spec": "^4.1.1",
     "tape": "^4.5.1",
     "uglify": "^0.1.5"
@@ -56,12 +58,13 @@
     "immutable": "^3.7.6",
     "immutable-jsonld": "^1.1.2",
     "language-tags": "^1.0.5",
-    "react": "^0.14.7",
     "react-autosuggest": "^3.7.4",
-    "react-dom": "^0.14.7",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
     "reselect": "^2.5.1",
     "validator": "^5.1.0"
+  },
+  "peerDependencies": {
+    "react": "^0.14.7 || ^15.2.1"
   }
 }
