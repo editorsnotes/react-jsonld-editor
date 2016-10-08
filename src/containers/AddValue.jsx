@@ -29,7 +29,7 @@ const mergeProps = (
     , hideLabel: true
     , onFocus: () => updateEditPath(path)
     , onChange: e => updateInput(e.target.value)
-    , onKeyUp: e => {
+    , onKeyDown: e => {
         if (e.key === 'Enter') {
           const value = JSONLDValue().set('@value', e.target.value)
           const type = getPredicateRange(path.last()).first()
