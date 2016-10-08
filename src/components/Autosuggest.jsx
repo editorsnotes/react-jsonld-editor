@@ -37,13 +37,9 @@ const Autosuggest = (
           , placeholder
           }
         }
-        ref={autosuggest => {
-          console.log(autosuggest ? autosuggest.input : autosuggest)
-          console.log(focused)
-          if (autosuggest && focused) {
-            autosuggest.input.focus()
-          }
-        }}
+        ref={autosuggest => { if (autosuggest && focused) {
+          autosuggest.input.focus()
+        }}}
         theme={
           { container:
             { position: 'relative'
