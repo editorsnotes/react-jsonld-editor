@@ -1,16 +1,14 @@
 const {JSONLDNode} = require('immutable-jsonld')
     , {Map, List} = require('immutable')
     , {combineReducers} = require('redux')
-    , { UPDATE_CLASSES
-      , UPDATE_PROPERTIES
-      , UPDATE_INDIVIDUALS
+    , { UPDATE_UNIVERSE
+      , SET_IN
       , DELETE_IN
+      , UPDATE_EDITPATH
+      , UPDATE_SHOWPATH
       , UPDATE_INPUT
-      , UPDATE_SELECTED_SUGGESTION
-      , UPDATE_CHANGE
-      , ACCEPT_CHANGE
-      , CANCEL_CHANGE
-      , NO_CHANGE
+      , UPDATE_SUGGESTIONS
+      , TOGGLE_EDITING_PROPERTIES
       } = require('../actions')
 
 const node = (node = JSONLDNode(), action) => {
@@ -19,9 +17,8 @@ const node = (node = JSONLDNode(), action) => {
     case DELETE_IN:
       return node.deleteIn(action.path)
 
-    case ACCEPT_CHANGE:
-      return action.change === NO_CHANGE
-        ? node : node.setIn(action.path, action.change)
+    case SET_IN:
+      return node.setIn(action.path, action.value)
 
     default:
       return node
@@ -30,8 +27,8 @@ const node = (node = JSONLDNode(), action) => {
 
 const classes = (classes = Map(), action) => {
   switch (action.type) {
-    case UPDATE_CLASSES:
-      return action.classes
+    case UPDATE_UNIVERSE:
+      return action.classes || classes
 
     default:
       return classes
@@ -40,8 +37,8 @@ const classes = (classes = Map(), action) => {
 
 const properties = (properties = Map(), action) => {
   switch (action.type) {
-    case UPDATE_PROPERTIES:
-      return action.properties
+    case UPDATE_UNIVERSE:
+      return action.properties || properties
 
     default:
       return properties
@@ -50,108 +47,109 @@ const properties = (properties = Map(), action) => {
 
 const individuals = (individuals = Map(), action) => {
   switch (action.type) {
-    case UPDATE_INDIVIDUALS:
-      return action.individuals
+    case UPDATE_UNIVERSE:
+      return action.individuals || individuals
 
     default:
       return individuals
   }
 }
 
-const editpath = (editpath = List(), action) => {
+const datatypes = (datatypes = Map(), action) => {
   switch (action.type) {
-
-    case DELETE_IN:
-    case ACCEPT_CHANGE:
-    case CANCEL_CHANGE:
-      return List()
-
-    case UPDATE_CHANGE:
-       return action.path
+    case UPDATE_UNIVERSE:
+      return action.datatypes || datatypes
 
     default:
-      return editpath
+      return datatypes
   }
 }
 
-const change = (change = NO_CHANGE, action) => {
+const languages = (languages = Map(), action) => {
   switch (action.type) {
-
-    case ACCEPT_CHANGE:
-    case CANCEL_CHANGE:
-      return NO_CHANGE
-
-    case UPDATE_CHANGE:
-      return action.change
+    case UPDATE_UNIVERSE:
+      return action.languages || languages
 
     default:
-      return change
+      return languages
+  }
+}
+
+const editPath = (editPath = List(), action) => {
+  switch (action.type) {
+
+    case SET_IN:
+      return action.editPath || editPath
+
+    case DELETE_IN:
+      return editPath.isEmpty() ? editPath : editPath.pop()
+
+    case UPDATE_EDITPATH:
+      return action.path
+
+    default:
+      return editPath
+  }
+}
+
+const rootNodePath = (rootNodePath = List(), action) => {
+  switch (action.type) {
+
+    case UPDATE_SHOWPATH:
+      return action.path
+
+    default:
+      return rootNodePath
   }
 }
 
 const input = (input = '', action) => {
   switch (action.type) {
 
-    case ACCEPT_CHANGE:
-    case CANCEL_CHANGE:
-      return ''
-
     case UPDATE_INPUT:
-    case UPDATE_CHANGE:
+    case UPDATE_EDITPATH:
+    case SET_IN:
       return action.input || ''
-
-    case UPDATE_SELECTED_SUGGESTION:
-      return action.suggestion.label ? action.suggestion.label : input
 
     default:
       return input
   }
 }
 
-const selectedSuggestion = (selectedSuggestion = {}, action) => {
+const suggestions = (suggestions = [], action) => {
   switch (action.type) {
 
-    case ACCEPT_CHANGE:
-    case CANCEL_CHANGE:
-      return {}
-
-    case UPDATE_SELECTED_SUGGESTION:
-    case UPDATE_CHANGE:
-      return action.suggestion
+    case UPDATE_SUGGESTIONS:
+      return action.suggestions
 
     default:
-      return selectedSuggestion
+      return suggestions
   }
 }
 
-const editingProperties = (editingProperties = false, action) => {
-  switch (action.type) {
+const isEditingProperties = (isEditingProperties = false, action) => {
+  switch(action.type) {
 
-    case ACCEPT_CHANGE:
-    case CANCEL_CHANGE:
-      return false
-
-    case UPDATE_CHANGE:
-      return action.editingProperties
+    case TOGGLE_EDITING_PROPERTIES:
+      return (! isEditingProperties)
 
     default:
-      return editingProperties
+      return isEditingProperties
   }
 }
-
-const idMinter = (idMinter = null) => idMinter
 
 module.exports = combineReducers(
   { node
   , classes
   , properties
   , individuals
-  , editpath
-  , change
+  , datatypes
+  , languages
+  , editPath
+  , rootNodePath
   , input
-  , selectedSuggestion
-  , editingProperties
-  , idMinter
+  , suggestions
+  , isEditingProperties
   }
 )
 

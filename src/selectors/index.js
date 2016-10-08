@@ -1,36 +1,27 @@
 const {createSelector} = require('reselect')
     , {Map, List, Seq} = require('immutable')
     , {JSONLDNode, JSONLDValue} = require('immutable-jsonld')
-    , {NO_CHANGE} = require('../actions')
     , {rdfs, owl} = require('../namespaces')
 
 const getNode = state => state.node
 const getClasses = state => state.classes
 const getProperties = state => state.properties
 const getIndividuals = state => state.individuals
-const getIdMinter = state => state.idMinter
+const getDatatypes = state => state.datatypes
+const getLanguages = state => state.languages
 
-exports.getClasses = getClasses
+exports.getNode = getNode
 exports.getProperties = getProperties
-exports.getIdMinter = getIdMinter
-
-exports.canEditTypes = createSelector(
-  [getClasses, getIdMinter],
-  (classes, idMinter) => (! (classes.isEmpty() && idMinter === null))
-)
-exports.canEditProperties = createSelector(
-  [getProperties, getIdMinter],
-  (properties, idMinter) => (! (properties.isEmpty() && idMinter === null))
-)
+exports.getIndividuals = getIndividuals
+exports.getLanguages = getLanguages
 
 const getLabels = createSelector(
-  [getClasses, getProperties, getIndividuals],
+  [getClasses, getProperties, getIndividuals, getDatatypes, getLanguages],
   (...domains) => Map(
     Seq(domains)
       .flatMap(domain => domain.valueSeq())
       .map(node => [node.id, node.preferredLabel()])
-  ).set(rdfs('label'), JSONLDValue( // always need this one
-    {'@value': 'label', '@language': 'en'}))
+  )
 )
 
 exports.getLabelResolver = createSelector(
@@ -38,23 +29,23 @@ exports.getLabelResolver = createSelector(
   labels => id => labels.has(id) ? labels.get(id).value : id
 )
 
-const getEditPath = state => state.editpath
-const getChange = state => state.change
+const getEditPath = state => state.editPath
+const getRootNodePath = state => state.rootNodePath
 const getInput = state => state.input
-const getSelectedSuggestion = state => state.selectedSuggestion
-const isEditingProperties = state => state.editingProperties
+const getSuggestions = state => state.suggestions
+const isEditingProperties = state => state.isEditingProperties
 
 exports.getEditPath = getEditPath
-exports.getChange = getChange
+exports.getRootNodePath = getRootNodePath
 exports.getInput = getInput
-exports.getSelectedSuggestion = getSelectedSuggestion
+exports.getSuggestions = getSuggestions
 exports.isEditingProperties = isEditingProperties
 
 const matches = (inputValue, inputLength) => label => label
   ? label.value.toLowerCase().slice(0, inputLength) === inputValue
   : false
 
-const getSuggestions = (input, domain, labels, labelTransform = x => x) => {
+const findSuggestions = (input, domain, labels) => {
   const inputValue = String(input).trim().toLowerCase()
   const inputLength = inputValue.length
   const matchesInput = matches(inputValue, inputLength)
@@ -63,30 +54,19 @@ const getSuggestions = (input, domain, labels, labelTransform = x => x) => {
     : domain.valueSeq()
         .filter(node => matchesInput(labels.get(node.id)))
         .map(node => ({id: node.id, label: labels.get(node.id).value}))
-        .map(({id, label}) => ({id, label: labelTransform(label)}))
         .toArray()
 }
 
-exports.getClassSuggestions = createSelector(
-  [getInput, getClasses, getLabels],
-  (input, classes, labels) => getSuggestions(input, classes, labels)
-)
-exports.getPropertySuggestions = createSelector(
-  [getInput, getProperties, getLabels],
-  (input, properties, labels) => getSuggestions(
-    input, properties, labels, label => label.toLowerCase())
-)
-exports.getIndividualSuggestions = createSelector(
-  [getInput, getIndividuals, getLabels],
-  (input, individuals, labels) => getSuggestions(input, individuals, labels)
+const createSuggester = getter => createSelector(
+  [getter, getLabels],
+  (resources, labels) => input => findSuggestions(input, resources, labels)
 )
 
-exports.getEditedNode = createSelector(
-  [getNode, getEditPath, getChange],
-  (node, editpath, change) => change === NO_CHANGE
-    ? node
-    : node.setIn(editpath, change)
-)
+exports.getClassSuggester = createSuggester(getClasses)
+exports.getPropertySuggester = createSuggester(getProperties)
+exports.getIndividualSuggester = createSuggester(getIndividuals)
+exports.getDatatypeSuggester = createSuggester(getDatatypes)
+exports.getLanguageSuggester = createSuggester(getLanguages)
 
 const createObject = property => {
   const types = property.get(rdfs('range'), List()).map(node => node.id)
@@ -99,5 +79,15 @@ exports.getEmptyObjectCreator = createSelector(
   [getProperties],
   properties => predicate => properties.has(predicate)
     ? createObject(properties.get(predicate))
-    : JSONLDNode()
+    : JSONLDValue()
+)
+
+exports.getPredicateRangeFinder = createSelector(
+  [getProperties],
+  properties => predicate => properties.has(predicate)
+    ? properties
+        .get(predicate)
+        .get(rdfs('range'), List())
+        .map(node => node.id)
+    : List()
 )

@@ -5,4 +5,5 @@ module.exports =
   , rdfs: ns('http://www.w3.org/2000/01/rdf-schema#')
   , owl: ns('http://www.w3.org/2002/07/owl#')
   , xsd: ns('http://www.w3.org/2001/XMLSchema#')
+  , lvont: ns('http://lexvo.org/ontology#')
   }

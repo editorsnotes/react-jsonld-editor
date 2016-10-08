@@ -1,40 +1,23 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
-    , Identifier = require('../components/Identifier')
+    , Chip = require('../components/Chip')
     , {deleteIn} = require('../actions')
-    , { getEditedNode
+    , { getNode
       , getLabelResolver
-      , isEditingProperties
       } = require('../selectors')
 
-const mapStateToProps = (state, {path, disabled = false}) => {
-  let id = getEditedNode(state).getIn(path)
-  return (
-    { id
-    , path
-    , label: getLabelResolver(state)(id)
-    , interactive: (! (disabled || isEditingProperties(state)))
-    }
-  )
-}
+const mapStateToProps = (state, {path}) => (
+  { label: getLabelResolver(state)(getNode(state).getIn(path)) }
+)
 
-const mapDispatchToProps = dispatch => bindActionCreators(
-  {deleteIn}, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({deleteIn}, dispatch)
 
-const mergeProps = ({id, path, label, interactive}, {deleteIn}) => (
-  { id
-  , label
-  , onClick:
-      interactive
-        ? () => window.open(id, '_blank')
-        : null
-  , onClickDelete:
-      interactive
-        ? () => deleteIn(path.last() === '@id' ? path.butLast() : path)
-        : null
+const mergeProps = ({label}, {deleteIn}, {path, ...props}) => (
+  { children: label
+  , onClickDelete: () => deleteIn(path)
+  , ...props
   }
 )
 
-module.exports = connect(
-  mapStateToProps, mapDispatchToProps, mergeProps)(Identifier)
+module.exports = connect(mapStateToProps, mapDispatchToProps, mergeProps)(Chip)

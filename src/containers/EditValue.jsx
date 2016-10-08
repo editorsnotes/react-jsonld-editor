@@ -1,56 +1,151 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
-    , validator = require('validator')
-    , {xsd, rdfs} = require('../namespaces')
-    , {getChange} = require('../selectors')
-    , {updateChange, acceptChange, cancelChange} = require('../actions')
-    , CancellableInput = require('../components/CancellableInput')
+    , {Input, Block, Label} = require('rebass')
+    , {List} = require('immutable')
+    , ShowValue = require('./ShowValue')
+    , Dropdown = require('../components/Dropdown')
+    , Autosuggest = require('../components/Autosuggest')
+    , { getNode
+      , getInput
+      , getSuggestions
+      , getEditPath
+      , getLanguages
+      , getLabelResolver
+      , getDatatypeSuggester
+      , getLanguageSuggester
+      } = require('../selectors')
+    , { updateEditPath
+      , updateInput
+      , updateSuggestions
+      , setIn
+      } = require('../actions')
+    , {rdf, lvont} = require('../namespaces')
 
-const VALIDATORS = {
-  [rdfs('Literal')]: () => true,
-  [xsd('anyAtomicType')]: () => true,
-  [xsd('dateTime')]: s => validator.isDate(s),
-  [xsd('float')]: s => validator.isFloat(s),
-  [xsd('gYear')]: s => validator.isDate(s),
-  [xsd('integer')]: s => validator.isInt(s),
-  [xsd('string')]: () => true
-}
-
-const isValid = value =>
-  VALIDATORS[value.type || xsd('anyAtomicType')](value.value + '')
-
-const mapStateToProps = state => {
-  let value = getChange(state)
-  return (
-    { value
-    , input: value.value
-    , classes: isValid(value) ? 'bg-white' : 'bg-red'
-    }
-  )
-}
-
-const mapDispatchToProps = dispatch => bindActionCreators(
-  {updateChange, acceptChange, cancelChange}, dispatch)
-
-const mergeProps = (
-  {value, input, classes},
-  {updateChange, acceptChange, cancelChange},
-  {path}) => (
-
-  { input
-  , classes
-
-  , onChange: e => updateChange(
-      path,
-      value.set('@value', e.target.value),
-      false,
-      e.target.value)
-
-  , onAccept: () => acceptChange(path, value)
-  , onCancel: () => cancelChange()
+const mapStateToProps = (state, {path}) => (
+  { value: getNode(state).getIn(path)
+  , input: getInput(state)
+  , suggestions: getSuggestions(state)
+  , editPath: getEditPath(state)
+  , languages: getLanguages(state)
+  , labelResolver: getLabelResolver(state)
+  , findDatatypes: getDatatypeSuggester(state)
+  , findLanguages: getLanguageSuggester(state)
   }
 )
 
-module.exports = connect(
-  mapStateToProps, mapDispatchToProps, mergeProps)(CancellableInput)
+const mapDispatchToProps = dispatch => bindActionCreators(
+  {updateEditPath, updateInput, updateSuggestions, setIn}, dispatch)
+
+const languageWithTag = (tag, languages) => languages.find(
+  language => language.get(lvont('iso639P1Code')).first().value === tag
+)
+
+const tagForLanguage = (language_id, languages) => languages
+  .get(language_id)
+  .get(lvont('iso639P1Code'))
+  .first().value
+
+const autosuggestProps = (
+  { path
+  , value
+  , editPath
+  , input
+  , suggester
+  , suggestions
+  , labelFor
+  , updateEditPath
+  , updateInput
+  , updateSuggestions
+  , setIn
+  , newValue
+  }) => (
+
+  { input: path.equals(editPath) ? input : labelFor(value)
+  , suggestions
+  , onFocus:
+      () => updateEditPath(path, labelFor(value))
+  , onBlur:
+      () => updateEditPath(path.pop())
+  , onChange:
+      e => { if (e.type === 'change') { updateInput(e.target.value) }}
+  , onSuggestionsFetchRequested:
+      ({value}) => updateSuggestions(suggester(value))
+  , onSuggestionsClearRequested:
+      () => updateSuggestions([])
+  , onSuggestionSelected:
+      (_, {suggestion}) => setIn(
+        path.pop(), newValue(suggestion.id), {input: suggestion.label})
+  }
+)
+
+const EditValue = (
+  { path
+  , value
+  , languages
+  , findDatatypes
+  , findLanguages
+  , labelResolver
+  , updateEditPath
+  , setIn
+  , ...props
+  }) => {
+
+  const valuePath = path.push('@value')
+
+  return (
+    <Dropdown onDismiss={() => updateEditPath(List())}>
+      <ShowValue path={path} mr={1} mt={1} />
+      <Block m={0} p={1}>
+
+        <Input
+          label="value"
+          name={valuePath.join('|')}
+          value={value.value}
+          onFocus={() => updateEditPath(valuePath)}
+          onChange={e => setIn(valuePath, e.target.value)}
+        />
+
+        <Label children={'type'} />
+        <Autosuggest {...autosuggestProps(
+          { ...props
+          , path: path.push('@type')
+          , value: value.type
+          , suggester: findDatatypes
+          , labelFor: value => value ? labelResolver(value) : ''
+          , updateEditPath
+          , setIn
+          , newValue: type => type === rdf('langString')
+              ? value.set('@type', rdf('langString'))
+              : value.set('@type', type).delete('@language')
+          })}
+        />
+
+  { value.type === rdf('langString')
+      ? <Label children={'language'} />
+      : ''
+  }
+  { value.type === rdf('langString')
+      ? <Autosuggest {...autosuggestProps(
+          { ...props
+          , path: path.push('@language')
+          , value: value.language
+          , suggester: findLanguages
+          , labelFor: value => value
+              ? labelResolver(languageWithTag(value, languages).id)
+              : ''
+          , updateEditPath
+          , setIn
+          , newValue: language => value
+              .set('@type', rdf('langString'))
+              .set('@language', tagForLanguage(language, languages))
+          })}
+        />
+      : ''
+  }
+      </Block>
+    </Dropdown>
+  )
+}
+
+module.exports = connect(mapStateToProps, mapDispatchToProps)(EditValue)

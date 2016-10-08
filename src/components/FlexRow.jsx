@@ -1,0 +1,23 @@
+const React = require('react') // eslint-disable-line no-unused-vars
+    , {Block} = require('rebass')
+
+const FlexRow = ({children, margins = {mr: 1, mt: 1}}) => {
+  const [last, ...rest] = React.Children.toArray(children).reverse()
+  return (
+    <Block
+      className="FlexRow"
+      m={1}
+      style={
+        { display: 'flex'
+        , flexDirection: 'row'
+        , flexWrap: 'wrap'
+        , lineHeight: 2
+        }
+    }>
+      { rest.reverse().map(e => React.cloneElement(e, margins)) }
+      { React.cloneElement(last, {...margins, style: {flex: 1}}) }
+    </Block>
+  )
+}
+
+module.exports = FlexRow

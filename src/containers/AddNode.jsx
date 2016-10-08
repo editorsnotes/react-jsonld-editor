@@ -1,61 +1,57 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
-    , {List} = require('immutable')
-    , {JSONLDValue} = require('immutable-jsonld')
-    , ResourceChooser = require('../components/ResourceChooser')
-    , {rdfs, xsd} = require('../namespaces')
     , { getInput
-      , getSelectedSuggestion
-      , getIndividualSuggestions
-      , getChange
+      , getEditPath
+      , getSuggestions
+      , getIndividualSuggester
+      , getIndividuals
       } = require('../selectors')
-    , {updateChange, acceptChange, cancelChange} = require('../actions')
-
-const setLabel = (node, label) => node.set(
-  rdfs('label'),
-  List.of(JSONLDValue({'@type': xsd('string'), '@value': label}))
-)
+    , { updateEditPath
+      , updateInput
+      , updateSuggestions
+      , setIn
+      } = require('../actions')
+    , Autosuggest = require('../components/Autosuggest')
 
 const mapStateToProps = state => (
   { input: getInput(state)
-  , suggestions: getIndividualSuggestions(state)
-  , selectedSuggestion: getSelectedSuggestion(state)
-  , change: getChange(state)
+  , suggestions: getSuggestions(state)
+  , findSuggestions: getIndividualSuggester(state)
+  , editPath: getEditPath(state)
+  , nodes: getIndividuals(state)
   }
 )
 
 const mapDispatchToProps = dispatch => bindActionCreators(
-  {updateChange, acceptChange, cancelChange}, dispatch)
+  {updateEditPath, updateInput, updateSuggestions, setIn}, dispatch)
 
 const mergeProps = (
-  {input, suggestions, selectedSuggestion, change},
-  {updateChange, acceptChange, cancelChange},
-  {path}) => (
+  {input, suggestions, findSuggestions, editPath, nodes},
+  {updateEditPath, updateInput, updateSuggestions, setIn},
+  {path, ...props}) => (
 
-  { input
+  { input: editPath.equals(path) ? input : ''
   , suggestions
-  , selectedSuggestion
-  , cancelChange
-
-  , onChange: e => updateChange(
-      path.butLast(),
-      setLabel(change, e.target.value),
-      false,
-      e.target.value)
-
-  , onSuggestionSelected: (_, {suggestion}) => updateChange(
-      path.butLast(),
-      change
-        .remove(rdfs('label'))
-        .set('@id', suggestion.id),
-      false,
-      suggestion.label,
-      suggestion)
-
-  , onAccept: () => acceptChange(path.butLast(), change)
+  , onFocus: () => updateEditPath(path)
+  , onBlur: () => updateEditPath(path.pop().pop())
+  , onChange: e => updateInput(e.target.value)
+  , onSuggestionsFetchRequested:
+      ({value}) => updateSuggestions(findSuggestions(value))
+  , onSuggestionsClearRequested: () => updateSuggestions([])
+  , onSuggestionSelected: (_, {suggestion}) => {
+      setIn(
+        path,
+        nodes.get(suggestion.id),
+        {editPath: path.set(-1, path.last() + 1)}
+      )
+    }
+  , focused: editPath.equals(path)
+  , ...props
   }
 )
 
-module.exports = connect(
-  mapStateToProps, mapDispatchToProps, mergeProps)(ResourceChooser)
+const AddNode = connect(
+  mapStateToProps, mapDispatchToProps, mergeProps)(Autosuggest)
+
+module.exports = AddNode

@@ -1,10 +1,11 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
+    , {List} = require('immutable')
     , { getInput
       , getEditPath
       , getSuggestions
-      , getClassSuggester
+      , getPropertySuggester
       } = require('../selectors')
     , { updateEditPath
       , updateInput
@@ -16,7 +17,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
 const mapStateToProps = state => (
   { input: getInput(state)
   , suggestions: getSuggestions(state)
-  , findSuggestions: getClassSuggester(state)
+  , findSuggestions: getPropertySuggester(state)
   , editPath: getEditPath(state)
   }
 )
@@ -27,25 +28,31 @@ const mapDispatchToProps = dispatch => bindActionCreators(
 const mergeProps = (
   {input, suggestions, findSuggestions, editPath},
   {updateEditPath, updateInput, updateSuggestions, setIn},
-  {path, ...props}) => (
+  {path, exclude, ...props}) => (
 
-  { input: editPath.equals(path) ? input : ''
+  { placeholder: 'New property'
+  , input: editPath.equals(path) ? input : ''
   , suggestions
   , onFocus: () => updateEditPath(path)
-  , onBlur: () => updateEditPath(path.pop().pop())
+  , onBlur: () => updateEditPath(path.pop())
   , onChange: e => updateInput(e.target.value)
   , onSuggestionsFetchRequested:
-      ({value}) => updateSuggestions(findSuggestions(value))
+      ({value}) => updateSuggestions(
+        findSuggestions(value).filter(
+          suggestion => (! exclude.includes(suggestion.id))
+        )
+      )
   , onSuggestionsClearRequested: () => updateSuggestions([])
   , onSuggestionSelected: (_, {suggestion}) => {
-      setIn(path, suggestion.id, {editPath: path.set(-1, path.last() + 1)})
+      const newPropPath = path.set(-1, suggestion.id)
+      setIn(newPropPath, List(), {editPath: newPropPath.push(0)})
     }
   , focused: editPath.equals(path)
   , ...props
   }
 )
 
-const AddTypeIdentifier = connect(
+const AddProperty = connect(
   mapStateToProps, mapDispatchToProps, mergeProps)(Autosuggest)
 
-module.exports = AddTypeIdentifier
+module.exports = AddProperty

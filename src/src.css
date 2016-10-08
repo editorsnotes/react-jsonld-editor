@@ -1,35 +1,23 @@
-@import 'basscss';
-@import 'basscss-colors';
-@import 'basscss-background-colors';
-@import 'basscss-border-colors';
+* { box-sizing: border-box}
 
 body {
-    font-family: Helvetica Neue, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.875em;
+  line-height: 1.5;
+  color: #111;
+  background-color: #fff;
 }
 
-.lowercase {
-    text-transform: lowercase;
+.Button:hover {
+  box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.125);
 }
 
-.input {
-    font-family: inherit;
-    font-size: inherit;
-    height: 2.1rem;
-    padding: .2rem;
-    margin-bottom: 1rem;
-    border-radius: 3px;
-    width: 20rem;
+.Input input, .Autosuggest input {
+  border-width: 0 0 1px !important ;
+  border-image: linear-gradient(to right, rgba(0,0,0,.25), rgba(0,0,0,0) 8em, rgba(0,0,0,0)) 1;
+  outline: none !important ;
 }
-
-.dropdown {
-    top: 41px;
-    width: 20.4rem;
-}
-
-.cursor-pointer {
-    cursor: pointer;
-}
-
-.hidden {
-    visibility: hidden;
+.Input input:focus, .Autosuggest input:focus {
+  border-width: 0 0 2px !important ;
+  border-image: linear-gradient(to right, #08e, rgba(0,0,0,0) 8em, rgba(0,0,0,0)) 2;
 }

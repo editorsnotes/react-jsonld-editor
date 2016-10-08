@@ -1,0 +1,3130 @@
+[
+  {
+    "@id": "http://lexvo.org/id/iso639-3/nav",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "nv"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Navaho"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/epo",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "eo"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Esperanto"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/tir",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ti"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Tigrinya"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/run",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "rn"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Rundi"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/bod",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "bo"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Tibetan"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/kom",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "kv"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Komi"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/mlt",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "mt"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Maltese"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/wol",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "wo"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Wolof"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/fas",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "fa"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Persian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/sqi",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "sq"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Albanian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/isl",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "is"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Icelandic"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ewe",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ee"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Ewe"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/nld",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "nl"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Dutch"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ibo",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ig"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Igbo"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/iku",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "iu"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Inuktitut"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/pan",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "pa"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Panjabi"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/cat",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ca"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Catalan"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/lug",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "lg"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Ganda"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/mal",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ml"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Malayalam"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/fij",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "fj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Fijian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/kau",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "kr"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Kanuri"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/chv",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "cv"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Chuvash"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/kik",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ki"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Gikuyu"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/pol",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "pl"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Polish"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/bel",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "be"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Belarusian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/che",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ce"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Chechen"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/nob",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "nb"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Bokm\u00e5l"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/mar",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "mr"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Marathi"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/tsn",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "tn"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Tswana"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/tah",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ty"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Tahitian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/lao",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "lo"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Lao"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/orm",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "om"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Oromo"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/sag",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "sg"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Sango"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/aar",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "aa"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Afar"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/arg",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "an"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Aragonese"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/kal",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "kl"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Kalaallisut"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/nde",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "nd"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "North Ndebele"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/jpn",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ja"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Japanese"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/bis",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "bi"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Bislama"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/fao",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "fo"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Faroese"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/lit",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "lt"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Lithuanian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/swe",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "sv"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Swedish"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/aze",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "az"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Azeri"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/cym",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "cy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Welsh"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/nya",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ny"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Chewa"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/amh",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "am"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Amharic"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/bak",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ba"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Bashkir"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/aym",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ay"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Aymara"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ssw",
+    "@type": [
+      "http://lexvo.org/ontology#iso639P1Code"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ss"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Swati"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/est",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "et"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Estonian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/hat",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ht"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Haitian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/afr",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "af"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Afrikaans"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/uig",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ug"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Uighur"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/wln",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "wa"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Walloon"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/bam",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "bm"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Bambara"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/glg",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "gl"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Galician"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/spa",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "es"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Spanish"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/snd",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "sd"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Sindhi"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/que",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "qu"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Quechua"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/twi",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "tw"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Twi"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/aka",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ak"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Akan"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/zho",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "zh"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Chinese"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/fra",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "fr"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "French"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/hye",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "hy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Armenian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/kaz",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "kk"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Kazakh"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/hbs",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "sh"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Serbo-Croatian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/cre",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "cr"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Cree"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/kir",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ky"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Kyrgyz"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ces",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "cs"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Czech"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/pli",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "pi"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Pali"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/pus",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ps"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Pushto"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ido",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "io"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Ido"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/oci",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "oc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Occitan"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/lim",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "li"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Limburgan"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/msa",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ms"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Malay"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/slv",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "sl"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Slovenian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ukr",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "uk"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Ukrainian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/mlg",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "mg"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Malagasy"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/glv",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "gv"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Manx"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/sun",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "su"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Sundanese"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ful",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ff"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Fulah"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/bre",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "br"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Breton"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/xho",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "xh"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Xhosa"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/tso",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ts"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Tsonga"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/srd",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "sc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Sardinian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/kon",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "kg"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Kongo"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/mya",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "my"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Burmese"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/slk",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "sk"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Slovak"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/nor",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "no"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Norwegian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/tur",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "tr"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Turkish"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/dzo",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "dz"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Dzongkha"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/guj",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "gu"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Gujarati"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/som",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "so"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Somali"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/bul",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "bg"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Bulgarian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/iii",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ii"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Nuosu"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/dan",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "da"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Danish"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ava",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "av"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Avaric"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/kin",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "rw"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Kinyarwanda"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/tgl",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "tl"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Tagalog"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/oss",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "os"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Ossetic"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/mri",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "mi"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Maori"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/sin",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "si"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Sinhala"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/urd",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ur"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Urdu"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/smo",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "sm"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Samoan"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/hmo",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ho"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Hiri Motu"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/hin",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "hi"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Hindi"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/lav",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "lv"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Latvian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/cor",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "kw"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Cornish"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/rus",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ru"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Russian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/por",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "pt"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Portuguese"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/eng",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "en"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "English"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ltz",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "lb"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Luxembourgish"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/lat",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "la"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Latin"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/asm",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "as"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Assamese"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/kat",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ka"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Georgian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/yid",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "yi"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Yiddish"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/san",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "sa"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Sanskrit"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/uzb",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "uz"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Uzbek"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ron",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ro"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Romanian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/nbl",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "nr"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "South Ndebele"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/hrv",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "hr"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Croatian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/mon",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "mn"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Mongolian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/abk",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ab"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Abkhazian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/deu",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "German"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/jav",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "jv"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Javanese"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/mkd",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "mk"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Macedonian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/kan",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "kn"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Kannada"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/bos",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "bs"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Bosnian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/hun",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "hu"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Hungarian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/hau",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ha"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Hausa"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ita",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "it"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Italian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ndo",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ng"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Ndonga"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/her",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "hz"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Herero"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ven",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ve"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Venda"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/kur",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ku"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Kurdish"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/cos",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Corsican"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/tuk",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "tk"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Turkmen"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/nep",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ne"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Nepali"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/gle",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ga"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Irish"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/kas",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ks"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Kashmiri"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/vie",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "vi"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Vietnamese"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/srp",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "sr"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Serbian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/fry",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "fy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Western Frisian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/tam",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ta"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Tamil"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/heb",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "he"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Hebrew"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/yor",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "yo"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Yoruba"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/lin",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ln"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Lingala"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/fin",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "fi"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Finnish"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/oji",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "oj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Ojibwa"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/tat",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "tt"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Tatar"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ave",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ae"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Avestan"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ara",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ar"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Arabic"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ile",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ie"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Occidental"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/zul",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "zu"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Zulu"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/tgk",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "tg"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Tajik"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ell",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "el"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Greek"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ipk",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ik"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Inupiaq"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ina",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ia"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Interlingua"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/lub",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "lu"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Luba-Katanga"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/nno",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "nn"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Nynorsk"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/sot",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "st"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Southern Sotho"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/cha",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ch"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Chamorro"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/eus",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "eu"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Basque"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ben",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "bn"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Bengali"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/gla",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "gd"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Gaelic"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/sna",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "sn"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Shona"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/zha",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "za"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Chuang"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/tel",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "te"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Telugu"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ori",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "or"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Oriya"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/vol",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "vo"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Volap\u00fck"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/nau",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "na"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Nauru"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/roh",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "rm"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Romansh"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/swa",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "sw"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Swahili"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/div",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "dv"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Divehi"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ton",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "to"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Tonga"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/khm",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "km"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Khmer"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/chu",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "cu"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Old Slavonic"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/mah",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "mh"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Marshallese"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/kua",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "kj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Kuanyama"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/sme",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "se"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Northern Sami"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/tha",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "th"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Thai"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/ind",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "id"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Indonesian"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/kor",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "ko"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Korean"
+      }
+    ]
+  },
+  {
+    "@id": "http://lexvo.org/id/iso639-3/grn",
+    "@type": [
+      "http://lexvo.org/ontology#Language"
+    ],
+    "http://lexvo.org/ontology#iso639P1Code": [
+      { 
+        "@value": "gn"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Guarani"
+      }
+    ]
+  }
+]
