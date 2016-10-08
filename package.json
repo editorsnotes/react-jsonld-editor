@@ -1,15 +1,18 @@
 {
   "name": "react-jsonld-editor",
-  "version": "1.0.0",
-  "private": true,
+  "version": "3.0.0",
   "description": "React component for editing JSON-LD",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rybesh/react-jsonld-editor.git"
+  },
   "files": [
     "lib",
     "src/style.css"
   ],
   "main": "lib/Editor.js",
   "scripts": {
-    "lint": "eslint --ext .jsx src demo/src test",
+    "lint": "eslint --ext .jsx src demo/src",
     "precompile": "npm -s run lint",
     "compile": "babel src -d lib --source-maps inline",
     "css": "cssnext src/src.css src/style.css",
@@ -24,12 +27,7 @@
     "setup-demo-data": "cd demo/data && make -B vocabs && make",
     "predevelop-demo": "npm -s run compile && if [ ! -d demo/data/indexes ]; then npm -s run setup-demo-data; fi",
     "develop-demo": "npm -s run develop-target --target=demo/src",
-    "precompile-tests": "npm -s run compile",
-    "compile-tests": "babel test -d lib/test",
-    "pretest": "npm -s run compile-tests",
-    "test": "tape lib/test/*.js | tap-spec",
-    "prepublish": "babel src -d lib",
-    "preversion": "npm test"
+    "prepublish": "babel src -d lib"
   },
   "author": "Ryan Shaw",
   "license": "ISC",
@@ -49,6 +47,9 @@
     "cssnext": "^1.8.4",
     "immutablediff": "^0.4.2",
     "n3": "^0.4.5",
+    "node-uuid": "^1.4.7",
+    "react": "0.14.7",
+    "react-dom": "^0.14.7",
     "tap-spec": "^4.1.1",
     "tape": "^4.5.1",
     "uglify": "^0.1.5"
@@ -66,5 +67,8 @@
     "redux": "^3.5.2",
     "reselect": "^2.5.1",
     "validator": "^5.1.0"
+  },
+  "peerDependencies": {
+    "react": "^0.14.7 || ^15.2.1"
   }
 }

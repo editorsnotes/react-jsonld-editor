@@ -21,6 +21,7 @@ const Editor = React.createClass(
       , languages: React.PropTypes.instanceOf(Map)
       , node: React.PropTypes.instanceOf(JSONLDNode)
       , onSave: React.PropTypes.func
+      , mintID: React.PropTypes.func
       }
 
   , getDefaultProps: function() {
@@ -32,6 +33,7 @@ const Editor = React.createClass(
         , languages: load(require('./languages.json'))
         , node: JSONLDNode()
         , onSave: () => {}
+        , mintID: null
         }
       )
     }
