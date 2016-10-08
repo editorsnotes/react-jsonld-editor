@@ -1,50 +1,72 @@
 const React = require('react') // eslint-disable-line no-unused-vars
-    , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
+    , {connect} = require('react-redux')
     , {List} = require('immutable')
-    , { getEditedNode
-      , getEmptyObjectCreator
+    , {Text} = require('rebass')
+    , {JSONLDValue} = require('immutable-jsonld')
+    , {updateEditPath, deleteIn} = require('../actions')
+    , { getNode
       , getLabelResolver
+      , getProperties
       , isEditingProperties
-      , getEditPath
-      , getChange
       } = require('../selectors')
-    , {updateChange, deleteProperty} = require('../actions')
-    , Property = require('../components/Property')
+    , {keyFromPath} = require('../utils')
+    , FlexRow = require('../components/FlexRow')
+    , RemoveButton = require('../components/RemoveButton')
+    , Value = require('./Value')
+    , ShowNode = require('./ShowNode')
+    , AddValue = require('./AddValue')
+    , AddNode = require('./AddNode')
+    , {owl} = require('../namespaces')
 
-const mapStateToProps = (state, {path, label, appendable = true}) => (
-  { objects: getEditedNode(state).getIn(path, List())
-  , objectCreator: getEmptyObjectCreator(state)
-  , label: label || getLabelResolver(state)(path.last())
-  , appendable: appendable && (! (isEditingProperties(state)))
-  , deletable:
-      isEditingProperties(state) && path.butLast().equals(getEditPath(state))
-  , change: getChange(state)
-  }
-)
+const isObjectProperty = properties => predicate => properties.has(predicate)
+  ? properties.get(predicate).types.includes(owl('ObjectProperty'))
+  : true
+
+const mapStateToProps = (state, {path}) => {
+  const id = path.last()
+  return (
+    { id
+    , label: getLabelResolver(state)(id)
+    , objects: getNode(state).getIn(path, List())
+    , isObjectProperty: isObjectProperty(getProperties(state))(id)
+    , deletable: isEditingProperties(state)
+    }
+  )
+}
 
 const mapDispatchToProps = dispatch => bindActionCreators(
-  {updateChange, deleteProperty}, dispatch)
+  {updateEditPath, deleteIn}, dispatch)
 
 const mergeProps = (
-  {objects, objectCreator, label, deletable, appendable, change},
-  {updateChange, deleteProperty},
-  {path}) => (
+  {id, label, objects, isObjectProperty, deletable},
+  {updateEditPath, deleteIn},
+  {path}) => {
+  const children =
+    [ <Text>{label}</Text>
 
-  { objects
-  , path
-  , label
+    , objects.map((o, i) => React.createElement(
+        JSONLDValue.isJSONLDValue(o) ? Value : ShowNode,
+        keyFromPath(path.push(i))
+      ))
 
-  , onAppend: appendable
-      ? numObjects => updateChange(
-          path.push(numObjects), objectCreator(path.last()))
-      : null
-
-  , onDelete: deletable
-      ? () => deleteProperty(path, change)
-      : null
-  }
-)
+    , React.createElement(
+        isObjectProperty ? AddNode : AddValue,
+        keyFromPath(path.push(objects.count()))
+      )
+    ]
+  return (
+    { children: deletable
+        ? [ <RemoveButton
+              style={{paddingTop: '4px'}}
+              onClick={() => deleteIn(path)}
+            />
+          , ...children
+          ]
+        : children
+    }
+  )
+}
 
 module.exports = connect(
-  mapStateToProps, mapDispatchToProps, mergeProps)(Property)
+  mapStateToProps, mapDispatchToProps, mergeProps)(FlexRow)

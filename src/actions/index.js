@@ -1,48 +1,50 @@
 const {List} = require('immutable')
 
-const UPDATE_CLASSES = 'UPDATE_CLASSES'
-const UPDATE_PROPERTIES = 'UPDATE_PROPERTIES'
-const UPDATE_INDIVIDUALS = 'UPDATE_INDIVIDUALS'
+const SET_IN = 'SET_IN'
 const DELETE_IN = 'DELETE_IN'
+const UPDATE_EDITPATH = 'UPDATE_EDITPATH'
+const UPDATE_SHOWPATH = 'UPDATE_SHOWPATH'
 const UPDATE_INPUT = 'UPDATE_INPUT'
-const UPDATE_SELECTED_SUGGESTION = 'UPDATE_SELECTED_SUGGESTION'
-const UPDATE_CHANGE = 'UPDATE_CHANGE'
-const ACCEPT_CHANGE = 'ACCEPT_CHANGE'
-const CANCEL_CHANGE = 'CANCEL_CHANGE'
+const UPDATE_SUGGESTIONS = 'UPDATE_SUGGESTIONS'
+const UPDATE_UNIVERSE = 'UPDATE_UNIVERSE'
+const TOGGLE_EDITING_PROPERTIES = 'TOGGLE_EDITING_PROPERTIES'
 
-exports.UPDATE_CLASSES = UPDATE_CLASSES
-exports.UPDATE_PROPERTIES = UPDATE_PROPERTIES
-exports.UPDATE_INDIVIDUALS = UPDATE_INDIVIDUALS
+exports.SET_IN = SET_IN
 exports.DELETE_IN = DELETE_IN
+exports.UPDATE_EDITPATH = UPDATE_EDITPATH
+exports.UPDATE_SHOWPATH = UPDATE_SHOWPATH
 exports.UPDATE_INPUT = UPDATE_INPUT
-exports.UPDATE_SELECTED_SUGGESTION = UPDATE_SELECTED_SUGGESTION
-exports.UPDATE_CHANGE = UPDATE_CHANGE
-exports.ACCEPT_CHANGE = ACCEPT_CHANGE
-exports.CANCEL_CHANGE = CANCEL_CHANGE
+exports.UPDATE_SUGGESTIONS = UPDATE_SUGGESTIONS
+exports.UPDATE_UNIVERSE = UPDATE_UNIVERSE
+exports.TOGGLE_EDITING_PROPERTIES = TOGGLE_EDITING_PROPERTIES
 
-const NO_CHANGE = Symbol('NO CHANGE')
-exports.NO_CHANGE = NO_CHANGE
-
-exports.updateClasses = classes => (
-  { type: UPDATE_CLASSES
-  , classes
+const setIn = (path, value, {input, editPath} = {}) => (
+  { type: SET_IN
+  , path
+  , value
+  , input
+  , editPath
   }
 )
+exports.setIn = setIn
 
-exports.updateProperties = properties => (
-  { type: UPDATE_PROPERTIES
-  , properties
-  }
-)
-
-exports.updateIndividuals = individuals => (
-  { type: UPDATE_INDIVIDUALS
-  , individuals
-  }
-)
+exports.updateNode = node => setIn(List(), node)
 
 exports.deleteIn = path => (
   { type: DELETE_IN
+  , path
+  }
+)
+
+exports.updateEditPath = (path, input) => (
+  { type: UPDATE_EDITPATH
+  , path
+  , input
+  }
+)
+
+exports.updateRootNodePath = path => (
+  { type: UPDATE_SHOWPATH
   , path
   }
 )
@@ -53,50 +55,19 @@ exports.updateInput = input => (
   }
 )
 
-exports.updateSelectedSuggestion = suggestion => (
-  { type: UPDATE_SELECTED_SUGGESTION
-  , suggestion
+exports.updateSuggestions = suggestions => (
+  { type: UPDATE_SUGGESTIONS
+  , suggestions
   }
 )
 
-const updateChange = (
-  path,
-  change,
-  editingProperties = false,
-  input = '',
-  suggestion = {}) => (
-  { type: UPDATE_CHANGE
-  , path
-  , change
-  , editingProperties
-  , input
-  , suggestion
+exports.updateUniverse = domains => (
+  { type: UPDATE_UNIVERSE
+  , ...domains
   }
 )
-exports.updateChange = updateChange
 
-exports.startEditingProperties = (path, change) => updateChange(
-  path, change, true
-)
-
-exports.deleteProperty = (path, change) => updateChange(
-  path.butLast(), change.delete(path.last()), true
-)
-
-exports.appendProperty = (path, change, predicate) => updateChange(
-  path, change.update(predicate, (list = List()) => list), true
-)
-
-const acceptChange = (path, change) => (
-  { type: ACCEPT_CHANGE
-  , path
-  , change
+exports.toggleEditingProperties = () => (
+  { type: TOGGLE_EDITING_PROPERTIES
   }
-)
-exports.acceptChange = acceptChange
-
-exports.updateNode = node => acceptChange(List(), node)
-
-exports.cancelChange = () => (
-  { type: CANCEL_CHANGE }
 )

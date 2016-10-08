@@ -58,9 +58,11 @@
     "immutable-jsonld": "^1.1.2",
     "language-tags": "^1.0.5",
     "react": "^0.14.7",
-    "react-autosuggest": "^3.7.4",
+    "react-autosuggest": "^6.0.4",
     "react-dom": "^0.14.7",
+    "react-icons": "^2.2.1",
     "react-redux": "^4.4.5",
+    "rebass": "^0.3.2",
     "redux": "^3.5.2",
     "reselect": "^2.5.1",
     "validator": "^5.1.0"

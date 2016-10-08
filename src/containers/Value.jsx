@@ -1,23 +1,19 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
-    , {List} = require('immutable')
     , {getEditPath} = require('../selectors')
     , EditValue = require('./EditValue')
     , ShowValue = require('./ShowValue')
 
-const Value = ({path, editable}) => editable
-  ? <EditValue path={path} />
-  : <ShowValue path={path} />
-
-Value.propTypes = {
-  path: React.PropTypes.instanceOf(List).isRequired,
-  editable: React.PropTypes.bool
-}
+const startsWith = (pathA, pathB) => pathA.slice(0, pathB.count()).equals(pathB)
 
 const mapStateToProps = (state, {path}) => (
   { path
-  , editable: path.equals(getEditPath(state))
+  , editable: startsWith(getEditPath(state), path)
   }
 )
+
+const Value = ({path, editable, ...props}) => editable
+  ? <EditValue path={path} {...props} />
+  : <ShowValue path={path} {...props} />
 
 module.exports = connect(mapStateToProps)(Value)

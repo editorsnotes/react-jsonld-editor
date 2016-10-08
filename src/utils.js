@@ -16,5 +16,12 @@ module.exports = {
         input.focus()
       }
     }
+  },
+
+  keyFromPath: path => ({path, key: path.join('|')}),
+
+  labelOrID: node => {
+    const label = node.preferredLabel()
+    return label ? label.value : node.id || ''
   }
 }
