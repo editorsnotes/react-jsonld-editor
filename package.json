@@ -15,6 +15,7 @@
     "lint": "eslint --ext .jsx src demo/src",
     "precompile": "npm -s run lint",
     "compile": "babel src -d lib --source-maps inline",
+    "postcompile": "cp src/*.json lib",
     "css": "cssnext src/src.css src/style.css",
     "develop-target": "budo $npm_config_target --css src/style.css --live -- -t [ babelify --sourceMaps inline ] --extension=.jsx",
     "develop": "npm -s run develop-target --target=src/develop.js",
