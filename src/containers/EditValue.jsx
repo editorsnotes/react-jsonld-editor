@@ -1,7 +1,7 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
-    , {Input, Block, Label} = require('rebass')
+    , {Input, Block} = require('rebass')
     , {List} = require('immutable')
     , ShowValue = require('./ShowValue')
     , Dropdown = require('../components/Dropdown')
@@ -61,7 +61,8 @@ const autosuggestProps = (
   , newValue
   }) => (
 
-  { input: path.equals(editPath) ? input : labelFor(value)
+  { name: path.join('|')
+  , input: path.equals(editPath) ? input : labelFor(value)
   , suggestions
   , onFocus:
       () => updateEditPath(path, labelFor(value))
@@ -106,40 +107,42 @@ const EditValue = (
           onChange={e => setIn(valuePath, e.target.value)}
         />
 
-        <Label children={'type'} />
-        <Autosuggest {...autosuggestProps(
-          { ...props
-          , path: path.push('@type')
-          , value: value.type
-          , suggester: findDatatypes
-          , labelFor: value => value ? labelResolver(value) : ''
-          , updateEditPath
-          , setIn
-          , newValue: type => type === rdf('langString')
-              ? value.set('@type', rdf('langString'))
-              : value.set('@type', type).delete('@language')
-          })}
+        <Autosuggest
+          label="type"
+          shouldRenderSuggestions={() => true}
+          {...autosuggestProps(
+            { ...props
+            , path: path.push('@type')
+            , value: value.type
+            , suggester: findDatatypes
+            , labelFor: value => value ? labelResolver(value) : ''
+            , updateEditPath
+            , setIn
+            , newValue: type => type === rdf('langString')
+                ? value.set('@type', rdf('langString'))
+                : value.set('@type', type).delete('@language')
+            })
+          }
         />
 
   { value.type === rdf('langString')
-      ? <Label children={'language'} />
-      : ''
-  }
-  { value.type === rdf('langString')
-      ? <Autosuggest {...autosuggestProps(
-          { ...props
-          , path: path.push('@language')
-          , value: value.language
-          , suggester: findLanguages
-          , labelFor: value => value
-              ? labelResolver(languageWithTag(value, languages).id)
-              : ''
-          , updateEditPath
-          , setIn
-          , newValue: language => value
-              .set('@type', rdf('langString'))
-              .set('@language', tagForLanguage(language, languages))
-          })}
+      ? <Autosuggest
+          label="language"
+          {...autosuggestProps(
+            { ...props
+            , path: path.push('@language')
+            , value: value.language
+            , suggester: findLanguages
+            , labelFor: value => value
+                ? labelResolver(languageWithTag(value, languages).id)
+                : ''
+            , updateEditPath
+            , setIn
+            , newValue: language => value
+                .set('@type', rdf('langString'))
+                .set('@language', tagForLanguage(language, languages))
+            })
+          }
         />
       : ''
   }
