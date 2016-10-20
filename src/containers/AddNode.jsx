@@ -51,7 +51,7 @@ const mergeProps = (
   , onChange: e => updateInput(e.target.value)
   , onSuggestionsFetchRequested: ({value}) => {
       updateSuggestions(
-        [ {label: `Create “${value}”`}
+        [ {label: `Create “${value}”`, value}
         , ...findSuggestions(value)
         ]
       )
@@ -62,7 +62,7 @@ const mergeProps = (
         path,
         suggestion.id
           ? nodes.get(suggestion.id)
-          : BlankNode(suggestion.label,
+          : BlankNode(suggestion.value,
               getPredicateRange(path.butLast().last())),
         {editPath: path.set(-1, path.last() + 1)}
       )
