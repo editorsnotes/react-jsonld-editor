@@ -28,7 +28,9 @@
     "setup-demo-data": "cd demo/data && make -B vocabs && make",
     "predevelop-demo": "npm -s run compile && if [ ! -d demo/data/indexes ]; then npm -s run setup-demo-data; fi",
     "develop-demo": "npm -s run develop-target --target=demo/src",
-    "prepublish": "babel src -d lib"
+    "pretest": "npm -s run compile",
+    "test": "tape lib/**/tests/*.js | tap-spec",
+    "prepublish": "npm -s run test && babel src -d lib"
   },
   "author": "Ryan Shaw",
   "license": "ISC",
@@ -42,13 +44,17 @@
     "babelify": "^7.2.0",
     "budo": "^8.0.4",
     "cssnext": "^1.8.4",
+    "enzyme": "^2.5.1",
     "immutablediff": "^0.4.2",
+    "jsdom": "^9.8.0",
+    "jsdom-global": "^2.1.0",
     "n3": "^0.4.5",
     "node-uuid": "^1.4.7",
     "react": "0.14.7",
+    "react-addons-test-utils": "^15.3.2",
     "react-dom": "^0.14.7",
     "tap-spec": "^4.1.1",
-    "tape": "^4.5.1",
+    "tape": "^4.6.2",
     "uglify": "^0.1.5"
   },
   "dependencies": {
@@ -58,7 +64,7 @@
     "react-dom": "^0.14.7",
     "react-icons": "^2.2.1",
     "react-redux": "^4.4.5",
-    "rebass": "^0.3.2",
+    "rebass": "^0.4.0-beta.8",
     "rebass-autosuggest": "^1.0.2",
     "redux": "^3.5.2",
     "reselect": "^2.5.1"

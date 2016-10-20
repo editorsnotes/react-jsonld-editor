@@ -1,19 +1,31 @@
 const React = require('react') // eslint-disable-line no-unused-vars
-    , {config, Dropdown, DropdownMenu} = require('rebass')
+    , classnames = require('classnames')
+    , {withRebass, Dropdown, DropdownMenu} = require('rebass')
 
-module.exports = ({children, style, ...props}, {rebass}) => {
+const Modal = (
+  { children
+  , className
+  , style
+  , theme
+  , ...props
+  }) => {
+
+  const {colors} = theme
+
+  const cx = classnames('Modal', className)
+
   const [first, ...rest] = React.Children.toArray(children)
-  const {scale, colors} = { ...config, ...rebass }
+
   const sx =
-    { borderColor: colors.gray
+    { borderColor: colors.muted
     , left: 10
-    , marginTop: -(scale[1] + 1)
     , overflow: 'visible'
     , width: 224
     , ...style
     }
+
   return (
-    <Dropdown>
+    <Dropdown className={cx}>
       { first }
       <DropdownMenu
         open
@@ -25,3 +37,7 @@ module.exports = ({children, style, ...props}, {rebass}) => {
     </Dropdown>
   )
 }
+
+Modal._name = 'Modal'
+
+module.exports = withRebass(Modal)

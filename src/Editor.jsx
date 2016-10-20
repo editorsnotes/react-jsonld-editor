@@ -36,6 +36,12 @@ const Editor = React.createClass(
       )
     }
 
+  , childContextTypes: { rebass: React.PropTypes.object }
+
+  , getChildContext: function() {
+      return {rebass: {PanelHeader: {fontWeight: 'inherit'}}}
+    }
+
   , subscribeToNodeUpdates: function(store, onSave) {
       return store.subscribe(() => {
         const node = store.getState().node

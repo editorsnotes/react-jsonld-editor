@@ -31,6 +31,7 @@ const mergeProps = (
 
   { name: 'new_type_id'
   , label: 'New type'
+  , mb: 0
   , hideLabel: true
   , input: editPath.equals(path) ? input : ''
   , suggestions

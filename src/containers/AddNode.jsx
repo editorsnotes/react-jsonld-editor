@@ -33,6 +33,7 @@ const mergeProps = (
 
   { name: 'new_node'
   , label: 'New value'
+  , mb: 0
   , hideLabel: true
   , input: editPath.equals(path) ? input : ''
   , suggestions

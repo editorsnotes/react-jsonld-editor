@@ -4,7 +4,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {Input, Block} = require('rebass')
     , {List} = require('immutable')
     , ShowValue = require('./ShowValue')
-    , Dropdown = require('../components/Dropdown')
+    , Modal = require('../components/Modal')
     , Autosuggest = require('../components/Autosuggest')
     , { getNode
       , getInput
@@ -95,8 +95,8 @@ const EditValue = (
   const valuePath = path.push('@value')
 
   return (
-    <Dropdown onDismiss={() => updateEditPath(List())}>
-      <ShowValue path={path} mr={1} mt={1} />
+    <Modal onDismiss={() => updateEditPath(List())}>
+      <ShowValue path={path} ml={1} mt={1} />
       <Block m={0} p={1}>
 
         <Input
@@ -147,7 +147,7 @@ const EditValue = (
       : ''
   }
       </Block>
-    </Dropdown>
+    </Modal>
   )
 }
 

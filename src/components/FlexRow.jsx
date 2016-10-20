@@ -1,12 +1,12 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {Block} = require('rebass')
 
-const FlexRow = ({children, margins = {mr: 1, mt: 1}}) => {
+const FlexRow = ({children, margins = {ml: 1, mt: 1}}) => {
   const [last, ...rest] = React.Children.toArray(children).reverse()
   return (
     <Block
       className="FlexRow"
-      m={1}
+      mt={2}
       style={
         { display: 'flex'
         , flexDirection: 'row'

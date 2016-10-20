@@ -1,11 +1,26 @@
 const React = require('react') // eslint-disable-line no-unused-vars
-    , {Base, config} = require('rebass')
+    , classnames = require('classnames')
+    , {withRebass} = require('rebass')
     , RemoveButton = require('./RemoveButton')
 
 const Chip = (
-  {children, style, onClick, onClickDelete, ...props}, { rebass }) => {
+  { children
+  , onClick
+  , onClickDelete
+  , className
+  , style
+  , theme
+  , subComponentStyles
+  , ...props
+  }) => {
 
-  const { fontSizes, scale, colors } = { ...config, ...rebass }
+  const {fontSizes, scale, colors} = theme
+
+  const cx = classnames('Chip', className)
+
+  const {
+    ...rootStyle
+  } = style
 
   const sx =
     { root:
@@ -14,26 +29,27 @@ const Chip = (
       , justifyContent: 'center'
       , height: scale[3]
       , lineHeight: scale[3]
-      , color: colors.black
-      , backgroundColor: colors.gray
+      , color: colors.default
+      , backgroundColor: colors.muted
       , cursor: onClick ? 'pointer' : 'default'
-      , ...style
+      , ...rootStyle
       }
     , inner:
       { pointerEvents: 'none'
       , marginLeft: fontSizes[6]
       , marginRight: onClickDelete ? 0 : fontSizes[6]
+      , ...subComponentStyles.inner
       }
     , remove:
       { margin: `0 ${fontSizes[2] / 6}px`
+      , ...subComponentStyles.remove
       }
     }
 
   return (
-    <Base
-      className="Chip"
-      baseStyle={sx.root}
-      pill rounded
+    <div
+      className={cx}
+      style={sx.root}
       onClick={onClick}
       {...props}
     >
@@ -42,7 +58,7 @@ const Chip = (
       </div>
       { onClickDelete
           ? <RemoveButton
-              color={props.backgroundColor === 'black'
+              color={style.backgroundColor === colors.black
                 ? 'rgba(255, 255, 255, 0.54)'
                 : 'rgba(0, 0, 0, 0.54)'}
               style={sx.remove}
@@ -53,7 +69,7 @@ const Chip = (
             />
           : null
       }
-    </Base>
+    </div>
   )
 }
 
@@ -62,4 +78,7 @@ Chip.propTypes = {
   onClickDelete: React.PropTypes.func
 }
 
-module.exports = Chip
+Chip._name = 'Chip'
+
+module.exports = props => React.createElement(
+  withRebass(Chip), {pill: true, ...props})
