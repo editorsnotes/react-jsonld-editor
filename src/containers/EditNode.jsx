@@ -126,7 +126,7 @@ const EditNode = (
         />
       </Block>
       <PanelFooter theme="muted">
-        <FlexRow margins={{mr: 1}}>
+        <FlexRow mt={0} margins={{mr: 1}}>
           <Switch
             checked={isEditingProperties}
             onClick={() => toggleEditingProperties()}
