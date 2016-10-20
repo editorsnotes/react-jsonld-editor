@@ -52,4 +52,6 @@ const mergeProps = (
 const AddTypeIdentifier = connect(
   mapStateToProps, mapDispatchToProps, mergeProps)(Autosuggest)
 
+AddTypeIdentifier.displayName = 'AddTypeIdentifier'
+
 module.exports = AddTypeIdentifier

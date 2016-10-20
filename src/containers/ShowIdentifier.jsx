@@ -20,4 +20,9 @@ const mergeProps = ({label}, {deleteIn}, {path, ...props}) => (
   }
 )
 
-module.exports = connect(mapStateToProps, mapDispatchToProps, mergeProps)(Chip)
+const ShowIdentifier = connect(
+  mapStateToProps, mapDispatchToProps, mergeProps)(Chip)
+
+ShowIdentifier.displayName = 'ShowIdentifier'
+
+module.exports = ShowIdentifier

@@ -14,11 +14,18 @@ const mapStateToProps = (state, {path}) => {
     children:
       [ <Text>is a</Text>
 
-      , ids.map((o, i) => <ShowIdentifier {...keyFromPath(path.push(i))} />)
+      , ids.isEmpty()
+          ? null
+          : ids.map((o, i) => <ShowIdentifier {...keyFromPath(path.push(i))} />)
 
       , <AddTypeIdentifier {...keyFromPath(path.push(ids.count()))} />
       ]
   }
 }
 
-module.exports = connect(mapStateToProps)(FlexRow)
+const Type = connect(
+  mapStateToProps, ignoreDispatch, keepOnlyStateProps)(FlexRow)
+
+Type.displayName = 'Type'
+
+module.exports = Type

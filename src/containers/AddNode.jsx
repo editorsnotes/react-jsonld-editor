@@ -75,4 +75,6 @@ const mergeProps = (
 const AddNode = connect(
   mapStateToProps, mapDispatchToProps, mergeProps)(Autosuggest)
 
+AddNode.displayName = 'AddNode'
+
 module.exports = AddNode

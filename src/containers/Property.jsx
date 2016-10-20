@@ -69,5 +69,9 @@ const mergeProps = (
   )
 }
 
-module.exports = connect(
+const Property = connect(
   mapStateToProps, mapDispatchToProps, mergeProps)(FlexRow)
+
+Property.displayName = 'Property'
+
+module.exports = Property

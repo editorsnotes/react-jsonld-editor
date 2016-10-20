@@ -52,4 +52,6 @@ const mergeProps = (
 const AddValue = connect(
   mapStateToProps, mapDispatchToProps, mergeProps)(Input)
 
+AddValue.displayName = 'AddValue'
+
 module.exports = AddValue

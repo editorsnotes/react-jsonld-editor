@@ -57,4 +57,6 @@ const mergeProps = (
 const AddProperty = connect(
   mapStateToProps, mapDispatchToProps, mergeProps)(Autosuggest)
 
+AddProperty.displayName = 'AddProperty'
+
 module.exports = AddProperty

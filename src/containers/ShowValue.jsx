@@ -42,4 +42,8 @@ const mergeProps = (
   }
 )
 
-module.exports = connect(mapStateToProps, mapDispatchToProps, mergeProps)(Chip)
+const ShowValue = connect(mapStateToProps, mapDispatchToProps, mergeProps)(Chip)
+
+ShowValue.displayName = 'ShowValue'
+
+module.exports = ShowValue

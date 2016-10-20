@@ -28,4 +28,8 @@ const mergeProps = (
   }
 )
 
-module.exports = connect(mapStateToProps, mapDispatchToProps, mergeProps)(Chip)
+const ShowNode = connect(mapStateToProps, mapDispatchToProps, mergeProps)(Chip)
+
+ShowNode.displayName = 'ShowNode'
+
+module.exports = ShowNode
