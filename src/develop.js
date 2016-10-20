@@ -3,7 +3,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {Map, List} = require('immutable')
     , IJLD = require('immutable-jsonld')
     , Editor = require('./Editor')
-    , {rdfs, owl} = require('./namespaces')
+    , {rdfs, owl, xsd} = require('./namespaces')
     , ns = require('rdf-ns')
     , foaf = ns('http://xmlns.com/foaf/0.1/')
 
@@ -11,11 +11,12 @@ const mount = document.createElement('div')
 document.body.appendChild(mount)
 
 const value = v => IJLD.JSONLDValue({'@value': v})
-const node = (id, label) => IJLD.JSONLDNode(
-  { '@id': id
-  , [rdfs('label')]: List.of(value(label))
-  }
-)
+const node = (id, label) => {
+  const n = IJLD.JSONLDNode({'@id': id})
+  return label
+    ? n.set(rdfs('label'), List.of(value(label)))
+    : n
+}
 
 const Person = node(foaf('Person'), 'Person')
 const Project = node(foaf('Project'), 'Project')
@@ -30,8 +31,13 @@ const knows = node(foaf('knows'), 'knows')
   .set('@type', List.of(owl('ObjectProperty')))
 const member = node(foaf('member'), 'member')
   .set('@type', List.of(owl('ObjectProperty')))
+  .set(rdfs('range'), List.of(Group))
+const age = node(foaf('age'), 'age')
+  .set('@type', List.of(owl('DatatypeProperty')))
+  .set(rdfs('range'), List.of(node(xsd('decimal'))))
 const properties = Map.of(
-  label.id, label, name.id, name, knows.id, knows, member.id, member)
+  label.id, label, name.id, name, knows.id, knows, member.id, member,
+  age.id, age)
 
 const Kim = node('http://viaf.org/viaf/100935834', 'Kim')
   .set('@type', List.of(Person.id))

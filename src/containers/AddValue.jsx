@@ -33,7 +33,7 @@ const mergeProps = (
     , onKeyDown: e => {
         if (e.key === 'Enter') {
           const value = JSONLDValue().set('@value', e.target.value)
-          const type = getPredicateRange(path.last()).first()
+          const type = getPredicateRange(path.butLast().last()).first()
           setIn(
             path,
             type ? value.set('@type', type) : value,

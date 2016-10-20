@@ -62,7 +62,8 @@ const mergeProps = (
         path,
         suggestion.id
           ? nodes.get(suggestion.id)
-          : BlankNode(suggestion.label, getPredicateRange(path.last())),
+          : BlankNode(suggestion.label,
+              getPredicateRange(path.butLast().last())),
         {editPath: path.set(-1, path.last() + 1)}
       )
     }
