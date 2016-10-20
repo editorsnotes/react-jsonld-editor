@@ -29,6 +29,7 @@ const Chip = (
       , justifyContent: 'center'
       , height: scale[3]
       , lineHeight: scale[3]
+      , borderRadius: 99999
       , color: colors.default
       , backgroundColor: colors.muted
       , cursor: onClick ? 'pointer' : 'default'
@@ -80,5 +81,4 @@ Chip.propTypes = {
 
 Chip._name = 'Chip'
 
-module.exports = props => React.createElement(
-  withRebass(Chip), {pill: true, ...props})
+module.exports = withRebass(Chip)
