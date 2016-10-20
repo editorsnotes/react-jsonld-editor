@@ -9,9 +9,10 @@ const React = require('react') // eslint-disable-line no-unused-vars
 
 const NON_TEXT_TYPES = Set.of(
   xsd('dateTime'),
+  xsd('decimal'),
   xsd('float'),
-  xsd('integer'),
-  xsd('gYear')
+  xsd('gYear'),
+  xsd('integer')
 )
 const notText = type => NON_TEXT_TYPES.includes(type)
 
