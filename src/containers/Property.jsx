@@ -58,6 +58,7 @@ const mergeProps = (
   return (
     { children: deletable
         ? [ <RemoveButton
+              color="red"
               style={{paddingTop: '4px'}}
               onClick={() => deleteIn(path)}
             />

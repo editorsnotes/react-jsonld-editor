@@ -30,7 +30,9 @@ const mergeProps = (
   {updateEditPath, updateInput, updateSuggestions, setIn},
   {path, exclude, ...props}) => (
 
-  { placeholder: 'New property'
+  { name: 'new_property'
+  , label: 'New property'
+  , hideLabel: true
   , input: editPath.equals(path) ? input : ''
   , suggestions
   , onFocus: () => updateEditPath(path)

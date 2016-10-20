@@ -45,27 +45,29 @@ const matches = (inputValue, inputLength) => label => label
   ? label.value.toLowerCase().slice(0, inputLength) === inputValue
   : false
 
-const findSuggestions = (input, domain, labels) => {
+const findSuggestions = (input, domain, labels, alwaysSuggest = false) => {
   const inputValue = String(input).trim().toLowerCase()
   const inputLength = inputValue.length
   const matchesInput = matches(inputValue, inputLength)
-  return inputLength === 0
-    ? []
-    : domain.valueSeq()
-        .filter(node => matchesInput(labels.get(node.id)))
-        .map(node => ({id: node.id, label: labels.get(node.id).value}))
-        .toArray()
+  const matchingNodes = inputLength === 0
+    ? alwaysSuggest ? domain.valueSeq() : Seq()
+    : domain.valueSeq().filter(node => matchesInput(labels.get(node.id)))
+  return matchingNodes
+    .map(node => ({id: node.id, label: labels.get(node.id).value}))
+    .sort(({label: a}, {label: b}) => a.localeCompare(b))
+    .toArray()
 }
 
-const createSuggester = getter => createSelector(
+const createSuggester = (getter, alwaysSuggest) => createSelector(
   [getter, getLabels],
-  (resources, labels) => input => findSuggestions(input, resources, labels)
+  (resources, labels) => input => findSuggestions(
+    input, resources, labels, alwaysSuggest)
 )
 
 exports.getClassSuggester = createSuggester(getClasses)
 exports.getPropertySuggester = createSuggester(getProperties)
 exports.getIndividualSuggester = createSuggester(getIndividuals)
-exports.getDatatypeSuggester = createSuggester(getDatatypes)
+exports.getDatatypeSuggester = createSuggester(getDatatypes, true)
 exports.getLanguageSuggester = createSuggester(getLanguages)
 
 const createObject = property => {

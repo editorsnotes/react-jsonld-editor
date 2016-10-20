@@ -31,7 +31,11 @@ const mergeProps = (
   {updateEditPath, updateInput, updateSuggestions, setIn},
   {path, ...props}) => (
 
-  { input: editPath.equals(path) ? input : ''
+  { name: 'new_node'
+  , label: 'New value'
+  , mb: 0
+  , hideLabel: true
+  , input: editPath.equals(path) ? input : ''
   , suggestions
   , onFocus: () => updateEditPath(path)
   , onBlur: () => updateEditPath(path.pop().pop())

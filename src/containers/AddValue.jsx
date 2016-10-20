@@ -26,6 +26,7 @@ const mergeProps = (
     , placeholder: 'New value'
     , name: path.join('|')
     , value: editPath.equals(path) ? input : ''
+    , mb: 0
     , hideLabel: true
     , onFocus: () => updateEditPath(path)
     , onChange: e => updateInput(e.target.value)

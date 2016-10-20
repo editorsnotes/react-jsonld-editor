@@ -13,6 +13,7 @@ body {
 }
 
 .Input input, .Autosuggest input {
+  min-width: 7em;
   border-width: 0 0 1px !important ;
   border-image: linear-gradient(to right, rgba(0,0,0,.25), rgba(0,0,0,0) 8em, rgba(0,0,0,0)) 1;
   outline: none !important ;

@@ -1,34 +1,54 @@
 const React = require('react') // eslint-disable-line no-unused-vars
-    , {config, Base} = require('rebass')
+    , classnames = require('classnames')
+    , {withRebass} = require('rebass')
     , Cancel = require('react-icons/lib/md/cancel')
 
-module.exports = ({color, style, ...props}, { rebass }) => {
+const RemoveButton = (
+  { className
+  , style
+  , theme
+  , subComponentStyles
+  , ...props
+  }) => {
 
-  const {fontSizes, colors} = { ...config, ...rebass }
+  const {fontSizes} = theme
+
+  const cx = classnames('RemoveButton', className)
+
+  const
+    { color
+    , ...rootStyle
+    } = style
+
   const sx =
     { root:
       { height: `${fontSizes[2]}px`
       , width: `${fontSizes[2]}px`
       , position: 'relative'
-      , ...style
+      , ...rootStyle
       }
     , icon:
       { cursor: 'pointer'
       , position: 'absolute'
+      , ...subComponentStyles.icon
       }
     }
 
   return (
-    <Base
-      className="RemoveButton"
-      baseStyle={sx.root}
+    <div
+      className={cx}
+      style={sx.root}
       {...props}
     >
       <Cancel
         size={fontSizes[2]}
+        color={color}
         style={sx.icon}
-        color={color || colors.red}
       />
-    </Base>
+    </div>
   )
 }
+
+RemoveButton._name = 'RemoveButton'
+
+module.exports = withRebass(RemoveButton)

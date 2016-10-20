@@ -2,7 +2,8 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
     , {List} = require('immutable')
-    , { config
+    , classnames = require('classnames')
+    , { withRebass
       , Panel
       , PanelHeader
       , PanelFooter
@@ -65,21 +66,44 @@ const EditNode = (
   , labelFor
   , isEditingProperties
   , toggleEditingProperties
-  }, {rebass}) => {
+  , className
+  , style
+  , theme
+  , subComponentStyles
+  , ...props
+  }) => {
+
+  const {fontSizes} = theme
+
+  const cx = classnames('EditNode', className)
+
+  const {
+    ...rootStyle
+  } = style
+
+  const sx =
+    { root:
+      { ...rootStyle }
+    , addProperty:
+      { fontSize: fontSizes[4]
+      , ...subComponentStyles.addProperty
+      }
+    }
 
   const node = top.getIn(path)
   const properties = node.keySeq()
-  const {fontSizes} = { ...config, ...rebass }
+
   return (
-    <Panel>
+    <Panel
+      className={cx}
+      theme="muted"
+      style={sx.root}
+      {...props}
+    >
       {
         path.isEmpty()
           ? ''
-          : <PanelHeader
-              theme={null}
-              inverted={false}
-              style={{borderBottom: '1px solid', fontWeight: 'inherit'}}
-            >
+          : <PanelHeader theme="muted">
               {renderPath(top, path, labelFor).elements}
             </PanelHeader>
       }
@@ -97,21 +121,22 @@ const EditNode = (
         <AddProperty
           {...keyFromPath(path.push(`new-property-${properties.count()}`))}
           exclude={properties}
-          style={{fontSize: fontSizes[4]}}
+          mt={2}
+          style={sx.addProperty}
         />
       </Block>
-      <PanelFooter>
+      <PanelFooter theme="muted">
         <FlexRow margins={{mr: 1}}>
+          <Switch
+            checked={isEditingProperties}
+            onClick={() => toggleEditingProperties()}
+          />
           <Text
             style={{cursor: 'pointer'}}
             onClick={() => toggleEditingProperties()}
           >
             { isEditingProperties? 'Editing properties' : 'Edit properties' }
           </Text>
-          <Switch
-            checked={isEditingProperties}
-            onClick={() => toggleEditingProperties()}
-          />
           <Space />
         </FlexRow>
       </PanelFooter>
@@ -119,5 +144,5 @@ const EditNode = (
   )
 }
 
-module.exports = connect(mapStateToProps, mapDispatchToProps)(EditNode)
-
+module.exports = connect(
+  mapStateToProps, mapDispatchToProps)(withRebass(EditNode))
