@@ -45,10 +45,12 @@ const mergeProps = (
   const children =
     [ <Text>{label}</Text>
 
-    , objects.map((o, i) => React.createElement(
-        JSONLDValue.isJSONLDValue(o) ? Value : ShowNode,
-        keyFromPath(path.push(i))
-      ))
+    , objects.isEmpty()
+        ? null
+        : objects.map((o, i) => React.createElement(
+            JSONLDValue.isJSONLDValue(o) ? Value : ShowNode,
+            keyFromPath(path.push(i))
+          ))
 
     , React.createElement(
         isObjectProperty ? AddNode : AddValue,

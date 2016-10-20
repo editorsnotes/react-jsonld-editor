@@ -3,10 +3,10 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {List} = require('immutable')
     , {Text} = require('rebass')
     , {getNode} = require('../selectors')
-    , {keyFromPath} = require('../utils')
+    , {keyFromPath, ignoreDispatch, keepOnlyStateProps} = require('../utils')
     , FlexRow = require('../components/FlexRow')
-    , ShowIdentifier = require('../containers/ShowIdentifier')
-    , AddTypeIdentifier = require('../containers/AddTypeIdentifier')
+    , ShowIdentifier = require('./ShowIdentifier')
+    , AddTypeIdentifier = require('./AddTypeIdentifier')
 
 const mapStateToProps = (state, {path}) => {
   const ids = getNode(state).getIn(path, List())

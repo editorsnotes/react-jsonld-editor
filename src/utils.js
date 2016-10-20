@@ -23,5 +23,9 @@ module.exports = {
   labelOrID: node => {
     const label = node.preferredLabel()
     return label ? label.value : node.id || ''
-  }
+  },
+
+  ignoreDispatch: () => ({}),
+
+  keepOnlyStateProps: p => p
 }

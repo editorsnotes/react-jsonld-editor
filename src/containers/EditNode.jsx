@@ -24,7 +24,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , Type = require('./Type')
     , Property = require('./Property')
     , AddProperty = require('./AddProperty')
-    , {keyFromPath, labelOrID} = require('../utils')
+    , {keyFromPath, labelOrID, keepOnlyStateProps} = require('../utils')
 
 const mapStateToProps = state => (
   { top: getNode(state)
@@ -145,4 +145,4 @@ const EditNode = (
 }
 
 module.exports = connect(
-  mapStateToProps, mapDispatchToProps)(withRebass(EditNode))
+  mapStateToProps, mapDispatchToProps, keepOnlyStateProps)(withRebass(EditNode))

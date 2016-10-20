@@ -3,6 +3,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , {getEditPath} = require('../selectors')
     , EditValue = require('./EditValue')
     , ShowValue = require('./ShowValue')
+    , {ignoreDispatch} = require('../utils')
 
 const startsWith = (pathA, pathB) => pathA.slice(0, pathB.count()).equals(pathB)
 
@@ -16,4 +17,4 @@ const Value = ({path, editable, ...props}) => editable
   ? <EditValue path={path} {...props} />
   : <ShowValue path={path} {...props} />
 
-module.exports = connect(mapStateToProps)(Value)
+module.exports = connect(mapStateToProps, ignoreDispatch)(Value)

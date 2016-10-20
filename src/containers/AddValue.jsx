@@ -21,8 +21,7 @@ const mergeProps = (
   {updateEditPath, updateInput, setIn},
   {path, ...props}) => {
   return (
-    { path
-    , label: 'New value'
+    { label: 'New value'
     , placeholder: 'New value'
     , name: path.join('|')
     , value: editPath.equals(path) ? input : ''
