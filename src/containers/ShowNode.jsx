@@ -1,13 +1,14 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
+    , {Space} = require('rebass')
     , {updateRootNodePath, deleteIn} = require('../actions')
     , Chip = require('../components/Chip')
     , {getNode} = require('../selectors')
     , {labelOrID} = require('../utils')
 
 const mapStateToProps = (state, {path}) => (
-  { children: [labelOrID(getNode(state).getIn(path))]
+  { children: [labelOrID(getNode(state).getIn(path)) || <Space x={3}/>]
   }
 )
 
