@@ -10,6 +10,12 @@ test('default properties includes rdfs:label', t=> {
     .has(rdfs('label')))
 })
 
+test('rdfs:label gets added to initial properties', t=> {
+  t.plan(1)
+  t.ok(reducer(Map(), {})
+    .has(rdfs('label')))
+})
+
 test('includes rdfs:label after update without properties', t=> {
   t.plan(1)
   t.ok(reducer(undefined, {type: UPDATE_UNIVERSE})

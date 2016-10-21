@@ -6,16 +6,8 @@ const {Map, List} = require('immutable')
 const label = node(rdfs('label'), 'label')
   .set('@type', List.of(owl('AnnotationProperty')))
 
-module.exports = (properties = Map.of(label.id, label), action) => {
-  switch (action.type) {
-
-    case UPDATE_UNIVERSE:
-      return action.properties
-        ? action.properties.set(label.id, label)
-        : properties
-
-    default:
-      return properties
-  }
-}
-
+module.exports = (properties = Map(), action) => (
+  action.type === UPDATE_UNIVERSE && action.properties
+    ? action.properties
+    : properties
+).set(label.id, label)
