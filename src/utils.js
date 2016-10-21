@@ -1,7 +1,13 @@
+const {List} = require('immutable')
+    , {JSONLDValue, JSONLDNode} = require('immutable-jsonld')
+    , {rdfs} = require('./namespaces')
+
 const isScrolledIntoView = el => (
   (el.getBoundingClientRect().top >= 0)
     && (el.getBoundingClientRect().bottom <= window.innerHeight)
 )
+
+const value = v => JSONLDValue({'@value': v})
 
 module.exports = {
 
@@ -27,5 +33,14 @@ module.exports = {
 
   ignoreDispatch: () => ({}),
 
-  keepOnlyStateProps: p => p
+  keepOnlyStateProps: p => p,
+
+  value,
+
+  node: (id, label) => {
+    const n = JSONLDNode({'@id': id})
+    return label
+      ? n.set(rdfs('label'), List.of(value(label)))
+      : n
+  }
 }

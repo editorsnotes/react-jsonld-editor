@@ -10,6 +10,7 @@ const {JSONLDNode} = require('immutable-jsonld')
       , UPDATE_SUGGESTIONS
       , TOGGLE_EDITING_PROPERTIES
       } = require('../actions')
+    , properties = require('./properties')
 
 const node = (node = JSONLDNode(), action) => {
   switch (action.type) {
@@ -32,16 +33,6 @@ const classes = (classes = Map(), action) => {
 
     default:
       return classes
-  }
-}
-
-const properties = (properties = Map(), action) => {
-  switch (action.type) {
-    case UPDATE_UNIVERSE:
-      return action.properties || properties
-
-    default:
-      return properties
   }
 }
 
