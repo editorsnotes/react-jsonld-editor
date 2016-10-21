@@ -7,7 +7,7 @@ const Autosuggest = (
   , focused
   , onFocus
   , onBlur
-  , onChange
+  , updateInput
   , ...props
   }) => {
 
@@ -21,7 +21,10 @@ const Autosuggest = (
         , placeholder: label
         , onFocus
         , onBlur
-        , onChange: e => { if (e.type === 'change') { onChange(e) }}
+        , onChange:
+          (e, {newValue, method}) => {
+            if (method === 'type') { updateInput(newValue) }
+          }
         }
       }
       baseRef={input => { if (input && focused) { input.focus() }}}

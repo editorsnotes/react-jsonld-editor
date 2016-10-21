@@ -48,7 +48,6 @@ const mergeProps = (
   , suggestions
   , onFocus: () => updateEditPath(path)
   , onBlur: () => updateEditPath(path.pop().pop())
-  , onChange: e => updateInput(e.target.value)
   , onSuggestionsFetchRequested: ({value}) => {
       updateSuggestions(
         [ {label: `Create “${value}”`, value}
@@ -68,6 +67,7 @@ const mergeProps = (
       )
     }
   , focused: editPath.equals(path)
+  , updateInput
   , ...props
   }
 )
