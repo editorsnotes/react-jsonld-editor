@@ -3,14 +3,33 @@ const React = require('react')
     , {Map} = require('immutable')
     , {JSONLDNode, fromExpandedJSONLD} = require('immutable-jsonld')
     , configureStore = require('./store/configureStore')
-    , {updateUniverse, updateNode} = require('./actions')
+    , { updateUniverse
+      , updateNode
+      , updateOnNewNamedNode
+      , updateMintID
+      } = require('./actions')
     , EditNode = require('./containers/EditNode')
-
-let lastNodeState = null
+    , {getNode} = require('./selectors')
 
 const indexByID = nodes => Map(nodes.map(node => [node.id, node]))
 
 const load = json => indexByID(fromExpandedJSONLD(json))
+
+const observeStore = (store, select, onChange) => {
+  let currentState
+
+  const handleChange = () => {
+    const nextState = select(store.getState())
+    if (! nextState.equals(currentState)) {
+      currentState = nextState
+      onChange(currentState)
+    }
+  }
+
+  let unsubscribe = store.subscribe(handleChange)
+  handleChange()
+  return unsubscribe
+}
 
 const Editor = React.createClass(
   { propTypes:
@@ -20,7 +39,9 @@ const Editor = React.createClass(
       , datatypes: React.PropTypes.instanceOf(Map)
       , languages: React.PropTypes.instanceOf(Map)
       , node: React.PropTypes.instanceOf(JSONLDNode)
+      , mintID: React.PropTypes.func
       , onSave: React.PropTypes.func
+      , onNewNamedNode: React.PropTypes.func
       }
 
   , getDefaultProps: function() {
@@ -31,7 +52,9 @@ const Editor = React.createClass(
         , datatypes: load(require('./datatypes.json'))
         , languages: load(require('./languages.json'))
         , node: JSONLDNode()
+        , mintID: undefined
         , onSave: () => {}
+        , onNewNamedNode: () => {}
         }
       )
     }
@@ -42,25 +65,18 @@ const Editor = React.createClass(
       return {rebass: {PanelHeader: {fontWeight: 'inherit'}}}
     }
 
-  , subscribeToNodeUpdates: function(store, onSave) {
-      return store.subscribe(() => {
-        const node = store.getState().node
-        if (! node.equals(lastNodeState)) {
-          onSave(node)
-          lastNodeState = node
-        }
-      })
-    }
-
   , dispatch: function(action) {
       this.state.store.dispatch(action)
     }
 
   , getInitialState: function() {
-      const {node, onSave, ...props} = this.props
-      const store = configureStore({node, ...props})
-      lastNodeState = node
-      return {store, unsubscribe: this.subscribeToNodeUpdates(store, onSave)}
+      const {onSave, ...props} = this.props
+      const store = configureStore({...props})
+      return (
+        { store
+        , unsubscribe: observeStore(store, getNode, onSave)
+        }
+      )
     }
 
   , componentWillReceiveProps: function(next) {
@@ -78,6 +94,12 @@ const Editor = React.createClass(
       }
       if (! next.node.equals(current.node)) {
         this.dispatch(updateNode(next.node))
+      }
+      if (next.mintID !== current.mintID) {
+        this.dispatch(updateMintID(next.mintID))
+      }
+      if (next.onNewNamedNode !== current.onNewNamedNode) {
+        this.dispatch(updateOnNewNamedNode(next.onNewNamedNode))
       }
       if (next.onSave !== current.onSave) {
         this.state.unsubscribe()

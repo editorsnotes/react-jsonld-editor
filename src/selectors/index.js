@@ -9,11 +9,13 @@ const getProperties = state => state.properties
 const getIndividuals = state => state.individuals
 const getDatatypes = state => state.datatypes
 const getLanguages = state => state.languages
+const getIDMinter = state => state.mintID
 
 exports.getNode = getNode
 exports.getProperties = getProperties
 exports.getIndividuals = getIndividuals
 exports.getLanguages = getLanguages
+exports.getIDMinter = getIDMinter
 
 const getLabels = createSelector(
   [getClasses, getProperties, getIndividuals, getDatatypes, getLanguages],

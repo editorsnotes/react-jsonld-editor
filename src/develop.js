@@ -7,6 +7,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , ns = require('rdf-ns')
     , foaf = ns('http://xmlns.com/foaf/0.1/')
     , ex = ns('http://example.org/ns/')
+    , uuid = require('node-uuid')
 
 const mount = document.createElement('div')
 document.body.appendChild(mount)
@@ -42,6 +43,11 @@ const Kimye = node('http://example.org/name/Kimye', 'Kimye')
   .set(name.id, List.of('Kimye').map(value))
 const individuals = Map.of(Kanye.id, Kanye, Kim.id, Kim, Kimye.id, Kimye)
 
+const mintID = () => {
+  const {protocol, hostname} = window.location
+  return `${protocol}//${hostname}/.well-known/genid/${uuid.v4()}`
+}
+
 render((
   <div>
     <Editor
@@ -49,7 +55,9 @@ render((
       classes={classes}
       properties={properties}
       individuals={individuals}
+      mintID={mintID}
       onSave={node => console.log(node.toJS())}
+      onNewNamedNode={node => console.log(node.toJS())}
     />
   </div>
 ), mount)

@@ -37,10 +37,14 @@ module.exports = {
 
   value,
 
-  node: (id, label) => {
-    const n = JSONLDNode({'@id': id})
-    return label
-      ? n.set(rdfs('label'), List.of(value(label)))
-      : n
+  node: (id, label, types) => {
+    let n = JSONLDNode({'@id': id})
+    if (label) {
+      n = n.set(rdfs('label'), List.of(value(label)))
+    }
+    if (types) {
+      n = n.set('@type', List(types))
+    }
+    return n
   }
 }

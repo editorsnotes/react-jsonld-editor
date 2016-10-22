@@ -10,7 +10,6 @@ const {JSONLDNode} = require('immutable-jsonld')
       , UPDATE_SUGGESTIONS
       , TOGGLE_EDITING_PROPERTIES
       } = require('../actions')
-    , properties = require('./properties')
 
 const node = (node = JSONLDNode(), action) => {
   switch (action.type) {
@@ -132,7 +131,6 @@ const isEditingProperties = (isEditingProperties = false, action) => {
 module.exports = combineReducers(
   { node
   , classes
-  , properties
   , individuals
   , datatypes
   , languages
@@ -141,6 +139,9 @@ module.exports = combineReducers(
   , input
   , suggestions
   , isEditingProperties
+  , properties: require('./properties')
+  , mintID: require('./mintID')
+  , onNewNamedNode: require('./onNewNamedNode')
   }
 )
 
