@@ -16,7 +16,7 @@ const indexByID = nodes => Map(nodes.map(node => [node.id, node]))
 const load = json => indexByID(fromExpandedJSONLD(json))
 
 const observeStore = (store, select, onChange) => {
-  let currentState
+  let currentState = select(store.getState())
 
   const handleChange = () => {
     const nextState = select(store.getState())
@@ -26,9 +26,7 @@ const observeStore = (store, select, onChange) => {
     }
   }
 
-  let unsubscribe = store.subscribe(handleChange)
-  handleChange()
-  return unsubscribe
+  return store.subscribe(handleChange)
 }
 
 const Editor = React.createClass(
@@ -103,9 +101,9 @@ const Editor = React.createClass(
       }
       if (next.onSave !== current.onSave) {
         this.state.unsubscribe()
-        this.setState({unsubscribe:
-          this.subscribeToNodeUpdates(this.state.store, next.onSave)
-        })
+        this.setState(
+          {unsubscribe: observeStore(this.state.store, getNode, next.onSave)}
+        )
       }
     }
 
