@@ -6,8 +6,9 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , Editor = require('../Editor')
     , EditNode = require('../containers/EditNode')
     , AddProperty = require('../containers/AddProperty')
+    , AddTypeIdentifier = require('../containers/AddTypeIdentifier')
     , {node} = require('../utils')
-    , {owl} = require('../namespaces')
+    , {rdfs, owl} = require('../namespaces')
     , ns = require('rdf-ns')
     , ex = ns('http://example.org/ns/')
 
@@ -81,3 +82,29 @@ test('do show AddProperty if has mintID', t=> {
   t.equal(wrapper.find(AddProperty).length, 1)
 })
 
+test('do not show AddTypeIdentifier if no classes or mintID', t=> {
+  const wrapper = mount(<Editor />)
+  t.plan(1)
+  t.equal(wrapper.find(AddTypeIdentifier).length, 0)
+})
+
+test('do not show AddTypeIdentifier if no unused classes or mintID', t=> {
+  const c = node(ex('SomeClass'), 'SomeClass', [rdfs('Class')])
+  const n = node(ex('Test'), 'Test', [c.id])
+  const wrapper = mount(<Editor node={n} classes={Map.of(c.id, c)} />)
+  t.plan(1)
+  t.equal(wrapper.find(AddTypeIdentifier).length, 0)
+})
+
+test('do show AddTypeIdentifier if has classes', t=> {
+  const c = node(ex('Test'), 'Test', [rdfs('Class')])
+  const wrapper = mount(<Editor classes={Map.of(c.id, c)} />)
+  t.plan(1)
+  t.equal(wrapper.find(AddTypeIdentifier).length, 1)
+})
+
+test('do show AddTypeIdentifier if has mintID', t=> {
+  const wrapper = mount(<Editor mintID={() => 'new-id'}/>)
+  t.plan(1)
+  t.equal(wrapper.find(AddTypeIdentifier).length, 1)
+})

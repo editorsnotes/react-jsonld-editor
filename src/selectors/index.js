@@ -12,6 +12,7 @@ const getLanguages = state => state.languages
 const getIDMinter = state => state.mintID
 
 exports.getNode = getNode
+exports.getClasses = getClasses
 exports.getProperties = getProperties
 exports.getIndividuals = getIndividuals
 exports.getLanguages = getLanguages

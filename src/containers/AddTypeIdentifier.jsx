@@ -37,7 +37,7 @@ const mapDispatchToProps = dispatch => bindActionCreators(
 const mergeProps = (
   {input, suggestions, findSuggestions, editPath, mintID},
   {updateEditPath, updateInput, updateSuggestions, setIn, newNamedNode},
-  {path, ...props}) => (
+  {path, exclude, ...props}) => (
 
   { name: 'new_type_id'
   , label: 'New type'
@@ -49,7 +49,8 @@ const mergeProps = (
   , onBlur: () => updateEditPath(path.pop().pop())
   , onSuggestionsFetchRequested:
       ({value}) => {
-        const suggestions = findSuggestions(value)
+        const suggestions = findSuggestions(value).filter(
+          suggestion => (! exclude.includes(suggestion.id)))
         updateSuggestions(
           mintID.accepts(rdfs('Class'))
             ? [ { label: `Create type “${value}”`
