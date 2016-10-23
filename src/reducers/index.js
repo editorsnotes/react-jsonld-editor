@@ -25,16 +25,6 @@ const node = (node = JSONLDNode(), action) => {
   }
 }
 
-const individuals = (individuals = Map(), action) => {
-  switch (action.type) {
-    case UPDATE_UNIVERSE:
-      return action.individuals || individuals
-
-    default:
-      return individuals
-  }
-}
-
 const datatypes = (datatypes = Map(), action) => {
   switch (action.type) {
     case UPDATE_UNIVERSE:
@@ -120,7 +110,6 @@ const isEditingProperties = (isEditingProperties = false, action) => {
 
 module.exports = combineReducers(
   { node
-  , individuals
   , datatypes
   , languages
   , editPath
@@ -128,6 +117,7 @@ module.exports = combineReducers(
   , input
   , suggestions
   , isEditingProperties
+  , individuals: require('./individuals')
   , classes: require('./classes')
   , properties: require('./properties')
   , mintID: require('./mintID')

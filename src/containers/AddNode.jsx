@@ -1,21 +1,22 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
-    , {List} = require('immutable')
-    , {JSONLDNode, JSONLDValue} = require('immutable-jsonld')
     , { getInput
       , getEditPath
       , getSuggestions
       , getIndividualSuggester
       , getIndividuals
       , getPredicateRangeFinder
+      , getIDMinter
       } = require('../selectors')
     , { updateEditPath
       , updateInput
       , updateSuggestions
       , setIn
+      , newNamedNode
       } = require('../actions')
     , Autosuggest = require('../components/Autosuggest')
+    , {node} = require('../utils')
     , {rdfs} = require('../namespaces')
 
 const mapStateToProps = state => (
@@ -23,21 +24,30 @@ const mapStateToProps = state => (
   , suggestions: getSuggestions(state)
   , findSuggestions: getIndividualSuggester(state)
   , editPath: getEditPath(state)
-  , nodes: getIndividuals(state)
+  , individuals: getIndividuals(state)
   , getPredicateRange: getPredicateRangeFinder(state)
+  , mintID: getIDMinter(state)
   }
 )
 
 const mapDispatchToProps = dispatch => bindActionCreators(
-  {updateEditPath, updateInput, updateSuggestions, setIn}, dispatch)
-
-const BlankNode = (label, types) => JSONLDNode()
-  .set(rdfs('label'), List.of(JSONLDValue().set('@value', label)))
-  .set('@type', types)
+  { updateEditPath
+  , updateInput
+  , updateSuggestions
+  , setIn
+  , newNamedNode
+  }, dispatch)
 
 const mergeProps = (
-  {input, suggestions, findSuggestions, editPath, nodes, getPredicateRange},
-  {updateEditPath, updateInput, updateSuggestions, setIn},
+  { input
+  , suggestions
+  , findSuggestions
+  , editPath
+  , individuals
+  , getPredicateRange
+  , mintID
+  },
+  {updateEditPath, updateInput, updateSuggestions, setIn, newNamedNode},
   {path, ...props}) => (
 
   { name: 'new_node'
@@ -57,14 +67,19 @@ const mergeProps = (
     }
   , onSuggestionsClearRequested: () => updateSuggestions([])
   , onSuggestionSelected: (_, {suggestion}) => {
-      setIn(
-        path,
-        suggestion.id
-          ? nodes.get(suggestion.id)
-          : BlankNode(suggestion.value,
-              getPredicateRange(path.butLast().last())),
-        {editPath: path.set(-1, path.last() + 1)}
-      )
+      let individual = individuals.get(suggestion.id)
+      if (! individual) {
+        const types = getPredicateRange(path.butLast().last())
+        if (types.some(mintID.accepts) || mintID.accepts(rdfs('Resource'))) {
+          // named node
+          individual = node(mintID(types.toArray()), suggestion.value, types)
+          newNamedNode(individual)
+        } else {
+          // blank node
+          individual = node(undefined, suggestion.value, types)
+        }
+      }
+      setIn(path, individual, {editPath: path.set(-1, path.last() + 1)})
     }
   , focused: editPath.equals(path)
   , updateInput
