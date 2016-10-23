@@ -59,18 +59,3 @@ test('a supplied mintID can limit what it accepts', t=> {
   t.false(f.accepts(rdfs('Class')))
   t.false(f.accepts(rdfs('Resource')))
 })
-
-test('can test multiple types at once with acceptsTypes', t=> {
-  const f = () => 'id'
-  f.accepts = type => type === owl('DatatypeProperty')
-  const action = {type: UPDATE_MINT_ID, mintID: f}
-  t.plan(2)
-  t.equal(reducer(undefined, action), f)
-  t.ok(f.acceptsSome(Set.of(
-    owl('ObjectProperty'),
-    owl('DatatypeProperty'),
-    rdfs('Class'),
-    rdfs('Resource')
-  )))
-})
-
