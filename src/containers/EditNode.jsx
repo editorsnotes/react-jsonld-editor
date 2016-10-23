@@ -1,7 +1,7 @@
 const React = require('react') // eslint-disable-line no-unused-vars
     , {connect} = require('react-redux')
     , {bindActionCreators} = require('redux')
-    , {List} = require('immutable')
+    , {List, Set} = require('immutable')
     , classnames = require('classnames')
     , { withRebass
       , Panel
@@ -17,6 +17,8 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , { getNode
       , getRootNodePath
       , getLabelResolver
+      , getIDMinter
+      , getProperties
       , isEditingProperties
       } = require('../selectors')
     , {toggleEditingProperties} = require('../actions')
@@ -25,11 +27,14 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , Property = require('./Property')
     , AddProperty = require('./AddProperty')
     , {keyFromPath, labelOrID} = require('../utils')
+    , {owl} = require('../namespaces')
 
 const mapStateToProps = state => (
   { top: getNode(state)
   , path: getRootNodePath(state)
   , labelFor: getLabelResolver(state)
+  , mintID: getIDMinter(state)
+  , availableProperties: getProperties(state)
   , isEditingProperties: isEditingProperties(state)
   }
 )
@@ -60,10 +65,12 @@ const renderPath = (top, path, labelFor) => path.reduce(
   {subpath: List(), elements: List()}
 )
 
-const EditNode = (
+const component = (
   { top
   , path
   , labelFor
+  , mintID
+  , availableProperties
   , isEditingProperties
   , toggleEditingProperties
   , className
@@ -93,6 +100,12 @@ const EditNode = (
   const node = top.getIn(path)
   const properties = node.keySeq()
 
+  const canAddProperty = (
+    mintID.accepts(owl('DatatypeProperty')) ||
+    mintID.accepts(owl('ObjectProperty'))   ||
+    (! Set(availableProperties.keySeq()).subtract(properties).isEmpty())
+  )
+
   return (
     <Panel
       className={cx}
@@ -118,12 +131,18 @@ const EditNode = (
             />
           ))
         }
-        <AddProperty
-          {...keyFromPath(path.push(`new-property-${properties.count()}`))}
-          exclude={properties}
-          mt={2}
-          style={sx.addProperty}
-        />
+        {
+          canAddProperty
+            ? <AddProperty
+                { ...keyFromPath(
+                    path.push(`new-property-${properties.count()}`))
+                }
+                exclude={properties}
+                mt={2}
+                style={sx.addProperty}
+              />
+            : null
+        }
       </Block>
       <PanelFooter theme="muted">
         <FlexRow mt={0} margins={{mr: 1}}>
@@ -144,5 +163,11 @@ const EditNode = (
   )
 }
 
-module.exports = connect(
-  mapStateToProps, mapDispatchToProps)(withRebass(EditNode))
+component._name = 'EditNodeComponent'
+
+const EditNode = connect(
+  mapStateToProps, mapDispatchToProps)(withRebass(component))
+
+EditNode.displayName = 'EditNodeContainer'
+
+module.exports = EditNode

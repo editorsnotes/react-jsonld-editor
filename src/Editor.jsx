@@ -1,5 +1,6 @@
 const React = require('react')
     , {Provider} = require('react-redux')
+    , {withRebass} = require('rebass')
     , {Map} = require('immutable')
     , {JSONLDNode, fromExpandedJSONLD} = require('immutable-jsonld')
     , configureStore = require('./store/configureStore')
@@ -57,18 +58,20 @@ const Editor = React.createClass(
       )
     }
 
-  , childContextTypes: { rebass: React.PropTypes.object }
-
-  , getChildContext: function() {
-      return {rebass: {PanelHeader: {fontWeight: 'inherit'}}}
-    }
-
   , dispatch: function(action) {
       this.state.store.dispatch(action)
     }
 
   , getInitialState: function() {
-      const {onSave, ...props} = this.props
+      /* eslint-disable no-unused-vars */
+      const { onSave
+            , className
+            , style
+            , theme
+            , subComponentStyles
+            , ...props
+            } = this.props
+      /* eslint-enable */
       const store = configureStore({...props})
       return (
         { store
@@ -110,11 +113,16 @@ const Editor = React.createClass(
   , render: function() {
       return (
         <Provider store={this.state.store}>
-          <EditNode/>
+          <EditNode
+            className={this.props.className}
+            style={this.props.style}
+          />
         </Provider>
       )
     }
   }
 )
 
-module.exports = Editor
+Editor._name = 'Editor'
+
+module.exports = withRebass(Editor)

@@ -8,10 +8,6 @@ body {
   background-color: #fff;
 }
 
-.Button:hover {
-  box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.125);
-}
-
 .Input input, .Autosuggest input {
   min-width: 7em;
   border-width: 0 0 1px !important ;
@@ -21,4 +17,8 @@ body {
 .Input input:focus, .Autosuggest input:focus {
   border-width: 0 0 2px !important ;
   border-image: linear-gradient(to right, #08e, rgba(0,0,0,0) 8em, rgba(0,0,0,0)) 2;
+}
+
+.PanelHeader {
+  font-weight: inherit !important ;
 }

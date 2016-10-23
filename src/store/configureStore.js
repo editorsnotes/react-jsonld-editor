@@ -1,6 +1,7 @@
 const {createStore} = require('redux')
+    , {composeWithDevTools} = require('redux-devtools-extension')
     , reducer = require('../reducers')
 
-module.exports = (initialState = {}) => createStore(reducer, initialState,
-  window.devToolsExtension && window.devToolsExtension())
-
+module.exports = (initialState = {}) => (
+  createStore(reducer, initialState, composeWithDevTools())
+)

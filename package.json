@@ -29,7 +29,7 @@
     "predevelop-demo": "npm -s run compile && if [ ! -d demo/data/indexes ]; then npm -s run setup-demo-data; fi",
     "develop-demo": "npm -s run develop-target --target=demo/src",
     "pretest": "npm -s run compile",
-    "test": "tape lib/**/tests/*.js | tap-spec",
+    "test": "tape lib/tests/*.js lib/*/tests/*.js | tap-spec",
     "prepublish": "npm -s run test && babel src -d lib"
   },
   "author": "Ryan Shaw",
@@ -65,6 +65,7 @@
     "rebass": "^0.4.0-beta.8",
     "rebass-autosuggest": "^1.0.2",
     "redux": "^3.5.2",
+    "redux-devtools-extension": "^1.0.0",
     "reselect": "^2.5.1"
   },
   "peerDependencies": {
