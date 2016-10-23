@@ -3,8 +3,7 @@ const {Map, List, Set} = require('immutable')
     , {UPDATE_UNIVERSE, NEW_NAMED_NODE} = require('../actions')
     , {rdfs, owl} = require('../namespaces')
 
-const label = node(rdfs('label'), 'label')
-  .set('@type', List.of(owl('AnnotationProperty')))
+const label = node(rdfs('label'), 'label', List.of(owl('AnnotationProperty')))
 
 const propertyTypes = Set.of(owl('DatatypeProperty'), owl('ObjectProperty'))
 
