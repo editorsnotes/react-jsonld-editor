@@ -52,7 +52,7 @@ const mergeProps = (
         const suggestions = findSuggestions(value).filter(
           suggestion => (! exclude.includes(suggestion.id)))
         updateSuggestions(
-          mintID.accepts(rdfs('Class'))
+          value && mintID.accepts(rdfs('Class'))
             ? [ { label: `Create type “${value}”`
                 , type: rdfs('Class')
                 , value
@@ -71,6 +71,7 @@ const mergeProps = (
       }
       setIn(path, id, {editPath: path.set(-1, path.last() + 1)})
     }
+  , shouldRenderSuggestions: () => true
   , focused: editPath.equals(path)
   , updateInput
   , ...props

@@ -67,8 +67,8 @@ const createSuggester = (getter, alwaysSuggest) => createSelector(
     input, resources, labels, alwaysSuggest)
 )
 
-exports.getClassSuggester = createSuggester(getClasses)
-exports.getPropertySuggester = createSuggester(getProperties)
+exports.getClassSuggester = createSuggester(getClasses, true)
+exports.getPropertySuggester = createSuggester(getProperties, true)
 exports.getIndividualSuggester = createSuggester(getIndividuals)
 exports.getDatatypeSuggester = createSuggester(getDatatypes, true)
 exports.getLanguageSuggester = createSuggester(getLanguages)

@@ -51,23 +51,25 @@ const mergeProps = (
       ({value}) => {
         let suggestions = findSuggestions(value).filter(
           suggestion => (! exclude.includes(suggestion.id)))
-        if (mintID.accepts(owl('ObjectProperty'))) {
-          suggestions =
-            [ { label: `Create relation “${value}”`
-              , type: owl('ObjectProperty')
-              , value
-              }
-            , ...suggestions
-            ]
-        }
-        if (mintID.accepts(owl('DatatypeProperty'))) {
-          suggestions =
-            [ { label: `Create property “${value}”`
-              , type: owl('DatatypeProperty')
-              , value
-              }
-            , ...suggestions
-            ]
+        if (value) {
+          if (mintID.accepts(owl('ObjectProperty'))) {
+            suggestions =
+              [ { label: `Create relation “${value}”`
+                , type: owl('ObjectProperty')
+                , value
+                }
+              , ...suggestions
+              ]
+          }
+          if (mintID.accepts(owl('DatatypeProperty'))) {
+            suggestions =
+              [ { label: `Create property “${value}”`
+                , type: owl('DatatypeProperty')
+                , value
+                }
+              , ...suggestions
+              ]
+          }
         }
         updateSuggestions(suggestions)
       }
@@ -81,6 +83,7 @@ const mergeProps = (
       const newPropPath = path.set(-1, id)
       setIn(newPropPath, List(), {editPath: newPropPath.push(0)})
     }
+  , shouldRenderSuggestions: () => true
   , focused: editPath.equals(path)
   , updateInput
   , ...props
