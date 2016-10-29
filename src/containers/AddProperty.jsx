@@ -35,6 +35,28 @@ const mapDispatchToProps = dispatch => bindActionCreators(
   , newNamedNode
   }, dispatch)
 
+const nodesToSectionedSuggestions = filter => labels => nodes => nodes
+  .filter(filter)
+  .groupBy(node => node.types.includes(owl('ObjectProperty'))
+      ? 'Relations' : 'Properties')
+  .update('Properties', nodes => nodes ? nodes : List())
+  .update('Relations', nodes => nodes ? nodes : List())
+  .entrySeq()
+  .map(([title, nodes]) => (
+    { title: title
+    , suggestions: nodes
+        .map(node => (
+          { id: node.id
+          , label: labels.get(node.id).value
+          }
+        ))
+        .sort(({label: a}, {label: b}) => a.localeCompare(b))
+        .toArray()
+    }
+  ))
+  .sort(({title: a}, {title: b}) => a.localeCompare(b))
+  .toArray()
+
 const mergeProps = (
   {input, suggestions, findSuggestions, editPath, mintID},
   {updateEditPath, updateInput, updateSuggestions, setIn, newNamedNode},
@@ -49,29 +71,31 @@ const mergeProps = (
   , onBlur: () => updateEditPath(path.pop())
   , onSuggestionsFetchRequested:
       ({value}) => {
-        let suggestions = findSuggestions(value).filter(
-          suggestion => (! exclude.includes(suggestion.id)))
+        let [properties, relations] = findSuggestions(
+            value, nodesToSectionedSuggestions(
+              suggestion => (! exclude.includes(suggestion.id))))
         if (value) {
           if (mintID.accepts(owl('ObjectProperty'))) {
-            suggestions =
+            relations.suggestions =
               [ { label: `Create relation “${value}”`
                 , type: owl('ObjectProperty')
                 , value
                 }
-              , ...suggestions
+              , ...relations.suggestions
               ]
           }
           if (mintID.accepts(owl('DatatypeProperty'))) {
-            suggestions =
+            properties.suggestions =
               [ { label: `Create property “${value}”`
                 , type: owl('DatatypeProperty')
                 , value
                 }
-              , ...suggestions
+              , ...properties.suggestions
               ]
           }
         }
-        updateSuggestions(suggestions)
+        updateSuggestions([properties, relations].filter(
+          ({suggestions}) => suggestions.length > 0))
       }
   , onSuggestionsClearRequested: () => updateSuggestions([])
   , onSuggestionSelected: (_, {suggestion}) => {
@@ -84,6 +108,9 @@ const mergeProps = (
       setIn(newPropPath, List(), {editPath: newPropPath.push(0)})
     }
   , shouldRenderSuggestions: () => true
+  , multiSection: true
+  , renderSectionTitle: section => section.title
+  , getSectionSuggestions: section => section.suggestions
   , focused: editPath.equals(path)
   , updateInput
   , ...props

@@ -48,7 +48,7 @@ const matches = (inputValue, inputLength) => label => label
   ? label.value.toLowerCase().slice(0, inputLength) === inputValue
   : false
 
-const findSuggestions = (input, domain, labels, alwaysSuggest = false) => {
+const findMatchingNodes = (input, domain, labels, alwaysSuggest = false) => {
   const inputValue = String(input).trim().toLowerCase()
   const inputLength = inputValue.length
   const matchesInput = matches(inputValue, inputLength)
@@ -56,15 +56,20 @@ const findSuggestions = (input, domain, labels, alwaysSuggest = false) => {
     ? alwaysSuggest ? domain.valueSeq() : Seq()
     : domain.valueSeq().filter(node => matchesInput(labels.get(node.id)))
   return matchingNodes
-    .map(node => ({id: node.id, label: labels.get(node.id).value}))
-    .sort(({label: a}, {label: b}) => a.localeCompare(b))
-    .toArray()
 }
+
+const nodesToSingleSectionSuggestions = labels => nodes => nodes
+  .map(node => ({id: node.id, label: labels.get(node.id).value}))
+  .sort(({label: a}, {label: b}) => a.localeCompare(b))
+  .toArray()
 
 const createSuggester = (getter, alwaysSuggest) => createSelector(
   [getter, getLabels],
-  (resources, labels) => input => findSuggestions(
-    input, resources, labels, alwaysSuggest)
+  (resources, labels) =>
+    (input, nodesToSuggestions = nodesToSingleSectionSuggestions) =>
+      nodesToSuggestions(labels)(
+        findMatchingNodes(input, resources, labels, alwaysSuggest)
+      )
 )
 
 exports.getClassSuggester = createSuggester(getClasses, true)
