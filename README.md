@@ -21,6 +21,6 @@ To make it more useful specify some props:
 * Similarly, the `individuals` prop specifies individual resources that can serve as the objects of properties. It should also be an [Immutable](https://facebook.github.io/immutable-js/) `Map` with URIs (as strings) for keys and `JSONLDNode`s for values. The `JSONLDNode`s should have `rdfs:label`s or `skos:prefLabel`s.
 * Finally, you can be notified of changes to the JSON-LD node by providing a callback function as the `onSave` prop.
 
-Try the [demo](http://editorsnotes.github.io/react-jsonld-editor/demo/standalone/) or check out its [source](https://github.com/editorsnotes/react-jsonld-editor/blob/master/demo/src/index.js).
+Try the [demo](http://editorsnotes.github.io/react-jsonld-editor/demo/standalone/) or check out its [source](https://github.com/editorsnotes/react-jsonld-editor/blob/master/demo/src/index.js). (Note that this demo is rather slow to load because it is loading quite a bit of JSON data into memory on load.)
 
 For an example of using the editor with dynamically loaded vocabuaries from [Linked Open Vocabularies](http://lov.okfn.org/dataset/lov/), see `edit-with-lov` ([demo](https://editorsnotes.github.io/edit-with-lov/), [source](https://github.com/editorsnotes/edit-with-lov)).
