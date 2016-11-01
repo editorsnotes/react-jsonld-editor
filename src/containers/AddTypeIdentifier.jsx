@@ -5,6 +5,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
       , getEditPath
       , getSuggestions
       , getClassSuggester
+      , getClasses
       , getIDMinter
       } = require('../selectors')
     , { updateEditPath
@@ -23,6 +24,7 @@ const mapStateToProps = state => (
   , findSuggestions: getClassSuggester(state)
   , editPath: getEditPath(state)
   , mintID: getIDMinter(state)
+  , classCount: getClasses(state).size
   }
 )
 
@@ -35,7 +37,7 @@ const mapDispatchToProps = dispatch => bindActionCreators(
   }, dispatch)
 
 const mergeProps = (
-  {input, suggestions, findSuggestions, editPath, mintID},
+  {input, suggestions, findSuggestions, editPath, mintID, classCount},
   {updateEditPath, updateInput, updateSuggestions, setIn, newNamedNode},
   {path, exclude, ...props}) => (
 
@@ -71,7 +73,9 @@ const mergeProps = (
       }
       setIn(path, id, {editPath: path.set(-1, path.last() + 1)})
     }
-  , shouldRenderSuggestions: () => true
+  , shouldRenderSuggestions: value => (
+      classCount < 20 || value.trim().length > 0
+    )
   , focused: editPath.equals(path)
   , updateInput
   , ...props

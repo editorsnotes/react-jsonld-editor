@@ -6,6 +6,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
       , getEditPath
       , getSuggestions
       , getPropertySuggester
+      , getProperties
       , getIDMinter
       } = require('../selectors')
     , { updateEditPath
@@ -24,6 +25,7 @@ const mapStateToProps = state => (
   , findSuggestions: getPropertySuggester(state)
   , editPath: getEditPath(state)
   , mintID: getIDMinter(state)
+  , propertyCount: getProperties(state).size
   }
 )
 
@@ -58,7 +60,7 @@ const nodesToSectionedSuggestions = filter => labels => nodes => nodes
   .toArray()
 
 const mergeProps = (
-  {input, suggestions, findSuggestions, editPath, mintID},
+  {input, suggestions, findSuggestions, editPath, mintID, propertyCount},
   {updateEditPath, updateInput, updateSuggestions, setIn, newNamedNode},
   {path, exclude, ...props}) => (
 
@@ -107,7 +109,9 @@ const mergeProps = (
       const newPropPath = path.set(-1, id)
       setIn(newPropPath, List(), {editPath: newPropPath.push(0)})
     }
-  , shouldRenderSuggestions: () => true
+  , shouldRenderSuggestions: value => (
+      propertyCount < 20 || value.trim().length > 0
+    )
   , multiSection: true
   , renderSectionTitle: section => section.title
   , getSectionSuggestions: section => section.suggestions
