@@ -59,7 +59,7 @@
   },
   "dependencies": {
     "immutable": "^3.7.6",
-    "immutable-jsonld": "^1.1.2",
+    "immutable-jsonld": "^2.1.0",
     "react-icons": "^2.2.1",
     "react-redux": "^4.4.5",
     "rebass": "^0.4.0-beta.8",

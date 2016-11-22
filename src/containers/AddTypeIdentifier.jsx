@@ -11,7 +11,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
     , { updateEditPath
       , updateInput
       , updateSuggestions
-      , setIn
+      , pushIn
       , newNamedNode
       } = require('../actions')
     , Autosuggest = require('../components/Autosuggest')
@@ -32,13 +32,13 @@ const mapDispatchToProps = dispatch => bindActionCreators(
   { updateEditPath
   , updateInput
   , updateSuggestions
-  , setIn
+  , pushIn
   , newNamedNode
   }, dispatch)
 
 const mergeProps = (
   {input, suggestions, findSuggestions, editPath, mintID, classCount},
-  {updateEditPath, updateInput, updateSuggestions, setIn, newNamedNode},
+  {updateEditPath, updateInput, updateSuggestions, pushIn, newNamedNode},
   {path, exclude, ...props}) => (
 
   { name: 'new_type_id'
@@ -71,7 +71,7 @@ const mergeProps = (
         id = mintID(suggestion.type)
         newNamedNode(node(id, suggestion.value, [suggestion.type]))
       }
-      setIn(path, id, {editPath: path.set(-1, path.last() + 1)})
+      pushIn(path.pop(), id, {editPath: path.set(-1, path.last() + 1)})
     }
   , shouldRenderSuggestions: value => (
       classCount < 20 || value.trim().length > 0

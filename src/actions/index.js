@@ -1,6 +1,7 @@
 const {List} = require('immutable')
 
 const SET_IN = 'SET_IN'
+const PUSH_IN = 'PUSH_IN'
 const DELETE_IN = 'DELETE_IN'
 const NEW_NAMED_NODE = 'NEW_NAMED_NODE'
 const UPDATE_EDITPATH = 'UPDATE_EDITPATH'
@@ -13,6 +14,7 @@ const UPDATE_ON_NEW_NAMED_NODE = 'UPDATE_ON_NEW_NAMED_NODE'
 const TOGGLE_EDITING_PROPERTIES = 'TOGGLE_EDITING_PROPERTIES'
 
 exports.SET_IN = SET_IN
+exports.PUSH_IN = PUSH_IN
 exports.DELETE_IN = DELETE_IN
 exports.NEW_NAMED_NODE = NEW_NAMED_NODE
 exports.UPDATE_EDITPATH = UPDATE_EDITPATH
@@ -35,6 +37,14 @@ const setIn = (path, value, {input, editPath} = {}) => (
 exports.setIn = setIn
 
 exports.updateNode = node => setIn(List(), node)
+
+exports.pushIn = (path, value, {editPath} = {}) => (
+  { type: PUSH_IN
+  , path
+  , value
+  , editPath
+  }
+)
 
 exports.deleteIn = path => (
   { type: DELETE_IN
