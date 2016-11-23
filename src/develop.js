@@ -56,7 +56,7 @@ render((
       properties={properties}
       individuals={individuals}
       mintID={mintID}
-      onSave={node => console.log(node.toJS())}
+      onSave={node => console.log(JSON.stringify(node.toJS(), null, 2))}
       onNewNamedNode={node => console.log(node.toJS())}
     />
   </div>
