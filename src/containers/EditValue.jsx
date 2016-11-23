@@ -20,7 +20,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
       , updateSuggestions
       , setIn
       } = require('../actions')
-    , {rdf, lvont} = require('../namespaces')
+    , {lvont} = require('../namespaces')
 
 const mapStateToProps = (state, {path}) => (
   { value: getNode(state).getIn(path)
@@ -37,9 +37,9 @@ const mapStateToProps = (state, {path}) => (
 const mapDispatchToProps = dispatch => bindActionCreators(
   {updateEditPath, updateInput, updateSuggestions, setIn}, dispatch)
 
-// const languageWithTag = (tag, languages) => languages.find(
-//   language => language.get(lvont('iso639P1Code')).first().value === tag
-// )
+const languageWithTag = (tag, languages) => languages.find(
+  language => language.get(lvont('iso639P1Code')).first().value === tag
+)
 
 const tagForLanguage = (language_id, languages) => languages
   .get(language_id)
@@ -52,6 +52,7 @@ const EditValue = (
   , input
   , editPath
   , languages
+  , labelResolver
   , findDatatypes
   , findLanguages
   , updateEditPath
@@ -64,8 +65,14 @@ const EditValue = (
   const typePath = path.push('@type')
   const languagePath = path.push('@language')
 
+  const valueInput = value.value || ''
+  const typeInput = value.type ? labelResolver(value.type) : ''
+  const languageInput = value.language
+    ? labelResolver(languageWithTag(value.language, languages).id)
+    : ''
+
   const onTypeSuggestionSelected = (_, {suggestion}) => {
-    const newValue = suggestion.id === rdf('langString')
+    const newValue = suggestion.id === undefined
       ? value.delete('@type')
       : value.delete('@language').set('@type', suggestion.id)
     setIn(path, newValue, {input: suggestion.label})
@@ -86,19 +93,23 @@ const EditValue = (
         <Input
           label="value"
           name={valuePath.join('|')}
-          value={value.value}
-          onFocus={() => updateEditPath(valuePath)}
+          value={valueInput}
+          onFocus={() => updateEditPath(valuePath, valueInput)}
           onChange={e => setIn(valuePath, e.target.value)}
         />
 
         <Autosuggest
           name="type"
           label="type"
-          input={editPath.equals(typePath) ? input : ''}
-          onFocus={() => updateEditPath(typePath)}
+          input={editPath.equals(typePath) ? input : typeInput}
+          onFocus={() => updateEditPath(typePath, typeInput)}
           onBlur={() => updateEditPath(path)}
           onSuggestionsFetchRequested={
-            ({value}) => updateSuggestions(findDatatypes(value))
+            ({value}) => updateSuggestions(
+              [ {label: 'none'}
+              , ...findDatatypes(value)
+              ]
+            )
           }
           onSuggestionsClearRequested={() => updateSuggestions([])}
           onSuggestionSelected={onTypeSuggestionSelected}
@@ -111,8 +122,8 @@ const EditValue = (
       ? <Autosuggest
           name="language"
           label="language"
-          input={editPath.equals(languagePath) ? input : ''}
-          onFocus={() => updateEditPath(languagePath)}
+          input={editPath.equals(languagePath) ? input : languageInput}
+          onFocus={() => updateEditPath(languagePath, languageInput)}
           onBlur={() => updateEditPath(path)}
           onSuggestionsFetchRequested={
             ({value}) => updateSuggestions(findLanguages(value))
