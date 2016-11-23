@@ -1,6 +1,6 @@
 {
   "name": "react-jsonld-editor",
-  "version": "5.0.1",
+  "version": "5.1.0",
   "description": "React component for editing JSON-LD",
   "repository": {
     "type": "git",
