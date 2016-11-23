@@ -37,62 +37,46 @@ const mapStateToProps = (state, {path}) => (
 const mapDispatchToProps = dispatch => bindActionCreators(
   {updateEditPath, updateInput, updateSuggestions, setIn}, dispatch)
 
-const languageWithTag = (tag, languages) => languages.find(
-  language => language.get(lvont('iso639P1Code')).first().value === tag
-)
+// const languageWithTag = (tag, languages) => languages.find(
+//   language => language.get(lvont('iso639P1Code')).first().value === tag
+// )
 
 const tagForLanguage = (language_id, languages) => languages
   .get(language_id)
   .get(lvont('iso639P1Code'))
   .first().value
 
-const autosuggestProps = (
-  { path
-  , value
-  , editPath
-  , input
-  , suggester
-  , suggestions
-  , labelFor
-  , updateEditPath
-  , updateInput
-  , updateSuggestions
-  , setIn
-  , newValue
-  }) => (
-
-  { name: path.join('|')
-  , input: path.equals(editPath) ? input : labelFor(value)
-  , suggestions
-  , onFocus:
-      () => updateEditPath(path, labelFor(value))
-  , onBlur:
-      () => updateEditPath(path.pop())
-  , onChange:
-      e => { if (e.type === 'change') { updateInput(e.target.value) }}
-  , onSuggestionsFetchRequested:
-      ({value}) => updateSuggestions(suggester(value))
-  , onSuggestionsClearRequested:
-      () => updateSuggestions([])
-  , onSuggestionSelected:
-      (_, {suggestion}) => setIn(
-        path.pop(), newValue(suggestion.id), {input: suggestion.label})
-  }
-)
-
 const EditValue = (
   { path
   , value
+  , input
+  , editPath
   , languages
   , findDatatypes
   , findLanguages
-  , labelResolver
   , updateEditPath
+  , updateSuggestions
   , setIn
   , ...props
   }) => {
 
   const valuePath = path.push('@value')
+  const typePath = path.push('@type')
+  const languagePath = path.push('@language')
+
+  const onTypeSuggestionSelected = (_, {suggestion}) => {
+    const newValue = suggestion.id === rdf('langString')
+      ? value.delete('@type')
+      : value.delete('@language').set('@type', suggestion.id)
+    setIn(path, newValue, {input: suggestion.label})
+  }
+
+  const onLanguageSuggestionSelected = (_, {suggestion}) => {
+    const newValue = value
+      .delete('@type')
+      .set('@language', tagForLanguage(suggestion.id, languages))
+    setIn(path, newValue, {input: suggestion.label})
+  }
 
   return (
     <Modal onDismiss={() => updateEditPath(List())}>
@@ -108,41 +92,35 @@ const EditValue = (
         />
 
         <Autosuggest
+          name="type"
           label="type"
-          shouldRenderSuggestions={() => true}
-          {...autosuggestProps(
-            { ...props
-            , path: path.push('@type')
-            , value: value.type
-            , suggester: findDatatypes
-            , labelFor: value => value ? labelResolver(value) : ''
-            , updateEditPath
-            , setIn
-            , newValue: type => type === rdf('langString')
-                ? value.set('@type', rdf('langString'))
-                : value.set('@type', type).delete('@language')
-            })
+          input={editPath.equals(typePath) ? input : ''}
+          onFocus={() => updateEditPath(typePath)}
+          onBlur={() => updateEditPath(path)}
+          onSuggestionsFetchRequested={
+            ({value}) => updateSuggestions(findDatatypes(value))
           }
+          onSuggestionsClearRequested={() => updateSuggestions([])}
+          onSuggestionSelected={onTypeSuggestionSelected}
+          shouldRenderSuggestions={() => true}
+          focused={editPath.equals(typePath)}
+          {...props}
         />
 
-  { value.type === rdf('langString')
+  { value.type === undefined
       ? <Autosuggest
+          name="language"
           label="language"
-          {...autosuggestProps(
-            { ...props
-            , path: path.push('@language')
-            , value: value.language
-            , suggester: findLanguages
-            , labelFor: value => value
-                ? labelResolver(languageWithTag(value, languages).id)
-                : ''
-            , updateEditPath
-            , setIn
-            , newValue: language => value
-                .set('@type', rdf('langString'))
-                .set('@language', tagForLanguage(language, languages))
-            })
+          input={editPath.equals(languagePath) ? input : ''}
+          onFocus={() => updateEditPath(languagePath)}
+          onBlur={() => updateEditPath(path)}
+          onSuggestionsFetchRequested={
+            ({value}) => updateSuggestions(findLanguages(value))
           }
+          onSuggestionsClearRequested={() => updateSuggestions([])}
+          onSuggestionSelected={onLanguageSuggestionSelected}
+          focused={editPath.equals(languagePath)}
+          {...props}
         />
       : ''
   }
