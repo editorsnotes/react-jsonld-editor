@@ -20,7 +20,7 @@ const React = require('react') // eslint-disable-line no-unused-vars
       , updateSuggestions
       , setIn
       } = require('../actions')
-    , {lvont} = require('../namespaces')
+    , {rdfs, lvont} = require('../namespaces')
 
 const mapStateToProps = (state, {path}) => (
   { value: getNode(state).getIn(path)
@@ -107,7 +107,7 @@ const EditValue = (
           onSuggestionsFetchRequested={
             ({value}) => updateSuggestions(
               [ {label: 'none'}
-              , ...findDatatypes(value)
+              , ...findDatatypes(value).filter(({id}) => id !== rdfs('Literal'))
               ]
             )
           }

@@ -141,5 +141,16 @@
         "@value": "text"
       }
     ]
+  },
+  {
+    "@id": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Literal"
+      }
+    ]
   }
 ]
