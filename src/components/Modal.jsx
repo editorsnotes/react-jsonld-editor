@@ -19,8 +19,8 @@ const Modal = (
   const sx =
     { borderColor: colors.muted
     , left: 10
-    , overflow: 'visible'
     , width: 224
+    , Menu: {overflow: 'visible'}
     , ...style
     }
 
