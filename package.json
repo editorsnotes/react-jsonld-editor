@@ -22,7 +22,7 @@
     "precompile-demo": "npm -s run compile",
     "compile-demo": "babel demo/src -d demo/lib",
     "prestandalone-demo": "npm -s run predevelop-demo && mkdir -p demo/standalone",
-    "standalone-demo": "browserify demo/lib | uglifyjs -c > demo/standalone/bundle.js",
+    "standalone-demo": "NODE_ENV=production browserify demo/lib | uglifyjs -c > demo/standalone/bundle.js",
     "poststandalone-demo": "cp demo/src/index.html src/style.css demo/standalone && zip -r standalone.zip demo/standalone demo/data/indexes",
     "presetup-demo-data": "npm -s run compile-demo",
     "setup-demo-data": "cd demo/data && make -B vocabs && make",
